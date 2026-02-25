@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* You can add custom CSS variables or base styles below if you ever need them,
+   but Tailwind handles 99% of it automatically. */
+body {
+  /* Smooth scrolling for anchor links in your markdown */
+  scroll-behavior: smooth;
+}
