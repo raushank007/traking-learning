@@ -7,7 +7,7 @@ import 'highlight.js/styles/github-dark.css';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import {Mermaid} from '../../components/Mermaid'
+import Mermaid from '@/components/Mermaid';
 
 // 1. Pre-render all markdown pages at build time
 export async function generateStaticParams() {

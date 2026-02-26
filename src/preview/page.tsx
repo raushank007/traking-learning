@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/github-dark.css';
-import Mermaid from '../../components/Mermaid'; // <-- Import Mermaid
+import Mermaid from '@/components/Mermaid';
 
 export default function LivePreviewPage() {
   const [markdown, setMarkdown] = useState<string>('# Hello World\n\n```mermaid\ngraph TD;\n    A-->B;\n    A-->C;\n    B-->D;\n    C-->D;\n```');
