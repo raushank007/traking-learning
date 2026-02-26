@@ -7,6 +7,7 @@ import 'highlight.js/styles/github-dark.css';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import {Mermaid} from '../../components/Mermaid'
 
 // 1. Pre-render all markdown pages at build time
 export async function generateStaticParams() {
@@ -101,7 +102,24 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
           </header>
 
           {/* Render the actual Markdown content with syntax highlighting and anchor links */}
-          <ReactMarkdown rehypePlugins={[rehypeHighlight, rehypeSlug]}>
+          <ReactMarkdown
+            rehypePlugins={[rehypeHighlight, rehypeSlug]}
+            components={{
+              code({ className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '');
+
+                if (match && match[1] === 'mermaid') {
+                  return <Mermaid chart={String(children).replace(/\n$/, '')} />;
+                }
+
+                return (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                );
+              }
+            }}
+          >
             {content}
           </ReactMarkdown>
         </article>
