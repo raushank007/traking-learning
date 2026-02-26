@@ -12,6 +12,14 @@ export interface PostMeta {
   summary?: string;
 }
 
+// 1. Helper to calculate reading time (~200 words per minute)
+export function calculateReadingTime(text: string): string {
+  const words = text.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / 200);
+  return `${minutes} min read`;
+}
+
+// 2. Fetch a single post and its metadata by slug
 export function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = path.join(contentDirectory, `${realSlug}.md`);
@@ -19,22 +27,32 @@ export function getPostBySlug(slug: string) {
 
   const { data, content } = matter(fileContents);
 
+  // Calculate the reading time from the raw markdown content
+  const readingTime = calculateReadingTime(content);
+
   return {
     slug: realSlug,
     meta: data as PostMeta,
     content,
+    readingTime, // Exported to keep the Next.js build happy
   };
 }
 
+// 3. Fetch all posts for feeds and sidebars
 export function getAllPosts() {
   const files = fs.readdirSync(contentDirectory);
 
-  const posts = files.map((file) => {
+  // Safety filter to prevent hidden files from crashing the parser
+  const mdFiles = files.filter(file => file.endsWith('.md'));
+
+  const posts = mdFiles.map((file) => {
     const slug = file.replace(/\.md$/, '');
-    const { meta } = getPostBySlug(slug);
+    // Extract readingTime along with meta
+    const { meta, readingTime } = getPostBySlug(slug);
     return {
       slug,
       meta,
+      readingTime,
     };
   });
 
@@ -46,13 +64,17 @@ export function getAllPosts() {
   });
 }
 
-// Keep this utility specifically for Next.js static routing
+// 4. Utility specifically for Next.js static routing (generateStaticParams)
 export function getAllSlugs() {
   const files = fs.readdirSync(contentDirectory);
-  return files.map((file) => file.replace(/\.md$/, ''));
+
+  // Safety filter here as well
+  const mdFiles = files.filter(file => file.endsWith('.md'));
+
+  return mdFiles.map((file) => file.replace(/\.md$/, ''));
 }
 
-// 1. Get a list of all unique tags across all markdown files
+// 5. Get a list of all unique tags across all markdown files
 export function getAllTags(): string[] {
   const posts = getAllPosts();
   const tags = new Set<string>();
@@ -66,7 +88,7 @@ export function getAllTags(): string[] {
   return Array.from(tags);
 }
 
-// 2. Filter posts by a specific tag
+// 6. Filter posts by a specific tag
 export function getPostsByTag(tag: string) {
   const posts = getAllPosts();
   return posts.filter((post) => {
