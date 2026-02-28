@@ -10,6 +10,8 @@ export interface PostMeta {
   date: string;
   tags?: string[];
   summary?: string;
+  pinned?: boolean;
+  category?: string;
 }
 
 // 1. Helper to calculate reading time (~200 words per minute)

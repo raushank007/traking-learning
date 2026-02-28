@@ -18,8 +18,12 @@ export default function RootLayout({
         {/* Render the Sidebar permanently */}
         <Sidebar />
 
-        {/* Reverted the padding back to standard p-8 md:p-12 */}
-        <main className="flex-1 w-full overflow-y-auto max-h-screen p-8 md:p-12 flex flex-col">
+        {/* THE FIX:
+          1. Added `md:ml-72` to push the content past the 72-width fixed sidebar.
+          2. Added `min-w-0` to prevent flexbox from overflowing the screen.
+          3. Removed `w-full` to prevent horizontal scrolling.
+        */}
+        <main className="flex-1 min-w-0 md:ml-72 overflow-y-auto max-h-screen p-8 md:p-12 flex flex-col">
 
           <div className="flex-1">
             {children}

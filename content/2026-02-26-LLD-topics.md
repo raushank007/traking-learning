@@ -3,6 +3,7 @@ title: "LLD Interview Topics"
 date: "2026-02-26"
 tags: ["System design", "LLD"]
 summary: "Fundamental of all LLD rounds"
+pinned: true
 ---
 
 ## Topics 

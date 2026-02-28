@@ -2,7 +2,7 @@
 title: "Pattern wise practise Part I"
 date: "2026-02-26"
 tags: ["leetcode", "daily practise questions","Two Pointers","Sliding window","Fast-slow"]
-
+category: "Coding"
 ---
 
 ## Problem 1 : 

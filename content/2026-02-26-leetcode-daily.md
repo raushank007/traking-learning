@@ -3,6 +3,7 @@ title: "1404. Number of steps to reduce a number in Binary representation to one
 date: "2026-02-26"
 tags: ["leetcode", "daily"]
 summary: "Problem link : https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/"
+category: "Coding"
 ---
 
 
