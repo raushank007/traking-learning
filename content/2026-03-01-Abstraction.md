@@ -1,6 +1,6 @@
 ---
 title: "Abstraction"
-date: "2026-03-21"
+date: "2026-03-01"
 tags: ["LLD", "Networking & Communication"]
 summary: "Hiding complexity + Showing Essentials"
 category: "LLD"
