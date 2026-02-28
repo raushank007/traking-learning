@@ -4,6 +4,13 @@ import matter from 'gray-matter';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+// 1. Define what a single study session looks like
+export interface StudySession {
+  date: string;
+  startTime: string; // e.g., "09:00" or "14:30"
+  endTime: string;   // e.g., "10:45" or "16:00"
+}
+
 // Define a type for your frontmatter to keep TypeScript happy
 export interface PostMeta {
   title: string;
@@ -12,6 +19,7 @@ export interface PostMeta {
   summary?: string;
   pinned?: boolean;
   category?: string;
+  sessions?: StudySession[];
 }
 
 // 1. Helper to calculate reading time (~200 words per minute)
