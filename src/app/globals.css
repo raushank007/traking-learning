@@ -1,9 +1,20 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/typography"; /* Keeps your markdown looking nice */
 
-/* You can add custom CSS variables or base styles below if you ever need them,
-   but Tailwind handles 99% of it automatically. */
+/* 🌟 ONE PIECE THEME CONFIGURATION 🌟 */
+@theme {
+  /* 1. Custom Pirate Font */
+  --font-pirate: var(--font-pirate), cursive;
+
+  /* 2. Custom Grand Line Colors */
+  --color-strawhat: #fbbf24; /* Luffy's Hat / Gold */
+  --color-luffyred: #ef4444; /* Luffy's Jacket */
+  --color-zoro: #10b981;     /* Zoro's Hair */
+  --color-ocean: #0ea5e9;    /* The All Blue */
+  --color-parchment: #fef3c7; /* Wanted Poster Background */
+}
+
+/* Base styles for the parchment background */
 body {
-  /* Smooth scrolling for anchor links in your markdown */
-  scroll-behavior: smooth;
+  background-color: var(--color-parchment);
 }
