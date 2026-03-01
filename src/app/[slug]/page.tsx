@@ -24,6 +24,10 @@ function calculateMinutes(start?: string, end?: string): number {
   return diff || 0;
 }
 
+// 🌟 THE FIX: Tells Next.js to immediately 404 any route (like favicon.ico)
+// that is NOT explicitly returned by generateStaticParams below.
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
   return slugs.map((slug) => ({ slug }));

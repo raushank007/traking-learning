@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter, Rye } from 'next/font/google';
 import Sidebar from '../components/Sidebar';
+import { getAllPosts } from '../lib/markdown'; // 🌟 1. Added this import
 
 // 1. Standard font for easy reading
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -22,22 +23,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // 🌟 2. Fetch all posts on the server side
+  const allPosts = getAllPosts();
+
   return (
     <html lang="en">
-      {/* THEME UPDATE:
-        1. Injected the font variables.
-        2. Changed bg to amber-50 (parchment).
-        3. Changed text highlight selection to Luffy Red/Pink.
-      */}
       <body className={`${inter.variable} ${pirateFont.variable} font-sans flex min-h-screen bg-amber-50 text-slate-800 antialiased selection:bg-red-200 selection:text-red-900`}>
 
-        {/* Render the Sidebar permanently */}
-        <Sidebar />
+        {/* 🌟 3. Pass the posts down to the Sidebar as a prop */}
+        <Sidebar posts={allPosts} />
 
-        {/* 1. Kept your exact md:ml-72 to push content past the fixed sidebar.
-          2. Kept min-w-0 and max-h-screen for proper scrolling.
-        */}
-        <main className="flex-1 min-w-0 md:ml-72 overflow-y-auto max-h-screen p-8 md:p-12 flex flex-col">
+        {/* 🌟 4. Removed md:ml-72 and added transition-all so it smoothly expands! */}
+        <main className="flex-1 min-w-0 overflow-y-auto max-h-screen p-8 md:p-12 flex flex-col transition-all duration-300 ease-in-out">
 
           <div className="flex-1">
             {children}
