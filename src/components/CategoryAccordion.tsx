@@ -10,7 +10,7 @@ interface Post {
   meta: PostMeta;
 }
 
-export default function CategoryAccordion({ posts }: { posts: Post[] }) {
+export default function CategoryAccordion({ posts, onLinkClick }: { posts: Post[], onLinkClick?: () => void }) {
   // State to track which category is currently open
   const [openCategory, setOpenCategory] = useState<string | null>(null);
 
@@ -66,8 +66,8 @@ export default function CategoryAccordion({ posts }: { posts: Post[] }) {
                     <Link
                       key={post.slug}
                       href={`/${post.slug}`}
+                      onClick={onLinkClick} // <-- Add this right here
                       className="block text-xs font-medium text-slate-600 hover:text-red-600 py-1.5 pl-2 truncate hover:bg-red-50/50 rounded transition-colors"
-                      title={post.meta.title}
                     >
                       {post.meta.title}
                     </Link>

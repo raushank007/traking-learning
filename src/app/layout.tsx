@@ -33,8 +33,8 @@ export default function RootLayout({
         {/* 🌟 3. Pass the posts down to the Sidebar as a prop */}
         <Sidebar posts={allPosts} />
 
-        {/* 🌟 4. Removed md:ml-72 and added transition-all so it smoothly expands! */}
-        <main className="flex-1 min-w-0 overflow-y-auto max-h-screen p-8 md:p-12 flex flex-col transition-all duration-300 ease-in-out">
+        {/* New: Small padding on mobile (p-4), large on desktop (md:p-12) */}
+        <main className="flex-1 min-w-0 overflow-y-auto max-h-screen p-4 sm:p-6 md:p-12 flex flex-col transition-all duration-300 ease-in-out relative">
 
           <div className="flex-1">
             {children}
