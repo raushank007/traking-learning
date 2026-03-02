@@ -2,12 +2,12 @@
 title: "@Transactional"
 date: "2026-03-02"
 tags: ["Spring boot", "Spring JPA"]
-summary: "Local balancers Layer 4 and Layer 7"
+summary: "Transactional in spring boot"
 category: "General"
 sessions:
-  - date: "2026-03-01"
-    startTime: "10:00"
-    endTime: "10:30"
+  - date: "2026-03-02"
+    startTime: "05:00"
+    endTime: "05:38"
 ---
 
 # What does @transactional actually do?
