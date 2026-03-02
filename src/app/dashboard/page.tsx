@@ -79,6 +79,8 @@ export default function DashboardPage() {
     hld: { label: 'Fortresses (HLD)', icon: '🏰', color: 'border-amber-300 hover:border-amber-500', textColor: 'text-amber-700' },
     lld: { label: 'Swordsmanship (LLD)', icon: '⚔️', color: 'border-emerald-200 hover:border-emerald-400', textColor: 'text-emerald-700' },
     general: { label: 'Poneglyphs (Notes)', icon: '📜', color: 'border-sky-200 hover:border-sky-400', textColor: 'text-sky-700' },
+    springboot: { label: 'Jolly Roger (Spring boot)', icon: '🚢', color: 'border-sky-200 hover:border-sky-400', textColor: 'text-sky-700' },
+    java: { label: 'Sniper(Java)', icon: '🔫', color: 'border-sky-200 hover:border-sky-400', textColor: 'text-sky-700' },
   };
 
   return (

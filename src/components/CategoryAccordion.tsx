@@ -19,7 +19,10 @@ export default function CategoryAccordion({ posts, onLinkClick }: { posts: Post[
     { id: 'coding', label: 'Coding', icon: '🏴‍☠️' },
     { id: 'hld', label: 'HLD', icon: '🏰' },
     { id: 'lld', label: 'LLD', icon: '⚔️' },
-    { id: 'general', label: 'General', icon: '📜' }
+    { id: 'general', label: 'General', icon: '📜' },
+    { id: 'springboot', label: 'Springboot', icon: '📜' },
+    { id: 'Java', label: 'Java', icon: '📜' }
+
   ];
 
   return (

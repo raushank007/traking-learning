@@ -3,7 +3,7 @@ title: "@Transactional"
 date: "2026-03-02"
 tags: ["Spring boot", "Spring JPA"]
 summary: "Transactional in spring boot"
-category: "General"
+category: "Springboot"
 sessions:
   - date: "2026-03-02"
     startTime: "05:00"
