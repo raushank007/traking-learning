@@ -1,7 +1,7 @@
 ---
 title: "API Gateway"
 date: "2026-03-07"
-tags: ["HLD", "Network & Communication"]
+tags: ["HLD", "Network & Communication","API Gateway"]
 summary: "API Gateways are a core component in modern distributed systems."
 category: "HLD"
 sessions:
