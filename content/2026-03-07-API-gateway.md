@@ -32,9 +32,9 @@ The gateway solves this by decoupling the client from the underlying microservic
 ## Key Responsibilities : 
 Security(AuthN/AuthZ), Routing, and Rate Limiting
 
-**Security:** Centralizes authentication so backend services focus on business logic. 
-**Rate Limiting:** Protects against spikes. Example: Token Bucket algorithm (smooth continuous refill) vs Fixed Window (bursty). 
-**Protocol Translation:** Converts client JSON (text) into internal gRPC (compressed binary). This is CPU-intensive and requires horizontal scaling.
+1. **Security:** Centralizes authentication so backend services focus on business logic. 
+2. **Rate Limiting:** Protects against spikes. Example: Token Bucket algorithm (smooth continuous refill) vs Fixed Window (bursty). 
+3. **Protocol Translation:** Converts client JSON (text) into internal gRPC (compressed binary). This is CPU-intensive and requires horizontal scaling.
 
 >Global apps deploy gateways at the Edge to reduce latency and avoid a Single Point of Failure. Example: A Tokyo user connects to a Tokyo gateway. It handles auth and translation locally, so only fast binary data travels across the ocean.
 
