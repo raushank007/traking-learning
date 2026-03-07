@@ -1,7 +1,7 @@
 ---
 title: "Reverse Proxy"
 date: "2026-03-07"
-tags: ["HLD", "Network & Communication","API Gateway"]
+tags: ["HLD", "Network & Communication","Reverse Proxy"]
 summary: "A Reverse Proxy is a server that sits in front of one or more web servers, intercepting all requests from clients. 'Reverse' means it operates on behalf of the servers (protecting their identity and handling their inbound traffic), whereas a standard 'Forward Proxy' (like a corporate VPN) operates on behalf of the client (protecting the user's IP address)."
 category: "HLD"
 sessions:
