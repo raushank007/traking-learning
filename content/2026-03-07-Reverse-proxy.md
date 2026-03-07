@@ -70,6 +70,19 @@ sequenceDiagram
 3. **The Performance Reason:** Decrypting HTTPS is incredibly CPU-intensive. By offloading this to a lightweight Reverse Proxy like Nginx, we free up the API Gateway's CPU to focus purely on business logic like authentication and protocol translation.
 4. **Industry Term:** This pattern is known as SSL Offloading or SSL Termination.
 
+>Imagine you are designing the backend for a frontend React application. The React app consists of a static index.html file, some CSS, and an app.js bundle. When a user navigates to your website, would you configure your API Gateway to serve these static files, or your Reverse Proxy? And why?
+
+1. **Direct Answer:** Static files like React's HTML, CSS, and JS bundles should be served by the Reverse Proxy, not the API Gateway.
+2. **The 'Why' (Separation of Concerns):** Static content doesn't require business logic, user authentication, or protocol translation. Forcing the API Gateway to serve static files wastes expensive compute resources
+3. **The Performance Benefit:** By caching these files at the Reverse Proxy at the edge of the network, we dramatically decrease latency for the user and completely offload that static traffic from our internal network.
+
+>A user opens a mobile app to view their personalized feed. The app needs to securely fetch the dynamic feed data over HTTPS.
+Can you trace the exact path this request takes, starting from the moment it hits your infrastructure, and list the one main job each of these three components performs on that specific request before passing it to the next layer?
+Reverse Proxy ,Load Balancer ,API Gateway
+
+1. **Step 1 (The Edge):** The mobile client resolves the domain via DNS and hits our outermost perimeter: the Reverse Proxy. Here, we perform SSL Termination to decrypt the HTTPS request, dropping bad connections early and saving CPU cycles for the deeper layers.
+2. **Step 2 (Distribution):** The decrypted traffic then passes through an External Load Balancer, which evenly distributes the massive volume of incoming requests across our cluster of API Gateway instances to prevent any single gateway from being overwhelmed.
+3. **Step 3 (Business Logic & Internal Routing):** The request reaches the API Gateway. Here, we validate the user's identity via Authentication. Once authenticated, the gateway acts as a Layer 7 router, forwarding the request to the specific internal microservice (often via an internal load balancer).
 
 
 
