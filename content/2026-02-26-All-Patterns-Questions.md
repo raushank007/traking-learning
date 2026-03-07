@@ -4,6 +4,7 @@ date: "2026-02-26"
 tags: ["leetcode", "daily"]
 summary: "All questions to practice pattern by pattern by following the steps below and revision after completing daily problems on the weekend."
 pinned: true
+isRoadmap: true
 ---
 
 # General Approach for Each Question

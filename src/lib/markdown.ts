@@ -20,6 +20,7 @@ export interface PostMeta {
   pinned?: boolean;
   category?: string;
   sessions?: StudySession[];
+  isRoadmap?: boolean
 }
 
 // 1. Helper to calculate reading time (~200 words per minute)
