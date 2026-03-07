@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export async function generateStaticParams() {
   // Define the core categories to generate static pages for
-  const categories = ['coding', 'hld', 'lld', 'general'];
+  const categories = ['coding', 'hld', 'lld', 'general','springboot','java'];
   return categories.map((category) => ({ category }));
 }
 
@@ -13,6 +13,8 @@ const getCategoryTheme = (category: string) => {
     case 'coding': return { title: 'Pirate Code (LeetCode)', icon: '🏴‍☠️' };
     case 'hld': return { title: 'Fortresses (HLD)', icon: '🏰' };
     case 'lld': return { title: 'Swordsmanship (LLD)', icon: '⚔️' };
+    case 'springboot': return {title: 'Thousand Sunny (Spring Boot)', icon: '🚢'}
+    case 'java': return {title: 'Sniper King (Java)', icon: '🔫'};
     default: return { title: 'Poneglyphs (General)', icon: '📜' };
   }
 };
