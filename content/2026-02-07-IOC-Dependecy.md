@@ -152,5 +152,174 @@ To fix this, some developers are tempted to inject the entire ApplicationContext
 1. Tight Coupling: Your business logic now depends directly on the Spring Framework's "brain" (ApplicationContext).
 2. Violates Interface Segregation: Your service should only know about the dependencies it needs, not the entire container that manages every bean in the system.
 3. Unit Testing: It becomes much harder to write a clean JUnit test if you have to mock the entire ApplicationContext.
-
+---
 ## Advanced Configuration and conditionals
+Imagine we have two implementations of a `MessageService:SmsService` and `EmailService`.If we try to `@Autowire` a `MessageService`, Spring will throw a `NoUniqueBeanDefinitionException`.
+
+**Toolbox for Ambiguity:**
+1. @Primary: Tells spring, "If you are confused, pick this one by default."
+2. @Qualifier("name"): Tells spring, "I want exactly this specific bean."
+3. @ConditionalOnProperty: Only creates the bean if a specific configuration(like mail.enabled=true) exists in application.properties.
+
+>Question: Imagine you are building a system that needs to use a MockPaymentGateway during local development but a StripePaymentGateway in production.
+> How would we use Spring Profiles(@Profile) or Conditionals to ensure the developer don't accidentally charge real credit cards while testing on their laptops?
+
+**Implementing Environment-Specific Injection**
+1. Using `@Profile` on classes
+```java
+//This bean only exists when "prod" is active
+@Profile("prod")
+@Component
+public class StripePaymentGateway implements PaymentGateway{
+    @Override
+    public void process(){
+        // Real API calls to Stripe
+    }
+}
+
+//This bean only exists when "local" or "dev" is active
+@Profile({"local","dev"})
+@Component
+public class MockPaymentGateway implements PaymentGateway{
+    @Override
+    public void process(){
+        // Just logs "Payment Successful"
+    }
+}
+```
+2. Using `@Bean` in a configuration Class
+
+```java
+@Configuration
+public class PaymentConfig {
+    @Bean
+    @Profile("prod")
+    public PaymentGateway realGateway() {
+        return new StripePaymentGateway();
+    }
+
+    @Bean
+    @Profile("!prod")
+    public PaymentGateway mockGateway(){
+        return new MockPaymentGateway();
+    }
+}
+```
+If we prefer centralized control, we can define them in a `@Configuration` class.
+
+---
+## The Bean Lifecycle
+**Constructor vs @PostConstruct**
+
+In Java, when the Constructor is running, the object is still being "born." In the Spring ecosystem, this means:
+1. Proxies aren't ready: If our initialization logic requires Spring features like `@Transactional` or `@Async`, they won't work in the constructor because the Spring proxy hasn't wrapped the bean yet.
+2. Field Injection is null: If we happened to use `@Autowired` on a field, that field will be `null` while the constructor is executing.
+
+`@PostConstruct` is called after the bean is fully constructed and all dependencies(via constructor, setter, or field) have been injected. It is the "safe zone" for startup logic.
+
+**The warm-up pattern**
+A common task is "warming up" a local cache or verifying a connection to a downstream service immediately at startup.
+
+```java
+@Component
+public class CurrencyExchangeService{
+    private final ExternalExchangeClient client;
+    private Map<String, Double> rateCache;
+    
+    public CurrencyExchangeService(ExternalExchangeClient client){
+        this.client = client;
+        //Logic here would fail if 'client' needs a Spring proxy to work
+    }
+    
+    @PostConstruct
+    public void init(){
+        //This is safe. The bean is fully "managed" by Spring now.
+        this.rateCache = client.getLatestRates();
+        System.out.println("Cache warmed up with " + rateCache.size());
+    }
+}
+```
+
+## Bean Scopes & Proxies
+How beans live and die in memory.
+
+The two most common scopes are:
+1. Singleton : One instance per IoC container.
+2. Prototype: A new instance is created every time `getBean()` is called.
+
+**The "Scope Gap" Problem**
+Imaging we have a Singleton `OderProcessor` and we want to inject a Prototype `TransactionToken`.
+
+Because the `OrderProcessor` is only created once, it will only have the `TransactionToken` inject once.Even through `TransactionToken` is a prototype, the `OrderProcessor` will keep using that same first instance forever.
+
+>Question: If you want a new instance of the prototype bean every time a method in your singleton bean is called, how would you handle that without injecting the entire ApplicationContext?
+
+`@Lookup` is a clean, "Spring-native" way to handle the scope gap.
+
+By making the method `abstract` and annotating it with `@Lookup`, we are telling the Spring container: "Every time this method is called, go to the context and find me the bean of the return type(TokenGenerator)." Because `TokenGenerator` is a Prototype, Spring will naturally create a new instance for us.
+
+Spring implements this using CGLIB at runtime. It creates a proxy subclass of your EmailService and overrides that abstract method with logic that essentially does a container.getBean(TokenGenerator.class).
+
+**Why not just use `ObjectProvider<T>`?
+```java
+@Component
+public class EmailService{
+    // We inject a provider, not the bean itself
+    private final ObjectProvider<TokenGenerator> tokenGeneratorObjectProvider;
+    
+    public EmailService(ObjectProvider<TokenGenerator> tokenGeneratorObjectProvider){
+        this.tokenGeneratorObjectProvider=tokenGeneratorObjectProvider;
+    }
+    
+    public void sendEmail(){
+        // we call .getObject() to get a fresh Prototype instance
+        TokenGenerator token = tokenGeneratorObjectProvider.getObject();
+        //... use token
+    }
+}
+```
+>The advantage of ObjectProvider over @Lookup is that it doesn't require abstract methods or CGLIB proxying. It’s also type-safe and allows you to handle cases where a bean might not exist (using getIfAvailable()).
+
+```mermaid
+graph TD
+%% Define Styles
+    classDef start_end fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef phase fill:#e1f5fe,stroke:#0277bd,stroke-width:2px;
+    classDef internal fill:#fff3e0,stroke:#ef6c00,stroke-width:1px,stroke-dasharray: 5 5;
+    classDef code fill:#f0f4c3,stroke:#827717,stroke-width:1px;
+
+%% --- THE FLOW ---
+
+    StartNode((Start: ApplicationContext Loads)):::start_end --> LoadDefs[Load Bean Definitions <br/> Scan @Component, Read @Bean]:::phase
+
+subgraph Phase1 [Phase 1: Instantiation & Dependency Injection]
+LoadDefs --> Instantiate[Instantiation: <br/> Call Constructor <br/> e.g., UserService]:::internal
+Instantiate --> |Constructor Injection Complete| PopulateFields[Populate Fields: <br/> Inject @Autowired fields/setters]:::internal
+end
+
+PopulateFields --> AwareInterfaces[Call Aware Interfaces <br/> e.g., BeanNameAware]:::phase
+
+subgraph Phase2 [Phase 2: Initialization & Post-Processing]
+AwareInterfaces --> BPP_Before[BeanPostProcessor: <br/> postProcessBeforeInitialization]:::phase
+BPP_Before --> |Modify/Wrap Bean| InitMethod[PostConstruct <br/> InitializingBean]:::code
+InitMethod --> |Setup logic| BPP_After[BeanPostProcessor: <br/> postProcessAfterInitialization]:::phase
+BPP_After --> |Spring AOP Proxy| BeanReady(Bean is Ready for Use):::start_end
+end
+
+BeanReady --> ApplicationRuns{Application Running}:::start_end
+
+subgraph Phase3 [Phase 3: Destruction]
+ApplicationRuns --> |Shutdown| PreDestroy[PreDestroy <br/> DisposableBean]:::code
+PreDestroy --> |Cleanup| EndNode((End: Bean Destroyed)):::start_end
+end
+```
+
+---
+## Explaining the flow
+When presenting this flow, emphasize these critical architectural timings:
+1. Instantiation: The JVM creates the object(new).If we use Constructor Injection, dependencies are available immediately.If we use Field Injection, the field sre still null.
+2. Aware Interfaces: Spring "injects itself" into the bean(e.g., giving the bean access to the `ApplicationContext` if needed).
+3. BPP(Before Initialization):This is your last chance to modify the raw bean instance before its official startup logic (`@PostConstruct`) runs.
+4. Initialization(`PostConstruct`): This is where you put your startup logic. All dependencies (`@Autowired`) are guaranteed to be injected and safe to use.
+5. BPP(After Initialization): If Spring needs to wrap your bean in a Proxy (for `@Transactional`, `@Async`, or `@Retry`), it usually happens in this phase.
+6. Destruction: Just before the application exits, `@PreDestroy` allows you to release resources (closing database connections, stopping background threads, cleaning temporary files).
