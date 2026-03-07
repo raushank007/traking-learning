@@ -10,11 +10,11 @@ isRoadmap: true
 ## Topics
 
 ### Spring Core Mechanics (Intermediate)
-- [ ] Inversion of Control (IoC) and Dependency Injection (DI)
-- [ ] `ApplicationContext` vs `BeanFactory`
-- [ ] Bean Scopes (Singleton, Prototype, Request, Session) and Thread Safety
-- [ ] Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`)
-- [ ] `BeanPostProcessor` and custom bean modification
+- [X] Inversion of Control (IoC) and Dependency Injection (DI)
+- [X] `ApplicationContext` vs `BeanFactory`
+- [X] Bean Scopes (Singleton, Prototype, Request, Session) and Thread Safety
+- [X] Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`)
+- [X] `BeanPostProcessor` and custom bean modification
 - [ ] Spring AOP (Aspect-Oriented Programming, Proxies, Pointcuts, Advice)
 
 ### Spring Boot Under the Hood (Advanced)
