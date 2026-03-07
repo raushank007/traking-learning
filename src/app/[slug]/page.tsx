@@ -1,5 +1,6 @@
 import { getPostBySlug, getAllSlugs } from '../../lib/markdown';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'; // 🌟 NEW: Added GitHub Flavored Markdown plugin
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
 import GithubSlugger from 'github-slugger';
@@ -24,7 +25,7 @@ function calculateMinutes(start?: string, end?: string): number {
   return diff || 0;
 }
 
-// 🌟 THE FIX: Tells Next.js to immediately 404 any route (like favicon.ico)
+// Tells Next.js to immediately 404 any route (like favicon.ico)
 // that is NOT explicitly returned by generateStaticParams below.
 export const dynamicParams = false;
 
@@ -83,11 +84,6 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
 
     return (
       <div className="w-full max-w-7xl mx-auto">
-        {/* 🌟 THEME UPDATE:
-            Changed prose-blue to custom modifiers.
-            prose-headings:font-pirate makes all your markdown ## headers use the custom font!
-            prose-a:text-red-600 makes your markdown links red.
-        */}
         <article className="prose prose-slate prose-headings:font-pirate prose-headings:font-normal prose-headings:tracking-wide prose-a:text-red-600 hover:prose-a:text-red-700 prose-strong:text-slate-800 max-w-none w-full">
 
           {/* UPGRADED PIRATE HEADER */}
@@ -150,6 +146,7 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
 
           {/* Render the actual Markdown content */}
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]} // 🌟 NEW: This enables tables, strikethroughs, and tasklists!
             rehypePlugins={[rehypeHighlight, rehypeSlug]}
             components={{
               code({ className, children, ...props }) {

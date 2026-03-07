@@ -49,15 +49,9 @@ Let's break down what happens when a client sends a request:
 
 ## Reverse Proxy vs API Gateway vs Load Balancer
 
-| Feature                | Reverse Prxoy | API Gateway | Load Balancer      |
-|------------------------|---------------|-------------|--------------------|
-| Entry point for client | Yes           | Yes         | Not always exposed |
-| Routing by path/method | Basic         | Advanced    | No                 |
-| Auth(JWT, OAuth2)      | No            | Yes         | No                 |
-| Rate limiting          | Basic         | Advanced    | No                 |
-| SSL termination        | Yes           | Yes         | Yes                |
-| API Versioning         | No            | Yes         | No                 |
-| Caching                | Yes           | No          | No                 |   
+1. **Reverse Proxy(The Bouncer):**  Protects the network. It handles generic web traffic tasks that require zero knowledge of your business logic.
+2. **Load Balancer(The Traffic Cop):** Distributes incoming traffic evenly across a pool of healthy servers so no single machine gets overwhelmed.
+3. **API Gateway(The Front desk):** Understands your actual business logic. It knows about user tokens, specific microservice endpoints, and data payloads.
 
 ## Where Reverse Proxy Fits in a Microservices Architecture
 ```mermaid
@@ -67,3 +61,15 @@ sequenceDiagram
     Reverse Proxy/ API Gateway ->> Service Mesh : route
     Service Mesh ->> Microservices : route
 ```
+
+## Questions 
+>When a mobile app sends a secure, encrypted HTTPS request to your system, the server needs to decrypt it (a CPU-intensive process called SSL Termination). Given the roles defined previously, which component—the Reverse Proxy at the edge, or the internal API Gateway—should ideally handle decrypting this traffic, and why?
+
+1. **Direct Answer:** SSL Termination should be handled at the edge by the Reverse Proxy.
+2. **The Security Reason:** "Architecturally, we want to intercept and decrypt public internet traffic at the outermost perimeter before it enters our trusted internal network."
+3. **The Performance Reason:** Decrypting HTTPS is incredibly CPU-intensive. By offloading this to a lightweight Reverse Proxy like Nginx, we free up the API Gateway's CPU to focus purely on business logic like authentication and protocol translation.
+4. **Industry Term:** This pattern is known as SSL Offloading or SSL Termination.
+
+
+
+
