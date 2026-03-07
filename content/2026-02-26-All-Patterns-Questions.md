@@ -39,16 +39,16 @@ isRoadmap: true
 
 ## DAY 2 - Full 12 Pattern Coverage
 
-- [ ] **Two Pointers:** [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
-- [ ] **Sliding Window:** [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
-- [ ] **Fast-Slow:** [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
-- [ ] **Binary Search:** [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-- [ ] **Prefix Sum:** [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
-- [ ] **Monotonic Stack:** [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-- [ ] **HashMap:** [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
-- [ ] **Graph BFS:** [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
-- [ ] **Tree BFS:** [Binary Tree ZigZag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
-- [ ] **Tree DFS:** [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
+- [X] **Two Pointers:** [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+- [X] **Sliding Window:** [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+- [X] **Fast-Slow:** [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- [X] **Binary Search:** [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+- [X] **Prefix Sum:** [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+- [X] **Monotonic Stack:** [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+- [X] **HashMap:** [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+- [X] **Graph BFS:** [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+- [X] **Tree BFS:** [Binary Tree ZigZag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+- [x] **Tree DFS:** [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
 - [ ] **Dynamic Programming:** [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 - [ ] **Backtracking:** [Combination Sum](https://leetcode.com/problems/combination-sum/)
 

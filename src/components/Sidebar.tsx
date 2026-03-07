@@ -91,6 +91,7 @@ export default function Sidebar({ posts }: SidebarProps) {
             </div>
           )}
 
+          {/* 🧭 Log Pose (Menu) */}
           <div className="mb-8 space-y-1">
             <h3 className="text-xs font-bold uppercase tracking-widest text-amber-700/60 mb-4 ml-2 mt-4 flex items-center gap-2">
               <span className="text-base">🧭</span> Log Pose
@@ -101,6 +102,14 @@ export default function Sidebar({ posts }: SidebarProps) {
             <Link href="/dashboard" onClick={handleMobileClick} className="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold text-slate-700 rounded-lg hover:bg-red-100/50 transition-all">
               <span className="text-base grayscale opacity-70">📜</span> Bounty Board
             </Link>
+
+            {/* 🌟 NEW: The Voyage Itinerary (Calendar) Link */}
+            <Link href="/schedule" onClick={handleMobileClick} className="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold text-slate-700 rounded-lg hover:bg-orange-100/50 transition-all">
+              <span className="text-base grayscale opacity-70">📅</span> Voyage Itinerary
+            </Link>
+
+
+
             <Link href="/archives" onClick={handleMobileClick} className="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold text-slate-700 rounded-lg hover:bg-sky-100/50 transition-all">
               <span className="text-base grayscale opacity-70">⏳</span> History Poneglyphs
             </Link>
