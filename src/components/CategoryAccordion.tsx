@@ -21,7 +21,7 @@ export default function CategoryAccordion({ posts, onLinkClick }: { posts: Post[
     { id: 'lld', label: 'LLD', icon: '⚔️' },
     { id: 'general', label: 'General', icon: '📜' },
     { id: 'springboot', label: 'Springboot', icon: '📜' },
-    { id: 'Java', label: 'Java', icon: '📜' }
+    { id: 'java', label: 'Java', icon: '📜' }
 
   ];
 
