@@ -28,11 +28,6 @@ By encapsulating the `BankAccount`:
 2. We force the rest of the program to use the `deposit()` or `withdraw()` methods.
 3. Inside those methods,we can add validation logic(e.g., checking if the withdrawal amount is greater than the current balance, or ensuring a deposit isn't a negative number.)
 
-## The "why" (Data Hiding vs Encapsulation)
-
-| Encapsulation is the physical bundling of data and methods into a single class. | Data Hiding is the restriction of access to that internal data |
-|---------------------------------------------------------------------------------|----------------------------------------------------------------|
-
 ## The "How" (Implementation)
 ```java
 public class BankAccount {
