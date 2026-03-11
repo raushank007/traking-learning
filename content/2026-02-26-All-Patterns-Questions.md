@@ -49,8 +49,8 @@ isRoadmap: true
 - [X] **Graph BFS:** [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
 - [X] **Tree BFS:** [Binary Tree ZigZag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
 - [x] **Tree DFS:** [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
-- [ ] **Dynamic Programming:** [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
-- [ ] **Backtracking:** [Combination Sum](https://leetcode.com/problems/combination-sum/)
+- [X] **Dynamic Programming:** [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+- [X] **Backtracking:** [Combination Sum](https://leetcode.com/problems/combination-sum/)
 
 ## DAY 3 - Full 12 Pattern Coverage
 

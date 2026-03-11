@@ -13,7 +13,7 @@ isRoadmap: true
 
 **Core OOP**
 - [X] Abstraction
-- [ ] Encapsulation
+- [X] Encapsulation
 - [ ] Inheritance
 - [ ] Polymorphism
 
