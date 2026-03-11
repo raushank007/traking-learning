@@ -56,7 +56,7 @@ isRoadmap: true
 
 - [X] **Two Pointers:** [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [X] **Sliding Window:** [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
-- [ ] **Fast-Slow:** [Happy Number](https://leetcode.com/problems/happy-number/)
+- [X] **Fast-Slow:** [Happy Number](https://leetcode.com/problems/happy-number/)
 - [ ] **Binary Search:** [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 - [ ] **Prefix Sum:** [Contiguous Array (Longest Subarray with equal 0s and 1s)](https://leetcode.com/problems/contiguous-array/)
 - [ ] **Monotonic Stack:** [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
