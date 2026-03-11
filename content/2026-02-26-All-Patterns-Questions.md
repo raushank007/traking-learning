@@ -141,3 +141,128 @@ isRoadmap: true
 - [ ] **Tree DFS:** [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)
 - [ ] **Dynamic Programming:** [Decode Ways](https://leetcode.com/problems/decode-ways/)
 - [ ] **Backtracking:** [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+
+
+## DAY 9 - Optimization & Intervals
+
+- [ ] **Overlapping Intervals:** [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+- [ ] **Heaps (Top K):** [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- [ ] **Heaps (Two Heaps):** [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+- [ ] **Two Pointers:** [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [ ] **Sliding Window:** [Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+- [ ] **Monotonic Queue:** [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+- [ ] **Binary Search:** [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+- [ ] **Prefix Sum:** [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+- [ ] **Tree DFS:** [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+- [ ] **Graph BFS:** [Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
+- [ ] **Dynamic Programming:** [Coin Change](https://leetcode.com/problems/coin-change/)
+- [ ] **Backtracking:** [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+
+## DAY 10 - Strings & Bitwise Logic
+
+- [ ] **Trie:** [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [ ] **Bit Manipulation:** [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
+- [ ] **Bit Manipulation:** [Single Number](https://leetcode.com/problems/single-number/)
+- [ ] **Intervals:** [Insert Interval](https://leetcode.com/problems/insert-interval/)
+- [ ] **Heaps:** [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+- [ ] **Two Pointers:** [4Sum](https://leetcode.com/problems/4sum/)
+- [ ] **HashMap:** [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) (Reviewing the "running sum" variant)
+- [ ] **Tree DFS:** [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [ ] **Graph DFS:** [All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)
+- [ ] **Dynamic Programming:** [Word Break](https://leetcode.com/problems/word-break/)
+- [ ] **Backtracking:** [N-Queens](https://leetcode.com/problems/n-queens/)
+- [ ] **Fast-Slow:** [Circular Array Loop](https://leetcode.com/problems/circular-array-loop/)
+
+## DAY 11 - Connectivity & Dependencies
+
+- [ ] **Topological Sort:** [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+- [ ] **Union Find (DSU):** [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+- [ ] **Trie:** [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+- [ ] **Intervals:** [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+- [ ] **Bit Manipulation:** [Counting Bits](https://leetcode.com/problems/counting-bits/)
+- [ ] **Heaps:** [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+- [ ] **Graph BFS:** [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)
+- [ ] **Tree DFS:** [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
+- [ ] **Dynamic Programming:** [Edit Distance](https://leetcode.com/problems/edit-distance/)
+- [ ] **Backtracking:** [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+- [ ] **Binary Search:** [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+- [ ] **Sliding Window:** [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)
+
+## DAY 12 - The Final Bosses (Deep Dives)
+
+- [ ] **Design:** [LRU Cache](https://leetcode.com/problems/lru-cache/)
+- [ ] **Advanced Graph:** [Network Delay Time (Dijkstra)](https://leetcode.com/problems/network-delay-time/)
+- [ ] **Union Find:** [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+- [ ] **Trie:** [Word Search II](https://leetcode.com/problems/word-search-ii/)
+- [ ] **Dynamic Programming:** [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
+- [ ] **DP (Bitmask):** [Can I Win](https://leetcode.com/problems/can-i-win/)
+- [ ] **Intervals:** [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) (Premium, use alternative if needed)
+- [ ] **Heaps:** [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/)
+- [ ] **Tree DFS:** [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+- [ ] **Graph DFS:** [Critical Connections in a Network (Tarjan's)](https://leetcode.com/problems/critical-connections-in-a-network/)
+- [ ] **Bit Manipulation:** [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)
+- [ ] **Two Pointers:** [Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/)
+
+
+## DAY 13 - Large Scale Optimization & Hard DP
+
+- [ ] **Data Structure Design:** [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) (Focus on $O(1)$ constraints)
+- [ ] **Hard DP:** [Burst Balloons](https://leetcode.com/problems/burst-balloons/) (Interval DP)
+- [ ] **Advanced Segment Tree:** [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/)
+- [ ] **Two Pointers/Hard:** [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) (3D version)
+- [ ] **String/DP:** [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
+- [ ] **Greedy/Heap:** [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+- [ ] **Sliding Window:** [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)
+- [ ] **Binary Search:** [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (Classic Google Hard)
+- [ ] **Monotonic Stack:** [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
+- [ ] **Tree:** [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+- [ ] **Backtracking:** [Word Search II](https://leetcode.com/problems/word-search-ii/) (Trie + Backtracking)
+- [ ] **Prefix Sum:** [Max Sum of Rectangle No Larger Than K](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/)
+
+## DAY 14 - Complex Graphs & Connectivity
+
+- [ ] **Shortest Path:** [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) (Dijkstra/Bellman-Ford)
+- [ ] **Connectivity:** [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/) (Bridges in a Graph)
+- [ ] **Bipartite Graph:** [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)
+- [ ] **Topological Sort:** [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+- [ ] **Union Find:** [Bricks Falling When Hit](https://leetcode.com/problems/bricks-falling-when-hit/)
+- [ ] **Graph DFS:** [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
+- [ ] **Matrix/BFS:** [Shortest Path to Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
+- [ ] **Graph BFS:** [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)
+- [ ] **Tree DFS:** [Height of Binary Tree After Subtree Removal Queries](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/)
+- [ ] **Graph BFS:** [Bus Routes](https://leetcode.com/problems/bus-routes/)
+- [ ] **Tree BFS:** [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+- [ ] **Advanced Graph:** [Cracking the Safe](https://leetcode.com/problems/cracking-the-safe/) (De Bruijn sequence)
+
+## DAY 15 - Concurrency & System Logic
+
+- [ ] **Design:** [LRU Cache](https://leetcode.com/problems/lru-cache/)
+- [ ] **Design:** [LFU Cache](https://leetcode.com/problems/lfu-cache/)
+- [ ] **Design:** [Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system/)
+- [ ] **Concurrency:** [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded/)
+- [ ] **Concurrency:** [Print FooBar Alternately](https://leetcode.com/problems/print-foobar-alternately/)
+- [ ] **Stream Processing:** [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)
+- [ ] **Trie:** [Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
+- [ ] **Bitmask DP:** [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
+- [ ] **Greedy:** [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)
+- [ ] **Math/Geometry:** [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/)
+- [ ] **Stack:** [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+- [ ] **Two Pointers:** [Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/)
+
+## DAY 16 - Probability & High-Complexity Logic
+
+- [ ] **Probability:** [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/)
+- [ ] **Randomization:** [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
+- [ ] **Geometry:** [Erect the Fence](https://leetcode.com/problems/erect-the-fence/) (Convex Hull)
+- [ ] **DP on Trees:** [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)
+- [ ] **Bit Manipulation:** [Integer Replacement](https://leetcode.com/problems/integer-replacement/)
+- [ ] **String:** [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) (KMP Algorithm)
+- [ ] **Hard DP:** [Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/)
+- [ ] **Graph Hard:** [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)
+- [ ] **Greedy:** [Patching Array](https://leetcode.com/problems/patching-array/)
+- [ ] **Recursion:** [Parse Lisp Expression](https://leetcode.com/problems/parse-lisp-expression/)
+- [ ] **Binary Search:** [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+- [ ] **Advanced:** [Number of Visible Points](https://www.google.com/search?q=https://leetcode.com/problems/number-of-visible-points/)
+
+---
