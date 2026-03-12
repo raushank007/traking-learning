@@ -2,7 +2,7 @@
 title: "875. Koko Eating Bananas"
 date: "2026-03-12"
 tags: ["LeetCode", "Coding", "Binary search"]
-summary: "Sliding Window 1"
+summary: "Binary Search 1"
 category: "Coding"
 sessions:
   - date: "2026-03-11"
