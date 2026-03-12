@@ -14,7 +14,7 @@ isRoadmap: true
 **Core OOP**
 - [X] Abstraction
 - [X] Encapsulation
-- [ ] Inheritance
+- [X] Inheritance [Read Log](/2026-03-12-Inheritance)
 - [ ] Polymorphism
 
 **SOLID Principles**
