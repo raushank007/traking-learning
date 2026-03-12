@@ -64,7 +64,7 @@ isRoadmap: true
 | Sliding Window | [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) |  [x]   | 0 | -                                           |
 | Fast-Slow | [Happy Number](https://leetcode.com/problems/happy-number/) |  [x]   | 0 | -                                           |
 | Binary Search | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) |  [x]   | 0 | [Read Log](/2026-03-12-Koko-Eating-Bananas) |
-| Prefix Sum | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) |  [X]   | 0 | -                                           |
+| Prefix Sum | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) |  [X]   | 0 | [Read Log](/2026-03-12-Contiguous-Array)                               |
 | Monotonic Stack | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) |  [ ]   | 0 | -                                           |
 | HashMap | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) |  [ ]   | 0 | -                                           |
 | Graph DFS | [Clone Graph](https://leetcode.com/problems/clone-graph/) |  [ ]   | 0 | -                                           |
