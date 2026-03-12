@@ -7,53 +7,92 @@ pinned: true
 isRoadmap: true
 ---
 
-## Topics
+## 1. Spring Core Mechanics
 
-### Spring Core Mechanics (Intermediate)
-- [X] Inversion of Control (IoC) and Dependency Injection (DI)
-- [X] `ApplicationContext` vs `BeanFactory`
-- [X] Bean Scopes (Singleton, Prototype, Request, Session) and Thread Safety
-- [X] Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`)
-- [X] `BeanPostProcessor` and custom bean modification
-- [ ] Spring AOP (Aspect-Oriented Programming, Proxies, Pointcuts, Advice)
+| Category | Topic | Status | Revisions | Log Link                                                                                                                            |
+| :--- | :--- | :---: | :---: |:------------------------------------------------------------------------------------------------------------------------------------|
+| Core | Inversion of Control (IoC) and Dependency Injection (DI) | [x] | 0 | [Read log](/2026-02-07-IOC-Dependecy)                                                                                               |
+| Core | `ApplicationContext` vs `BeanFactory` | [x] | 0 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                               |
+| Beans | Bean Scopes (Singleton, Prototype, Request) & Thread Safety | [x] | 0 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                               |
+| Beans | Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`) | [x] | 0 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                               |
+| Beans | `BeanPostProcessor` and Custom Bean Modification | [x] | 0 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                                                                    |
+| AOP | Aspect-Oriented Programming (Proxies, Pointcuts, Advice) | [ ] | 0 | -                                                                                                                                   |
+| Events | Application Events (`ApplicationEventPublisher`, `@EventListener`) | [ ] | 0 | -                                                                                                                                   |
 
-### Spring Boot Under the Hood (Advanced)
-- [ ] How `@SpringBootApplication` works internally
-- [ ] Auto-configuration (`@EnableAutoConfiguration`, `META-INF/spring.factories`)
-- [ ] Conditional bean loading (`@ConditionalOnClass`, `@ConditionalOnProperty`)
-- [ ] Creating a Custom Spring Boot Starter
-- [ ] Externalized Configuration and Property Resolution Order
-- [ ] Spring Boot Actuator internals and Custom Metrics
+## 2. Spring Boot Under the Hood
 
-### Web & REST API Design (Intermediate to Advanced)
-- [ ] `DispatcherServlet` Architecture and Request Lifecycle
-- [ ] Global Exception Handling (`@ControllerAdvice`, `@ExceptionHandler`)
-- [ ] Filters vs Interceptors (Execution order and use cases)
-- [ ] Content Negotiation and `HttpMessageConverters`
-- [ ] Asynchronous Request Processing (`DeferredResult`, `Callable`)
-- [ ] Pagination, Sorting, and standardizing API Responses
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Internals | How `@SpringBootApplication` works internally | [ ] | 0 | - |
+| Auto-Config | Auto-configuration (`@EnableAutoConfiguration`, `spring.factories`) | [ ] | 0 | - |
+| Conditions | Conditional Bean Loading (`@ConditionalOnClass`, `@ConditionalOnProperty`) | [ ] | 0 | - |
+| Extensions | Creating a Custom Spring Boot Starter | [ ] | 0 | - |
+| Config | Externalized Configuration and Property Resolution Order | [ ] | 0 | - |
+| Ops | Spring Boot Actuator Internals and Custom Metrics | [ ] | 0 | - |
 
-### Data Access & Hibernate/JPA (Advanced)
-- [ ] `EntityManager` and Hibernate Session Lifecycle
-- [ ] Entity States (Transient, Persistent, Detached, Removed)
-- [ ] The N+1 Select Problem and solutions (`JOIN FETCH`, `@EntityGraph`)
-- [ ] Caching in Hibernate (L1 vs L2 Cache, Query Cache)
-- [ ] Transaction Management (`@Transactional` Proxies, Propagation behaviors)
-- [ ] Isolation Levels and addressing Dirty Reads / Phantom Reads
-- [ ] Optimistic vs Pessimistic Locking (`@Version`, `LockModeType`)
+## 3. Web, REST & Reactive Design
 
-### Security & Microservices Ecosystem (Advanced)
-- [ ] `DelegatingFilterProxy` and the `SecurityFilterChain`
-- [ ] Authentication vs Authorization architectures
-- [ ] Implementing Stateless JWT Security
-- [ ] OAuth2 and OpenID Connect flows
-- [ ] Spring Cloud Gateway and Route Predicates
-- [ ] Circuit Breakers, Retries, and Bulkheads with Resilience4j
-- [ ] Distributed Tracing (Micrometer, OpenTelemetry, MDC context passing)
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Architecture| `DispatcherServlet` Architecture and Request Lifecycle | [ ] | 0 | - |
+| Middleware | Filters vs Interceptors (Execution order and use cases) | [ ] | 0 | - |
+| Exceptions | Global Exception Handling (`@ControllerAdvice`, `@ExceptionHandler`) | [ ] | 0 | - |
+| APIs | Content Negotiation and `HttpMessageConverters` | [ ] | 0 | - |
+| APIs | DTO Validation (`@Valid`, BindingResult) & API Versioning | [ ] | 0 | - |
+| Async | Asynchronous Request Processing (`DeferredResult`, `Callable`) | [ ] | 0 | - |
+| Reactive | Spring WebFlux Basics (Mono, Flux, Netty vs Tomcat) | [ ] | 0 | - |
 
-### Caching, Async & Testing (Intermediate to Advanced)
-- [ ] Spring Caching Abstraction (`@Cacheable`, `@CacheEvict`) with Redis
-- [ ] Asynchronous Processing (`@Async`) and custom `TaskExecutor` configuration
-- [ ] Integration Testing with `@SpringBootTest` and Testcontainers
-- [ ] Web Layer Testing with `@WebMvcTest` and `MockMvc`
-- [ ] Data Layer Testing with `@DataJpaTest`
+## 4. Data Access, JPA & Hibernate
+
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Hibernate | `EntityManager` and Hibernate Session Lifecycle | [ ] | 0 | - |
+| Hibernate | Entity States (Transient, Persistent, Detached, Removed) | [ ] | 0 | - |
+| Performance | The N+1 Select Problem and solutions (`JOIN FETCH`, `@EntityGraph`) | [ ] | 0 | - |
+| Performance | Caching in Hibernate (L1 vs L2 Cache, Query Cache) | [ ] | 0 | - |
+| Performance | Connection Pooling Internals (HikariCP) | [ ] | 0 | - |
+| Transactions| `@Transactional` Proxies & The Self-Invocation Problem | [ ] | 0 | - |
+| Transactions| Transaction Propagation Behaviors and Isolation Levels | [ ] | 0 | - |
+| Concurrency | Optimistic vs Pessimistic Locking (`@Version`, `LockModeType`) | [ ] | 0 | - |
+
+## 5. Spring Security
+
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Architecture| `DelegatingFilterProxy` and the `SecurityFilterChain` | [ ] | 0 | - |
+| Concepts | Authentication vs Authorization Architectures | [ ] | 0 | - |
+| Tokens | Implementing Stateless JWT Security | [ ] | 0 | - |
+| OAuth | OAuth2 and OpenID Connect Flows | [ ] | 0 | - |
+| Defense | CORS and CSRF Protection Mechanics | [ ] | 0 | - |
+| Granular | Method Level Security (`@PreAuthorize`, `@Secured`) | [ ] | 0 | - |
+
+## 6. Microservices, Async & Messaging
+
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Async | Asynchronous Processing (`@Async`) & custom `TaskExecutor` | [ ] | 0 | - |
+| Caching | Spring Caching Abstraction (`@Cacheable`, `@CacheEvict`) with Redis | [ ] | 0 | - |
+| Gateway | Spring Cloud Gateway and Route Predicates | [ ] | 0 | - |
+| Resilience | Circuit Breakers, Retries, and Bulkheads (Resilience4j) | [ ] | 0 | - |
+| Observability| Distributed Tracing (Micrometer, OpenTelemetry, MDC context passing) | [ ] | 0 | - |
+| Messaging | Integrating Kafka/RabbitMQ with Spring Boot | [ ] | 0 | - |
+
+## 7. Testing Ecosystem
+
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Integration | Integration Testing with `@SpringBootTest` and Testcontainers | [ ] | 0 | - |
+| Slices | Web Layer Testing (`@WebMvcTest`, `MockMvc`) | [ ] | 0 | - |
+| Slices | Data Layer Testing (`@DataJpaTest`) | [ ] | 0 | - |
+| Mocking | `@MockBean` vs standard Mockito `@Mock` | [ ] | 0 | - |
+
+---
+
+## 💡 What Interviewers Evaluate in Spring Boot
+
+For SDE 2/3 roles, interviewers are looking beyond basic annotations. They want to know:
+1. **Proxy Mechanics:** Do you understand how Spring wraps your classes in CGLIB/JDK proxies for `@Transactional`, `@Async`, and `@Cacheable`? Do you know why calling an `@Async` method from within the *same* class fails?
+2. **Context & Scopes:** How do you handle a Prototype bean injected into a Singleton bean?
+3. **Hibernate Gotchas:** Can you spot an N+1 query issue? Do you know the difference between `save()` and `saveAndFlush()`?
+4. **Thread Safety:** Are your Controllers and Services truly stateless and thread-safe?
+5. **Boot Internals:** If a library isn't auto-configuring, do you know how to debug `spring.factories` or the condition evaluation report?
