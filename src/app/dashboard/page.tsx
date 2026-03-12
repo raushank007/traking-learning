@@ -48,8 +48,20 @@ export default function DashboardPage() {
   posts.forEach(post => {
     // 🌟 NEW: If it's a roadmap file, scan its checkboxes and SKIP standard stats!
     if (post.meta.isRoadmap) {
-      const pendingCount = [...post.content.matchAll(/-\s+\[ \]\s+/g)].length;
-      const completedCount = [...post.content.matchAll(/-\s+\[[xX]\]\s+/g)].length;
+      // 1. Grab items from standard lists (like your HLD / LLD files)
+      // FIX: Changed `file.content` to `post.content`
+      const pendingListMatches = [...post.content.matchAll(/-\s+\[ \]\s+(.*)/g)].map(m => m[1]);
+      const completedListMatches = [...post.content.matchAll(/-\s+\[[xX]\]\s+(.*)/g)].map(m => m[1]);
+
+      // 2. Grab items from Markdown Tables (like your new Patterns file)
+      // This regex looks for: | Column 1 | Column 2 | [ ] | ...
+      const pendingTableMatches = [...post.content.matchAll(/\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|\s*\[ \]\s*\|/g)].map(m => m[2]);
+      const completedTableMatches = [...post.content.matchAll(/\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|\s*\[[xX]\]\s*\|/g)].map(m => m[2]);
+
+      // 3. Combine them together for the tracker
+      const pendingMatches = [...pendingListMatches, ...pendingTableMatches];
+      const pendingCount = pendingMatches.length;
+      const completedCount = completedListMatches.length + completedTableMatches.length;
       totalRoadmapTopics += (pendingCount + completedCount);
       completedRoadmapTopics += completedCount;
       return; // Stop here so master files don't bloat your log counts
