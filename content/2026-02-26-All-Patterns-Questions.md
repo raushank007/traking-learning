@@ -59,19 +59,19 @@ isRoadmap: true
 ## DAY 3 - Full 12 Pattern Coverage
 
 | Pattern | Question | Status | Revisions | Log Link                                    |
-| :--- | :--- | :---: | :---: |:--------------------------------------------|
-| Two Pointers | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [x] | 0 | -                                           |
-| Sliding Window | [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) | [x] | 0 | -                                           |
-| Fast-Slow | [Happy Number](https://leetcode.com/problems/happy-number/) | [x] | 0 | -                                           |
-| Binary Search | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | [x] | 0 | [Read Log](/2026-03-12-Koko-Eating-Bananas) |
-| Prefix Sum | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [ ] | 0 | -                                           |
-| Monotonic Stack | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | [ ] | 0 | -                                           |
-| HashMap | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | [ ] | 0 | -                                           |
-| Graph DFS | [Clone Graph](https://leetcode.com/problems/clone-graph/) | [ ] | 0 | -                                           |
-| Tree BFS | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | [ ] | 0 | -                                           |
-| Tree DFS | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [ ] | 0 | -                                           |
-| Dynamic Programming | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [ ] | 0 | -                                           |
-| Backtracking | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [ ] | 0 | -                                           |
+| :--- | :--- |:------:| :---: |:--------------------------------------------|
+| Two Pointers | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |  [x]   | 0 | -                                           |
+| Sliding Window | [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) |  [x]   | 0 | -                                           |
+| Fast-Slow | [Happy Number](https://leetcode.com/problems/happy-number/) |  [x]   | 0 | -                                           |
+| Binary Search | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) |  [x]   | 0 | [Read Log](/2026-03-12-Koko-Eating-Bananas) |
+| Prefix Sum | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) |  [X]   | 0 | -                                           |
+| Monotonic Stack | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) |  [ ]   | 0 | -                                           |
+| HashMap | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) |  [ ]   | 0 | -                                           |
+| Graph DFS | [Clone Graph](https://leetcode.com/problems/clone-graph/) |  [ ]   | 0 | -                                           |
+| Tree BFS | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) |  [ ]   | 0 | -                                           |
+| Tree DFS | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) |  [ ]   | 0 | -                                           |
+| Dynamic Programming | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) |  [ ]   | 0 | -                                           |
+| Backtracking | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) |  [ ]   | 0 | -                                           |
 
 ## DAY 4 - Full 12 Pattern Coverage
 
