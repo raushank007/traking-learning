@@ -278,10 +278,10 @@ public class Main {
         // Upcasting: Reference is Vehicle, Object is Car
         Vehicle myRide = new Car(); 
 
-        // 1. Instance Method -> Resolved at RUNTIME (looks at Object: Car)
+        // 1. Instance Method -> Resolved at RUNTIME -> call the method of vehicle
         myRide.startEngine(); 
 
-        // 2. Static Method -> Resolved at COMPILE TIME (looks at Reference: Vehicle)
+        // 2. Static Method -> Resolved at COMPILE TIME -> call the method of Car
         myRide.soundHorn(); 
 
         // 3. Variable Access -> Resolved at COMPILE TIME (looks at Reference: Vehicle)
@@ -310,6 +310,49 @@ In Low-Level Design (LLD) interviews, the focus shifts from syntax to architectu
 In LLD, you will often draw class diagrams before writing code.
 
 * **Inheritance (IS-A):** Represented by a solid line with a hollow, closed arrowhead pointing from the child class to the parent class.
+```text
+classDiagram
+    %% The <|-- syntax creates the solid line with a hollow arrow
+    Vehicle <|-- Car
+    Vehicle <|-- Bike
+
+    class Vehicle {
+        +String brand
+        +startEngine() void
+    }
+
+    class Car {
+        -int numberOfDoors
+        +startEngine() void
+    }
+
+    class Bike {
+        -boolean hasCarrier
+        +startEngine() void
+    }
+```
+**Preview**
+```mermaid
+classDiagram
+    %% The <|-- syntax creates the solid line with a hollow arrow
+    Vehicle <|-- Car
+    Vehicle <|-- Bike
+
+    class Vehicle {
+        +String brand
+        +startEngine() void
+    }
+
+    class Car {
+        -int numberOfDoors
+        +startEngine() void
+    }
+
+    class Bike {
+        -boolean hasCarrier
+        +startEngine() void
+    }
+```
 * **Tight Coupling:** Inheritance creates the strongest form of coupling in software design. The child is permanently bound to the parent's implementation details. If the parent changes, the child is directly impacted (often called the fragile base class problem).
 
 #### **2. The Liskov Substitution Principle (LSP)**

@@ -7,118 +7,113 @@ pinned: true
 isRoadmap: true
 ---
 
-## Topics
+## 1. Object Oriented Design Principles
 
-### Object Oriented Design Principles
+| Category | Topic | Status | Revisions | Log Link                              |
+| :--- | :--- |:------:| :---: |:--------------------------------------|
+| Core OOP | Abstraction |  [x]   | 0 | [Read Log](/2026-03-01-Abstraction)   |
+| Core OOP | Encapsulation |  [x]   | 0 | [Read Log](/2026-03-11-Encapsulation) |
+| Core OOP | Inheritance |  [x]   | 0 | [Read Log](/2026-03-12-Inheritance)   |
+| Core OOP | Polymorphism |  [X]   | 0 | [Read Log](/2026-03-12-Polymorphism)                         |
+| SOLID | Single Responsibility |  [ ]   | 0 | -                                     |
+| SOLID | Open/Closed |  [ ]   | 0 | -                                     |
+| SOLID | Liskov Substitution |  [ ]   | 0 | -                                     |
+| SOLID | Interface Segregation |  [ ]   | 0 | -                                     |
+| SOLID | Dependency Inversion |  [ ]   | 0 | -                                     |
+| Additional | DRY (Don't Repeat Yourself) |  [ ]   | 0 | -                                     |
+| Additional | KISS (Keep it Simple, Stupid) |  [ ]   | 0 | -                                     |
+| Additional | YAGNI (You Aren't Gonna Need It) |  [ ]   | 0 | -                                     |
+| Additional | Composition > Inheritance |  [ ]   | 0 | -                                     |
+| Additional | Immutability |  [ ]   | 0 | -                                     |
 
-**Core OOP**
-- [X] Abstraction
-- [X] Encapsulation
-- [X] Inheritance [Read Log](/2026-03-12-Inheritance)
-- [ ] Polymorphism
+## 2. UML Diagrams (Draw & Describe)
 
-**SOLID Principles**
-- [ ] Single Responsibility
-- [ ] Open/closed
-- [ ] Liskov Substitution
-- [ ] Interface Segregation
-- [ ] Dependency Inversion
+| Category | Diagram Type | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| UML | Class Diagrams | [ ] | 0 | - |
+| UML | Sequence Diagrams | [ ] | 0 | - |
+| UML | Activity/State Diagrams | [ ] | 0 | - |
 
-**Additional Design Principles**
-- [ ] DRY(Don't Repeat Yourself)
-- [ ] KISS(Keep it Simple, Stupid)
-- [ ] YAGIN
-- [ ] Composition > Inheritance
-- [ ] Immutability
+## 3. Design Patterns
 
-### UML Diagrams
-aware of draw/describe:
-- [ ] Class diagrams
-- [ ] sequence diagrams
-- [ ] Activity/State diagrams
+> **Focus:** Always understand *when* and *why* to use them, not just how to code them.
 
-### Design Pattern
-**Creational Patterns**
-- [ ] Singleton
-- [ ] Factory, Factory Method
-- [ ] Abstract Factory
-- [ ] Builder
-- [ ] Prototype
+| Category | Pattern | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Creational | Singleton | [ ] | 0 | - |
+| Creational | Factory & Factory Method | [ ] | 0 | - |
+| Creational | Abstract Factory | [ ] | 0 | - |
+| Creational | Builder | [ ] | 0 | - |
+| Creational | Prototype | [ ] | 0 | - |
+| Structural | Adapter | [ ] | 0 | - |
+| Structural | Decorator | [ ] | 0 | - |
+| Structural | Facade | [ ] | 0 | - |
+| Structural | Composite | [ ] | 0 | - |
+| Structural | Proxy | [ ] | 0 | - |
+| Behavioral | Strategy | [ ] | 0 | - |
+| Behavioral | Observer | [ ] | 0 | - |
+| Behavioral | Command | [ ] | 0 | - |
+| Behavioral | Template Method | [ ] | 0 | - |
+| Behavioral | Iterator | [ ] | 0 | - |
+| Behavioral | Chain of Responsibility | [ ] | 0 | - |
+| Behavioral | State | [ ] | 0 | - |
 
-**Structural Patterns**
-- [ ] Adapter
-- [ ] Decorator
-- [ ] Facade
-- [ ] Composite
-- [ ] Proxy
+## 4. Concurrency & Multithreading Design
 
-**Behavioral Patterns**
-- [ ] Strategy
-- [ ] Observer
-- [ ] Command
-- [ ] Template Method
-- [ ] Iterator
-- [ ] Chain of Responsibility
-- [ ] State
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Concurrency | Thread Safety | [ ] | 0 | - |
+| Concurrency | Locks, Mutex, Semaphores | [ ] | 0 | - |
+| Concurrency | Producer-Consumer Problem | [ ] | 0 | - |
+| Concurrency | Rate Limiter Design | [ ] | 0 | - |
+| Concurrency | Read-Write Locks | [ ] | 0 | - |
+| Concurrency | Deadlocks & Avoidance | [ ] | 0 | - |
+| Concurrency | Thread Pools | [ ] | 0 | - |
+| Concurrency | Executors Framework | [ ] | 0 | - |
 
->focus on when/why to use them
+## 5. Low-Level Design of Real Systems
 
-### Concurrency & Multithreading Design
-- [ ] Thread safety
-- [ ] Locks,mutex,semaphores
-- [ ] Producer-consumer
-- [ ] Rete Limiter design
-- [ ] Read-wirte Locks
-- [ ] Deadlocks & avoidance
-- [ ] Threads pools
-- [ ] Executors framework
+| Category | System / Concept | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Object Modeling | Parking Lot | [ ] | 0 | - |
+| Object Modeling | Elevator System | [ ] | 0 | - |
+| Object Modeling | Library Management | [ ] | 0 | - |
+| Object Modeling | Movie-Ticket Booking | [ ] | 0 | - |
+| Object Modeling | Airlines Reservation | [ ] | 0 | - |
+| Object Modeling | Hotel Reservation | [ ] | 0 | - |
+| Object Modeling | Meeting Scheduler | [ ] | 0 | - |
+| Object Modeling | Splitwise | [ ] | 0 | - |
+| Object Modeling | Ride-Sharing (Uber/Ola) | [ ] | 0 | - |
+| Object Modeling | Food Delivery (Zomato/Swiggy) | [ ] | 0 | - |
+| Object Modeling | Notification Service | [ ] | 0 | - |
+| Object Modeling | Logging Service | [ ] | 0 | - |
+| Object Modeling | Rate Limiter | [ ] | 0 | - |
+| Object Modeling | Cache & LRU Cache | [ ] | 0 | - |
+| Game Design | Chess | [ ] | 0 | - |
+| Game Design | Tic-Tac-Toe | [ ] | 0 | - |
+| Game Design | Snake & Ladder | [ ] | 0 | - |
+| Game Design | Poker | [ ] | 0 | - |
+| Game Design | Cricbuzz Scoreboard | [ ] | 0 | - |
+| API + Class | Class Responsibility Breakdown | [ ] | 0 | - |
+| API + Class | Model Relationships | [ ] | 0 | - |
+| API + Class | DTOs vs Domain Models | [ ] | 0 | - |
+| API + Class | Interface-Based Design | [ ] | 0 | - |
+| API + Class | Error Handling Strategy | [ ] | 0 | - |
+| API + Class | Modularization | [ ] | 0 | - |
+| Database | Entities and Relation Modeling | [ ] | 0 | - |
+| Database | Transactions (ACID Basics) | [ ] | 0 | - |
+| Database | Optimistic vs Pessimistic Locking | [ ] | 0 | - |
+| Database | Pagination & Filtering | [ ] | 0 | - |
 
-### Low-level Design of Real System
+## 6. Coding-Style & Best Practices
 
-**Object Modeling**
-- [ ] Parking lot
-- [ ] Elevator system
-- [ ] Library management
-- [ ] Movie-ticket booking
-- [ ] Airlines reservation
-- [ ] Hotel reservation
-- [ ] Meeting scheduler
-- [ ] Splitwise
-- [ ] Ride-sharing
-- [ ] Food delivery
-- [ ] Notification service
-- [ ] Logging service
-- [ ] Rate Limiter
-- [ ] Cache & LRU cache
-
-**Game Designs**
-- [ ] Chess
-- [ ] Tic-Tac-Toe
-- [ ] Snake & ladder
-- [ ] Poker
-- [ ] Cricbuzz scoreboard
-
-**API + Class Design**
-- [ ] Class responsibility breakdown
-- [ ] Model relationships
-- [ ] DTOs vs domain models
-- [ ] Interface-based design
-- [ ] Error Handling strategy
-- [ ] Modularization
-
-**Database(Basic LLD perspective)**
-- [ ] Entities and relation modeling
-- [ ] Transactions (ACID basics)
-- [ ] Optimistic vs pessimistic locking
-- [ ] Pagination & filtering
-
-### Coding-style LLD Topics
-```text
-1. Writing clean classes
-2. Using interfaces & abstractions
-3. Dependency Injection
-4. Logging strategies
-5. Configurations
-6. Enum usage
-7. Constants
-8. Handling edge cases
+| Category | Topic | Status | Revisions | Log Link |
+| :--- | :--- | :---: | :---: | :--- |
+| Best Practices | Writing Clean Classes | [ ] | 0 | - |
+| Best Practices | Using Interfaces & Abstractions | [ ] | 0 | - |
+| Best Practices | Dependency Injection | [ ] | 0 | - |
+| Best Practices | Logging Strategies | [ ] | 0 | - |
+| Best Practices | Configurations | [ ] | 0 | - |
+| Best Practices | Enum Usage | [ ] | 0 | - |
+| Best Practices | Constants Management | [ ] | 0 | - |
+| Best Practices | Handling Edge Cases | [ ] | 0 | - |
