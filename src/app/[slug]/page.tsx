@@ -7,6 +7,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
 import rehypeRaw from 'rehype-raw';
 import rehypeKatex from 'rehype-katex';
+import InteractiveFrame from '@/components/InteractiveFrame';
 
 // Stylesheets
 import 'highlight.js/styles/github-dark.css';
@@ -18,18 +19,30 @@ import { Metadata } from 'next';
 // Components
 import Mermaid from '@/components/Mermaid';
 
-// --- HELPER FUNCTION ---
+// --- HELPER FUNCTIONS ---
+
+/**
+ * Calculates time difference in minutes for session metadata
+ */
 function calculateMinutes(start?: string, end?: string): number {
   if (!start || !end) return 0;
-
   const [startHr, startMin] = start.split(':').map(Number);
   const [endHr, endMin] = end.split(':').map(Number);
-
   let diff = (endHr * 60 + endMin) - (startHr * 60 + startMin);
-
   if (diff < 0) diff += 24 * 60;
-
   return diff || 0;
+}
+
+/**
+ * Recursively extracts raw text from highlighted React nodes (rehype-highlight spans)
+ */
+function extractText(node: any): string {
+  if (typeof node === 'string') return node;
+  if (Array.isArray(node)) return node.map(extractText).join('');
+  if (node && typeof node === 'object' && node.props && node.props.children) {
+    return extractText(node.props.children);
+  }
+  return '';
 }
 
 export const dynamicParams = false;
@@ -78,9 +91,7 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
       : `${totalMinutes} mins`;
 
     return (
-      // Changed max-w-7xl back to max-w-4xl for a centered, focused reading experience
       <div className="w-full max-w-4xl mx-auto py-8">
-
         <article className="prose prose-slate prose-headings:font-pirate prose-headings:font-normal prose-headings:tracking-wide prose-a:text-red-600 hover:prose-a:text-red-700 prose-strong:text-slate-800 prose-code:before:content-none prose-code:after:content-none max-w-none w-full">
 
           <header className="mb-10 pb-8 border-b border-amber-200/80">
@@ -141,19 +152,27 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
             remarkPlugins={[remarkGfm, remarkMath, remarkBreaks]}
             rehypePlugins={[rehypeRaw, rehypeHighlight, rehypeSlug, rehypeKatex]}
             components={{
-              code({ className, children, ...props }: any) {
+              // 🌟 CUSTOM CODE RENDERER
+              code({ node, inline, className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '');
+                const rawContent = extractText(children);
 
-                if (match && match[1] === 'mermaid') {
-                  return <Mermaid chart={String(children).replace(/\n$/, '')} />;
+                // 1. Mermaid Rendering
+                if (!inline && match && match[1] === 'mermaid') {
+                  return <Mermaid chart={rawContent.replace(/\n$/, '')} />;
                 }
 
-                // If it has a language or was highlighted, it's a block of code
-                if (className?.includes('hljs') || match) {
+                // 2. Interactive HTML Preview
+                if (!inline && match && match[1] === 'html') {
+                    return <InteractiveFrame htmlContent={rawContent} />;
+                }
+
+                // 3. Syntax Highlighted Code Blocks
+                if (!inline && (className?.includes('hljs') || match)) {
                   return <code className={className} {...props}>{children}</code>;
                 }
 
-                // IntelliJ/GitHub styled inline code interceptor
+                // 4. Default Inline Code Styling
                 return (
                   <code
                     className="bg-slate-200/80 text-slate-800 px-1.5 py-0.5 rounded-md font-mono text-[0.85em] font-semibold border border-slate-300/60 shadow-sm"
@@ -168,7 +187,6 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
             {content}
           </ReactMarkdown>
         </article>
-
       </div>
     );
   } catch (error) {
