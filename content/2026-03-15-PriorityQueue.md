@@ -10,7 +10,6 @@ sessions:
     endTime: "12:30"
 ---
 
-Certainly! Here is a structured summary of **PriorityQueue** and **Ordering** in Java, formatted for your `.md` log file.
 
 ---
 
