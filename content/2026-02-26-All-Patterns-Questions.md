@@ -24,27 +24,27 @@ isRoadmap: true
 
 ## DAY 1 - Full 12 Pattern Coverage
 
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- |:------:| :---: | :--- |
-| Two Pointers | [3Sum](https://leetcode.com/problems/3sum/) |  [x]   | 0 | - |
-| Sliding Window | [Longest Substring without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |  [x]   | 0 | - |
-| Fast-Slow | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) |  [x]   | 0 | - |
-| Binary Search | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) |  [x]   | 0 | - |
-| Prefix Sum | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) |  [x]   | 0 | - |
-| Monotonic Stack | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) |  [x]   | 0 | - |
-| HashMap | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) |  [x]   | 0 | - |
-| Graph BFS | [Number of Islands](https://leetcode.com/problems/number-of-islands/) |  [x]   | 0 | - |
-| Tree BFS | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) |  [x]   | 0 | - |
-| Tree DFS | [Path Sum II](https://leetcode.com/problems/path-sum-ii) |  [x]   | 0 | - |
-| Dynamic Programming | [House Robber](https://leetcode.com/problems/house-robber/) |  [x]   | 0 | - |
-| Backtracking | [Subsets](https://leetcode.com/problems/subsets/) |  [x]   | 0 | - |
+| Pattern                                                         | Question | Status | Revisions | Log Link |
+|:----------------------------------------------------------------| :--- |:------:| :---: | :--- |
+| Two Pointers                                                    | [3Sum](https://leetcode.com/problems/3sum/) |  [x]   | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template) | [Longest Substring without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |  [x]   | 0 | - |
+| Fast-Slow                                                       | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) |  [x]   | 0 | - |
+| Binary Search                                                   | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) |  [x]   | 0 | - |
+| Prefix Sum                                                      | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) |  [x]   | 0 | - |
+| Monotonic Stack                                                 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) |  [x]   | 0 | - |
+| HashMap                                                         | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) |  [x]   | 0 | - |
+| Graph BFS                                                       | [Number of Islands](https://leetcode.com/problems/number-of-islands/) |  [x]   | 0 | - |
+| Tree BFS                                                        | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) |  [x]   | 0 | - |
+| Tree DFS                                                        | [Path Sum II](https://leetcode.com/problems/path-sum-ii) |  [x]   | 0 | - |
+| Dynamic Programming                                             | [House Robber](https://leetcode.com/problems/house-robber/) |  [x]   | 0 | - |
+| Backtracking                                                    | [Subsets](https://leetcode.com/problems/subsets/) |  [x]   | 0 | - |
 
 ## DAY 2 - Full 12 Pattern Coverage
 
 | Pattern | Question | Status | Revisions | Log Link |
 | :--- | :--- | :---: | :---: | :--- |
 | Two Pointers | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [x] | 0 | - |
-| Sliding Window | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [x] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [x] | 0 | - |
 | Fast-Slow | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [x] | 0 | - |
 | Binary Search | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [x] | 0 | - |
 | Prefix Sum | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | [x] | 0 | - |
@@ -61,7 +61,7 @@ isRoadmap: true
 | Pattern | Question | Status | Revisions | Log Link                                    |
 | :--- | :--- |:------:| :---: |:--------------------------------------------|
 | Two Pointers | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |  [x]   | 0 | -                                           |
-| Sliding Window | [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) |  [x]   | 0 | -                                           |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) |  [x]   | 0 | -                                           |
 | Fast-Slow | [Happy Number](https://leetcode.com/problems/happy-number/) |  [x]   | 0 | -                                           |
 | Binary Search | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) |  [x]   | 0 | [Read Log](/2026-03-12-Koko-Eating-Bananas) |
 | Prefix Sum | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) |  [X]   | 0 | [Read Log](/2026-03-12-Contiguous-Array)                               |
@@ -78,7 +78,7 @@ isRoadmap: true
 | Pattern | Question | Status | Revisions | Log Link |
 | :--- | :--- | :---: | :---: | :--- |
 | Two Pointers | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [ ] | 0 | - |
-| Sliding Window | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [ ] | 0 | - |
 | Fast-Slow | [Reorder List](https://leetcode.com/problems/reorder-list/) | [ ] | 0 | - |
 | Binary Search | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [ ] | 0 | - |
 | Prefix Sum | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | [ ] | 0 | - |
@@ -95,7 +95,7 @@ isRoadmap: true
 | Pattern | Question | Status | Revisions | Log Link |
 | :--- | :--- | :---: | :---: | :--- |
 | Two Pointers | [Sort Colors (Dutch National Flag)](https://leetcode.com/problems/sort-colors/) | [ ] | 0 | - |
-| Sliding Window | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) | [ ] | 0 | - |
 | Fast-Slow | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/) | [ ] | 0 | - |
 | Binary Search | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [ ] | 0 | - |
 | Prefix Sum | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | [ ] | 0 | - |
@@ -109,27 +109,27 @@ isRoadmap: true
 
 ## DAY 6
 
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Two Pointers | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [ ] | 0 | - |
-| Sliding Window | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | [ ] | 0 | - |
-| Fast-Slow | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | [ ] | 0 | - |
-| Binary Search | [Find First and Last Position of Element](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [ ] | 0 | - |
-| Prefix Sum | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | [ ] | 0 | - |
-| Monotonic Stack | [Remove All Adjacent Duplicates](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | [ ] | 0 | - |
-| HashMap | [Two Sum](https://leetcode.com/problems/two-sum/) | [ ] | 0 | - |
-| Graph DFS | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [ ] | 0 | - |
-| Tree BFS | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [ ] | 0 | - |
-| Tree DFS | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [ ] | 0 | - |
+| Pattern             | Question | Status | Revisions | Log Link |
+|:--------------------| :--- | :---: | :---: | :--- |
+| Two Pointers        | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)     | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | [ ] | 0 | - |
+| Fast-Slow           | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | [ ] | 0 | - |
+| Binary Search       | [Find First and Last Position of Element](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [ ] | 0 | - |
+| Prefix Sum          | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | [ ] | 0 | - |
+| Monotonic Stack     | [Remove All Adjacent Duplicates](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | [ ] | 0 | - |
+| HashMap             | [Two Sum](https://leetcode.com/problems/two-sum/) | [ ] | 0 | - |
+| Graph DFS           | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [ ] | 0 | - |
+| Tree BFS            | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [ ] | 0 | - |
+| Tree DFS            | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [ ] | 0 | - |
 | Dynamic Programming | [Triangle Minimum Path Sum](https://leetcode.com/problems/triangle/) | [ ] | 0 | - |
-| Backtracking | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [ ] | 0 | - |
+| Backtracking        | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [ ] | 0 | - |
 
 ## DAY 7
 
 | Pattern | Question | Status | Revisions | Log Link |
 | :--- | :--- | :---: | :---: | :--- |
 | Two Pointers | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [ ] | 0 | - |
-| Sliding Window | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | [ ] | 0 | - |
 | Fast-Slow | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [ ] | 0 | - |
 | Binary Search | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | [ ] | 0 | - |
 | Prefix Sum | [Maximum Size Subarray Sum Equals K](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | [ ] | 0 | - |
@@ -146,7 +146,7 @@ isRoadmap: true
 | Pattern | Question | Status | Revisions | Log Link |
 | :--- | :--- | :---: | :---: | :--- |
 | Two Pointers | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | [ ] | 0 | - |
-| Sliding Window | [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | [ ] | 0 | - |
 | Fast-Slow | [Sort List](https://leetcode.com/problems/sort-list/) | [ ] | 0 | - |
 | Binary Search | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) | [ ] | 0 | - |
 | Prefix Sum | [Sum of Subarray Ranges](https://leetcode.com/problems/sum-of-subarray-ranges/) | [ ] | 0 | - |
@@ -166,7 +166,7 @@ isRoadmap: true
 | Heaps (Top K) | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [ ] | 0 | - |
 | Heaps (Two Heaps) | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [ ] | 0 | - |
 | Two Pointers | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [ ] | 0 | - |
-| Sliding Window | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [ ] | 0 | - |
 | Monotonic Queue | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | [ ] | 0 | - |
 | Binary Search | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | [ ] | 0 | - |
 | Prefix Sum | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [ ] | 0 | - |
@@ -207,7 +207,7 @@ isRoadmap: true
 | Dynamic Programming | [Edit Distance](https://leetcode.com/problems/edit-distance/) | [ ] | 0 | - |
 | Backtracking | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | [ ] | 0 | - |
 | Binary Search | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | [ ] | 0 | - |
-| Sliding Window | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | [ ] | 0 | - |
 
 ## DAY 12 - The Final Bosses (Deep Dives)
 
@@ -236,7 +236,7 @@ isRoadmap: true
 | Two Pointers/Hard | [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) | [ ] | 0 | - |
 | String/DP | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | [ ] | 0 | - |
 | Greedy/Heap | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [ ] | 0 | - |
-| Sliding Window | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | [ ] | 0 | - |
+| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | [ ] | 0 | - |
 | Binary Search | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [ ] | 0 | - |
 | Monotonic Stack | [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/) | [ ] | 0 | - |
 | Tree | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [ ] | 0 | - |
