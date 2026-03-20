@@ -7,291 +7,345 @@ pinned: true
 isRoadmap: true
 ---
 
-# General Approach for Each Question
-
-1. Read the problem, rephrase it.
-2. Identify the data structure (Array, String, Tree, Graph).
-3. Detect the pattern.
-4. Think brute force first.
-5. Optimize using the relevant pattern.
-6. Walk through small examples manually.
-7. List edge cases.
-8. Write clean code.
-9. Dry run the code with multiple examples.
-10. Explain time and space complexity.
+# General Approach
+1. Read/Rephrase.
+2. Identify DS & Pattern.
+3. Brute Force -> Optimize (Java Collections/Streams).
+4. Edge Cases & Dry Run.
 
 ---
 
-## DAY 1 - Full 12 Pattern Coverage
-
-| Pattern                                                         | Question | Status | Revisions | Log Link |
-|:----------------------------------------------------------------| :--- |:------:| :---: | :--- |
-| Two Pointers                                                    | [3Sum](https://leetcode.com/problems/3sum/) |  [x]   | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template) | [Longest Substring without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |  [x]   | 0 | - |
-| Fast-Slow                                                       | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) |  [x]   | 0 | - |
-| Binary Search                                                   | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) |  [x]   | 0 | - |
-| Prefix Sum    [Template](/2026-03-15-PrefixSum-template)                                     | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) |  [x]   | 0 | - |
-| Monotonic Stack                                                 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) |  [x]   | 0 | - |
-| HashMap                                                         | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) |  [x]   | 0 | - |
-| Graph BFS                                                       | [Number of Islands](https://leetcode.com/problems/number-of-islands/) |  [x]   | 0 | - |
-| Tree BFS                                                        | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) |  [x]   | 0 | - |
-| Tree DFS                                                        | [Path Sum II](https://leetcode.com/problems/path-sum-ii) |  [x]   | 0 | - |
-| Dynamic Programming                                             | [House Robber](https://leetcode.com/problems/house-robber/) |  [x]   | 0 | - |
-| Backtracking                                                    | [Subsets](https://leetcode.com/problems/subsets/) |  [x]   | 0 | - |
-
-## DAY 2 - Full 12 Pattern Coverage
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Two Pointers | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [x] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [x] | 0 | - |
-| Fast-Slow | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [x] | 0 | - |
-| Binary Search | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [x] | 0 | - |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | [x] | 0 | - |
-| Monotonic Stack | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | [x] | 0 | - |
-| HashMap | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [x] | 0 | - |
-| Graph BFS | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [x] | 0 | - |
-| Tree BFS | [Binary Tree ZigZag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | [x] | 0 | - |
-| Tree DFS | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree) | [x] | 0 | - |
-| Dynamic Programming | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [x] | 0 | - |
-| Backtracking | [Combination Sum](https://leetcode.com/problems/combination-sum/) | [x] | 0 | - |
-
-## DAY 3 - Full 12 Pattern Coverage
-
-| Pattern | Question | Status | Revisions | Log Link                                    |
-| :--- | :--- |:------:| :---: |:--------------------------------------------|
-| Two Pointers | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |  [x]   | 0 | -                                           |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) |  [x]   | 0 | -                                           |
-| Fast-Slow | [Happy Number](https://leetcode.com/problems/happy-number/) |  [x]   | 0 | -                                           |
-| Binary Search | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) |  [x]   | 0 | [Read Log](/2026-03-12-Koko-Eating-Bananas) |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Contiguous Array](https://leetcode.com/problems/contiguous-array/) |  [X]   | 0 | [Read Log](/2026-03-12-Contiguous-Array)                               |
-| Monotonic Stack | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) |  [ ]   | 0 | -                                           |
-| HashMap | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) |  [ ]   | 0 | -                                           |
-| Graph DFS | [Clone Graph](https://leetcode.com/problems/clone-graph/) |  [ ]   | 0 | -                                           |
-| Tree BFS | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) |  [ ]   | 0 | -                                           |
-| Tree DFS | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) |  [ ]   | 0 | -                                           |
-| Dynamic Programming | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) |  [ ]   | 0 | -                                           |
-| Backtracking | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) |  [ ]   | 0 | -                                           |
-
-## DAY 4 - Full 12 Pattern Coverage
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Two Pointers | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [ ] | 0 | - |
-| Fast-Slow | [Reorder List](https://leetcode.com/problems/reorder-list/) | [ ] | 0 | - |
-| Binary Search | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [ ] | 0 | - |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | [ ] | 0 | - |
-| Monotonic Stack | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | [ ] | 0 | - |
-| HashMap | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | [ ] | 0 | - |
-| Graph BFS | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | [ ] | 0 | - |
-| Tree BFS | [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | [ ] | 0 | - |
-| Tree DFS | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [ ] | 0 | - |
-| Dynamic Programming | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | [ ] | 0 | - |
-| Backtracking | [Permutations](https://leetcode.com/problems/permutations/) | [ ] | 0 | - |
-
-## DAY 5
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Two Pointers | [Sort Colors (Dutch National Flag)](https://leetcode.com/problems/sort-colors/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) | [ ] | 0 | - |
-| Fast-Slow | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/) | [ ] | 0 | - |
-| Binary Search | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [ ] | 0 | - |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | [ ] | 0 | - |
-| Monotonic Stack | [Online Stock Span](https://leetcode.com/problems/online-stock-span/) | [ ] | 0 | - |
-| HashMap | [Ransom Note](https://leetcode.com/problems/ransom-note/) | [ ] | 0 | - |
-| Graph DFS | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [ ] | 0 | - |
-| Tree BFS | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/) | [ ] | 0 | - |
-| Tree DFS | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [ ] | 0 | - |
-| Dynamic Programming | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | [ ] | 0 | - |
-| Backtracking | [Word Search](https://leetcode.com/problems/word-search/) | [ ] | 0 | - |
-
-## DAY 6
-
-| Pattern             | Question | Status | Revisions | Log Link |
-|:--------------------| :--- | :---: | :---: | :--- |
-| Two Pointers        | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)     | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | [ ] | 0 | - |
-| Fast-Slow           | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | [ ] | 0 | - |
-| Binary Search       | [Find First and Last Position of Element](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [ ] | 0 | - |
-| Prefix Sum     [Template](/2026-03-15-PrefixSum-template)     | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | [ ] | 0 | - |
-| Monotonic Stack     | [Remove All Adjacent Duplicates](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | [ ] | 0 | - |
-| HashMap             | [Two Sum](https://leetcode.com/problems/two-sum/) | [ ] | 0 | - |
-| Graph DFS           | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [ ] | 0 | - |
-| Tree BFS            | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [ ] | 0 | - |
-| Tree DFS            | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [ ] | 0 | - |
-| Dynamic Programming | [Triangle Minimum Path Sum](https://leetcode.com/problems/triangle/) | [ ] | 0 | - |
-| Backtracking        | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [ ] | 0 | - |
-
-## DAY 7
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Two Pointers | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | [ ] | 0 | - |
-| Fast-Slow | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [ ] | 0 | - |
-| Binary Search | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | [ ] | 0 | - |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Maximum Size Subarray Sum Equals K](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | [ ] | 0 | - |
-| Monotonic Stack | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | [ ] | 0 | - |
-| HashMap | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | [ ] | 0 | - |
-| Graph BFS | [Word Ladder](https://leetcode.com/problems/word-ladder/) | [ ] | 0 | - |
-| Tree BFS | [Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/) | [ ] | 0 | - |
-| Tree DFS | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | [ ] | 0 | - |
-| Dynamic Programming | [Decode Ways](https://leetcode.com/problems/decode-ways/) | [ ] | 0 | - |
-| Backtracking | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [ ] | 0 | - |
-
-## DAY 8
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Two Pointers | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | [ ] | 0 | - |
-| Fast-Slow | [Sort List](https://leetcode.com/problems/sort-list/) | [ ] | 0 | - |
-| Binary Search | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) | [ ] | 0 | - |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Sum of Subarray Ranges](https://leetcode.com/problems/sum-of-subarray-ranges/) | [ ] | 0 | - |
-| Monotonic Stack | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | [ ] | 0 | - |
-| HashMap | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | [ ] | 0 | - |
-| Graph BFS | [Word Ladder](https://leetcode.com/problems/word-ladder/) | [ ] | 0 | - |
-| Tree BFS | [Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/) | [ ] | 0 | - |
-| Tree DFS | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | [ ] | 0 | - |
-| Dynamic Programming | [Decode Ways](https://leetcode.com/problems/decode-ways/) | [ ] | 0 | - |
-| Backtracking | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [ ] | 0 | - |
-
-## DAY 9 - Optimization & Intervals
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Overlapping Intervals | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [ ] | 0 | - |
-| Heaps (Top K) | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [ ] | 0 | - |
-| Heaps (Two Heaps) | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [ ] | 0 | - |
-| Two Pointers | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [ ] | 0 | - |
-| Monotonic Queue | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | [ ] | 0 | - |
-| Binary Search | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | [ ] | 0 | - |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [ ] | 0 | - |
-| Tree DFS | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [ ] | 0 | - |
-| Graph BFS | [Shortest Bridge](https://leetcode.com/problems/shortest-bridge/) | [ ] | 0 | - |
-| Dynamic Programming | [Coin Change](https://leetcode.com/problems/coin-change/) | [ ] | 0 | - |
-| Backtracking | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | [ ] | 0 | - |
-
-## DAY 10 - Strings & Bitwise Logic
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Trie | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [ ] | 0 | - |
-| Bit Manipulation | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [ ] | 0 | - |
-| Bit Manipulation | [Single Number](https://leetcode.com/problems/single-number/) | [ ] | 0 | - |
-| Intervals | [Insert Interval](https://leetcode.com/problems/insert-interval/) | [ ] | 0 | - |
-| Heaps | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [ ] | 0 | - |
-| Two Pointers | [4Sum](https://leetcode.com/problems/4sum/) | [ ] | 0 | - |
-| HashMap | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | [ ] | 0 | - |
-| Tree DFS | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [ ] | 0 | - |
-| Graph DFS | [All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/) | [ ] | 0 | - |
-| Dynamic Programming | [Word Break](https://leetcode.com/problems/word-break/) | [ ] | 0 | - |
-| Backtracking | [N-Queens](https://leetcode.com/problems/n-queens/) | [ ] | 0 | - |
-| Fast-Slow | [Circular Array Loop](https://leetcode.com/problems/circular-array-loop/) | [ ] | 0 | - |
-
-## DAY 11 - Connectivity & Dependencies
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Topological Sort | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | [ ] | 0 | - |
-| Union Find (DSU) | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [ ] | 0 | - |
-| Trie | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [ ] | 0 | - |
-| Intervals | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | [ ] | 0 | - |
-| Bit Manipulation | [Counting Bits](https://leetcode.com/problems/counting-bits/) | [ ] | 0 | - |
-| Heaps | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | [ ] | 0 | - |
-| Graph BFS | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | [ ] | 0 | - |
-| Tree DFS | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | [ ] | 0 | - |
-| Dynamic Programming | [Edit Distance](https://leetcode.com/problems/edit-distance/) | [ ] | 0 | - |
-| Backtracking | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | [ ] | 0 | - |
-| Binary Search | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | [ ] | 0 | - |
-
-## DAY 12 - The Final Bosses (Deep Dives)
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Design | [LRU Cache](https://leetcode.com/problems/lru-cache/) | [ ] | 0 | - |
-| Advanced Graph | [Network Delay Time (Dijkstra)](https://leetcode.com/problems/network-delay-time/) | [ ] | 0 | - |
-| Union Find | [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | [ ] | 0 | - |
-| Trie | [Word Search II](https://leetcode.com/problems/word-search-ii/) | [ ] | 0 | - |
-| Dynamic Programming | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | [ ] | 0 | - |
-| DP (Bitmask) | [Can I Win](https://leetcode.com/problems/can-i-win/) | [ ] | 0 | - |
-| Intervals | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [ ] | 0 | - |
-| Heaps | [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | [ ] | 0 | - |
-| Tree DFS | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [ ] | 0 | - |
-| Graph DFS | [Critical Connections in a Network (Tarjan's)](https://leetcode.com/problems/critical-connections-in-a-network/) | [ ] | 0 | - |
-| Bit Manipulation | [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) | [ ] | 0 | - |
-| Two Pointers | [Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/) | [ ] | 0 | - |
-
-## DAY 13 - Large Scale Optimization & Hard DP
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Data Structure Design | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | [ ] | 0 | - |
-| Hard DP | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | [ ] | 0 | - |
-| Advanced Segment Tree | [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/) | [ ] | 0 | - |
-| Two Pointers/Hard | [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) | [ ] | 0 | - |
-| String/DP | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | [ ] | 0 | - |
-| Greedy/Heap | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [ ] | 0 | - |
-| Sliding Window [Template](/2026-03-15-Slidling-window-template)| [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | [ ] | 0 | - |
-| Binary Search | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [ ] | 0 | - |
-| Monotonic Stack | [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/) | [ ] | 0 | - |
-| Tree | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [ ] | 0 | - |
-| Backtracking | [Word Search II](https://leetcode.com/problems/word-search-ii/) | [ ] | 0 | - |
-| Prefix Sum [Template](/2026-03-15-PrefixSum-template)| [Max Sum of Rectangle No Larger Than K](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) | [ ] | 0 | - |
-
-## DAY 14 - Complex Graphs & Connectivity
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Shortest Path | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [ ] | 0 | - |
-| Connectivity | [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/) | [ ] | 0 | - |
-| Bipartite Graph | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) | [ ] | 0 | - |
-| Topological Sort | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | [ ] | 0 | - |
-| Union Find | [Bricks Falling When Hit](https://leetcode.com/problems/bricks-falling-when-hit/) | [ ] | 0 | - |
-| Graph DFS | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [ ] | 0 | - |
-| Matrix/BFS | [Shortest Path to Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/) | [ ] | 0 | - |
-| Graph BFS | [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/) | [ ] | 0 | - |
-| Tree DFS | [Height of Binary Tree After Subtree Removal Queries](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/) | [ ] | 0 | - |
-| Graph BFS | [Bus Routes](https://leetcode.com/problems/bus-routes/) | [ ] | 0 | - |
-| Tree BFS | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [ ] | 0 | - |
-| Advanced Graph | [Cracking the Safe](https://leetcode.com/problems/cracking-the-safe/) | [ ] | 0 | - |
-
-## DAY 15 - Concurrency & System Logic
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Design | [LRU Cache](https://leetcode.com/problems/lru-cache/) | [ ] | 0 | - |
-| Design | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | [ ] | 0 | - |
-| Design | [Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system/) | [ ] | 0 | - |
-| Concurrency | [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded/) | [ ] | 0 | - |
-| Concurrency | [Print FooBar Alternately](https://leetcode.com/problems/print-foobar-alternately/) | [ ] | 0 | - |
-| Stream Processing | [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/) | [ ] | 0 | - |
-| Trie | [Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) | [ ] | 0 | - |
-| Bitmask DP | [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/) | [ ] | 0 | - |
-| Greedy | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/) | [ ] | 0 | - |
-| Math/Geometry | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/) | [ ] | 0 | - |
-| Stack | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | [ ] | 0 | - |
-| Two Pointers | [Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/) | [ ] | 0 | - |
-
-## DAY 16 - Probability & High-Complexity Logic
-
-| Pattern | Question | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Probability | [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/) | [ ] | 0 | - |
-| Randomization | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/) | [ ] | 0 | - |
-| Geometry | [Erect the Fence](https://leetcode.com/problems/erect-the-fence/) | [ ] | 0 | - |
-| DP on Trees | [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/) | [ ] | 0 | - |
-| Bit Manipulation | [Integer Replacement](https://leetcode.com/problems/integer-replacement/) | [ ] | 0 | - |
-| String | [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) | [ ] | 0 | - |
-| Hard DP | [Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/) | [ ] | 0 | - |
-| Graph Hard | [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | [ ] | 0 | - |
-| Greedy | [Patching Array](https://leetcode.com/problems/patching-array/) | [ ] | 0 | - |
-| Recursion | [Parse Lisp Expression](https://leetcode.com/problems/parse-lisp-expression/) | [ ] | 0 | - |
-| Binary Search | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | [ ] | 0 | - |
-| Advanced | [Number of Visible Points](https://www.google.com/search?q=https://leetcode.com/problems/number-of-visible-points/) | [ ] | 0 | - |
+## 1. Arrays (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Build Array from Permutation | [ ] | [Link](https://leetcode.com/problems/build-array-from-permutation/) |
+| **E** | Find Pivot Index (Equilibrium) | [ ] | [Link](https://leetcode.com/problems/find-pivot-index/) |
+| **E** | Sort Colors (0s, 1s, 2s) | [ ] | [Link](https://leetcode.com/problems/sort-colors/) |
+| **M** | Kadane’s Algorithm (Max Subarray) | [ ] | [Link](https://leetcode.com/problems/maximum-subarray/) |
+| **M** | Subarray Sum Equals K | [ ] | [Link](https://leetcode.com/problems/subarray-sum-equals-k/) |
+| **M** | Next Permutation | [ ] | [Link](https://leetcode.com/problems/next-permutation/) |
+| **M** | Find the Duplicate Number | [ ] | [Link](https://leetcode.com/problems/find-the-duplicate-number/) |
+| **M** | Product of Array Except Self | [ ] | [Link](https://leetcode.com/problems/product-of-array-except-self/) |
+| **H** | First Missing Positive | [ ] | [Link](https://leetcode.com/problems/first-missing-positive/) |
+| **H** | Trapping Rain Water | [ ] | [Link](https://leetcode.com/problems/trapping-rain-water/) |
 
 ---
+
+## 2. Strings (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Valid Anagram | [ ] | [Link](https://leetcode.com/problems/valid-anagram/) |
+| **E** | Reverse Words in a String | [ ] | [Link](https://leetcode.com/problems/reverse-words-in-a-string/) |
+| **E** | Longest Common Prefix | [ ] | [Link](https://leetcode.com/problems/longest-common-prefix/) |
+| **M** | Longest Palindromic Substring | [ ] | [Link](https://leetcode.com/problems/longest-palindromic-substring/) |
+| **M** | String to Integer (atoi) | [ ] | [Link](https://leetcode.com/problems/string-to-integer-atoi/) |
+| **M** | Group Anagrams | [ ] | [Link](https://leetcode.com/problems/group-anagrams/) |
+| **M** | Multiply Strings | [ ] | [Link](https://leetcode.com/problems/multiply-strings/) |
+| **M** | Decode String | [ ] | [Link](https://leetcode.com/problems/decode-string/) |
+| **H** | Minimum Window Substring | [ ] | [Link](https://leetcode.com/problems/minimum-window-substring/) |
+| **H** | Valid Number | [ ] | [Link](https://leetcode.com/problems/valid-number/) |
+
+---
+
+## 3. Searching (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Binary Search | [ ] | [Link](https://leetcode.com/problems/binary-search/) |
+| **E** | Find Smallest Letter Greater Than Target | [ ] | [Link](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) |
+| **E** | Search Insert Position | [ ] | [Link](https://leetcode.com/problems/search-insert-position/) |
+| **M** | Search in Rotated Sorted Array | [ ] | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/) |
+| **M** | Find First/Last Position in Sorted Array | [ ] | [Link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) |
+| **M** | Koko Eating Bananas | [ ] | [Link](https://leetcode.com/problems/koko-eating-bananas/) |
+| **M** | Search a 2D Matrix | [ ] | [Link](https://leetcode.com/problems/search-a-2d-matrix/) |
+| **M** | Capacity To Ship Packages Within D Days | [ ] | [Link](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) |
+| **H** | Median of Two Sorted Arrays | [ ] | [Link](https://leetcode.com/problems/median-of-two-sorted-arrays/) |
+| **H** | Split Array Largest Sum | [ ] | [Link](https://leetcode.com/problems/split-array-largest-sum/) |
+
+---
+
+## 4. Sorting (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Merge Sorted Array | [ ] | [Link](https://leetcode.com/problems/merge-sorted-array/) |
+| **E** | Intersection of Two Arrays | [ ] | [Link](https://leetcode.com/problems/intersection-of-two-arrays/) |
+| **E** | Contains Duplicate | [ ] | [Link](https://leetcode.com/problems/contains-duplicate/) |
+| **M** | Merge Intervals | [ ] | [Link](https://leetcode.com/problems/merge-intervals/) |
+| **M** | Sort List | [ ] | [Link](https://leetcode.com/problems/sort-list/) |
+| **M** | Largest Number | [ ] | [Link](https://leetcode.com/problems/largest-number/) |
+| **M** | Top K Frequent Elements | [ ] | [Link](https://leetcode.com/problems/top-k-frequent-elements/) |
+| **M** | H-Index | [ ] | [Link](https://leetcode.com/problems/h-index/) |
+| **H** | Count of Smaller Numbers After Self | [ ] | [Link](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) |
+| **H** | Meeting Rooms II | [ ] | [Link](https://leetcode.com/problems/meeting-rooms-ii/) |
+
+---
+
+## 5. Two Pointers (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Move Zeroes | [ ] | [Link](https://leetcode.com/problems/move-zeroes/) |
+| **E** | Two Sum II (Sorted Array) | [ ] | [Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |
+| **E** | Valid Palindrome | [ ] | [Link](https://leetcode.com/problems/valid-palindrome/) |
+| **M** | 3Sum | [ ] | [Link](https://leetcode.com/problems/3sum/) |
+| **M** | Container With Most Water | [ ] | [Link](https://leetcode.com/problems/container-with-most-water/) |
+| **M** | Remove Nth Node From End of List | [ ] | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) |
+| **M** | Interval List Intersections | [ ] | [Link](https://leetcode.com/problems/interval-list-intersections/) |
+| **M** | Bag of Tokens | [ ] | [Link](https://leetcode.com/problems/bag-of-tokens/) |
+| **H** | 4Sum | [ ] | [Link](https://leetcode.com/problems/4sum/) |
+| **H** | Trapping Rain Water II | [ ] | [Link](https://leetcode.com/problems/trapping-rain-water-ii/) |
+
+---
+
+## 6. Window Sliding (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Maximum Average Subarray I | [ ] | [Link](https://leetcode.com/problems/maximum-average-subarray-i/) |
+| **E** | Defuse the Bomb | [ ] | [Link](https://leetcode.com/problems/defuse-the-bomb/) |
+| **E** | Minimum Recolors | [ ] | [Link](https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/) |
+| **M** | Longest Substring Without Repeating Characters | [ ] | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |
+| **M** | Repeating Character Replacement | [ ] | [Link](https://leetcode.com/problems/longest-repeating-character-replacement/) |
+| **M** | Max Consecutive Ones III | [ ] | [Link](https://leetcode.com/problems/max-consecutive-ones-iii/) |
+| **M** | Fruit Into Baskets | [ ] | [Link](https://leetcode.com/problems/fruit-into-baskets/) |
+| **M** | Sliding Window Maximum | [ ] | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
+| **H** | Minimum Window Substring | [ ] | [Link](https://leetcode.com/problems/minimum-window-substring/) |
+| **H** | Subarrays with K Different Integers | [ ] | [Link](https://leetcode.com/problems/subarrays-with-k-different-integers/) |
+
+---
+
+## 7. Hashing (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Two Sum | [ ] | [Link](https://leetcode.com/problems/two-sum/) |
+| **E** | Isomorphic Strings | [ ] | [Link](https://leetcode.com/problems/isomorphic-strings/) |
+| **E** | First Unique Character in String | [ ] | [Link](https://leetcode.com/problems/first-unique-character-in-a-string/) |
+| **M** | Longest Consecutive Sequence | [ ] | [Link](https://leetcode.com/problems/longest-consecutive-sequence/) |
+| **M** | Continuous Subarray Sum | [ ] | [Link](https://leetcode.com/problems/continuous-subarray-sum/) |
+| **M** | Subarray Sums Divisible by K | [ ] | [Link](https://leetcode.com/problems/subarray-sums-divisible-by-k/) |
+| **M** | Design HashMap | [ ] | [Link](https://leetcode.com/problems/design-hashmap/) |
+| **M** | Find All Anagrams in a String | [ ] | [Link](https://leetcode.com/problems/find-all-anagrams-in-a-string/) |
+| **H** | Max Points on a Line | [ ] | [Link](https://leetcode.com/problems/max-points-on-a-line/) |
+| **H** | Grid Illumination | [ ] | [Link](https://leetcode.com/problems/grid-illumination/) |
+
+
+
+## 8. Recursion (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Fibonacci Number | [ ] | [Link](https://leetcode.com/problems/fibonacci-number/) |
+| **E** | Power of Two | [ ] | [Link](https://leetcode.com/problems/power-of-two/) |
+| **E** | Range Sum of BST | [ ] | [Link](https://leetcode.com/problems/range-sum-of-bst/) |
+| **M** | Letter Combinations of Phone Number | [ ] | [Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) |
+| **M** | Combination Sum | [ ] | [Link](https://leetcode.com/problems/combination-sum/) |
+| **M** | Generate Parentheses | [ ] | [Link](https://leetcode.com/problems/generate-parentheses/) |
+| **M** | K-th Symbol in Grammar | [ ] | [Link](https://leetcode.com/problems/k-th-symbol-in-grammar/) |
+| **M** | Find the Winner (Josephus) | [ ] | [Link](https://leetcode.com/problems/find-the-winner-of-the-circular-game/) |
+| **H** | Word Search II | [ ] | [Link](https://leetcode.com/problems/word-search-ii/) |
+| **H** | 4 Keys Keyboard (Special Keyboard) | [ ] | [Link](https://leetcode.com/problems/4-keys-keyboard/) |
+
+---
+
+## 9. Linked List (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Middle of the Linked List | [ ] | [Link](https://leetcode.com/problems/middle-of-the-linked-list/) |
+| **E** | Reverse Linked List | [ ] | [Link](https://leetcode.com/problems/reverse-linked-list/) |
+| **E** | Palindrome Linked List | [ ] | [Link](https://leetcode.com/problems/palindrome-linked-list/) |
+| **M** | Linked List Cycle II | [ ] | [Link](https://leetcode.com/problems/linked-list-cycle-ii/) |
+| **M** | Copy List with Random Pointer | [ ] | [Link](https://leetcode.com/problems/copy-list-with-random-pointer/) |
+| **M** | Flatten Multilevel Doubly Linked List | [ ] | [Link](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) |
+| **M** | Add Two Numbers | [ ] | [Link](https://leetcode.com/problems/add-two-numbers/) |
+| **M** | Reorder List | [ ] | [Link](https://leetcode.com/problems/reorder-list/) |
+| **H** | Reverse Nodes in k-Group | [ ] | [Link](https://leetcode.com/problems/reverse-nodes-in-k-group/) |
+| **H** | Merge k Sorted Lists | [ ] | [Link](https://leetcode.com/problems/merge-k-sorted-lists/) |
+
+---
+
+## 10. Queue (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Number of Recent Calls | [ ] | [Link](https://leetcode.com/problems/number-of-recent-calls/) |
+| **E** | Implement Queue using Stacks | [ ] | [Link](https://leetcode.com/problems/implement-queue-using-stacks/) |
+| **E** | Time Needed to Buy Tickets | [ ] | [Link](https://leetcode.com/problems/time-needed-to-buy-tickets/) |
+| **M** | DOTA2 Senate | [ ] | [Link](https://leetcode.com/problems/dota2-senate/) |
+| **M** | Design Circular Queue | [ ] | [Link](https://leetcode.com/problems/design-circular-queue/) |
+| **M** | Task Scheduler | [ ] | [Link](https://leetcode.com/problems/task-scheduler/) |
+| **M** | First Unique Char in Stream | [ ] | [Link](https://leetcode.com/problems/first-unique-character-in-a-string/) |
+| **M** | Reveal Cards In Increasing Order | [ ] | [Link](https://leetcode.com/problems/reveal-cards-in-increasing-order/) |
+| **H** | Constrained Subsequence Sum | [ ] | [Link](https://leetcode.com/problems/constrained-subsequence-sum/) |
+| **H** | Max Value of Equation | [ ] | [Link](https://leetcode.com/problems/max-value-of-equation/) |
+
+---
+
+## 11. Stack (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Valid Parentheses | [ ] | [Link](https://leetcode.com/problems/valid-parentheses/) |
+| **E** | Min Stack | [ ] | [Link](https://leetcode.com/problems/min-stack/) |
+| **E** | Next Greater Element I | [ ] | [Link](https://leetcode.com/problems/next-greater-element-i/) |
+| **M** | Daily Temperatures | [ ] | [Link](https://leetcode.com/problems/daily-temperatures/) |
+| **M** | Simplify Path | [ ] | [Link](https://leetcode.com/problems/simplify-path/) |
+| **M** | Online Stock Span | [ ] | [Link](https://leetcode.com/problems/online-stock-span/) |
+| **M** | Evaluate Reverse Polish Notation | [ ] | [Link](https://leetcode.com/problems/evaluate-reverse-polish-notation/) |
+| **M** | Score of Parentheses | [ ] | [Link](https://leetcode.com/problems/score-of-parentheses/) |
+| **H** | Largest Rectangle in Histogram | [ ] | [Link](https://leetcode.com/problems/largest-rectangle-in-histogram/) |
+| **H** | Maximal Rectangle | [ ] | [Link](https://leetcode.com/problems/maximal-rectangle/) |
+
+---
+
+## 12. Deque (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Implement Stack using Queues | [ ] | [Link](https://leetcode.com/problems/implement-stack-using-queues/) |
+| **E** | Students Unable to Eat Lunch | [ ] | [Link](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) |
+| **E** | Base 7 | [ ] | [Link](https://leetcode.com/problems/base-7/) |
+| **M** | Sliding Window Maximum | [ ] | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
+| **M** | Longest Subarray with Absolute Diff | [ ] | [Link](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) |
+| **M** | Design Front Middle Back Queue | [ ] | [Link](https://leetcode.com/problems/design-front-middle-back-queue/) |
+| **M** | Jump Game VI | [ ] | [Link](https://leetcode.com/problems/jump-game-vi/) |
+| **M** | Shortest Subarray with Sum at Least K | [ ] | [Link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) |
+| **H** | Maximize the Beauty of the Garden | [ ] | [Link](https://leetcode.com/problems/maximize-the-beauty-of-the-garden/) |
+| **H** | First Negative Integer in Window | [ ] | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
+
+---
+
+## 13. Tree (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Invert Binary Tree | [ ] | [Link](https://leetcode.com/problems/invert-binary-tree/) |
+| **E** | Maximum Depth of Binary Tree | [ ] | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/) |
+| **E** | Same Tree | [ ] | [Link](https://leetcode.com/problems/same-tree/) |
+| **M** | Validate Binary Search Tree | [ ] | [Link](https://leetcode.com/problems/validate-binary-search-tree/) |
+| **M** | Binary Tree Zigzag Traversal | [ ] | [Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) |
+| **M** | Lowest Common Ancestor of a BT | [ ] | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
+| **M** | Path Sum III | [ ] | [Link](https://leetcode.com/problems/path-sum-iii/) |
+| **M** | Construct BT from Pre/Inorder | [ ] | [Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) |
+| **H** | Binary Tree Maximum Path Sum | [ ] | [Link](https://leetcode.com/problems/binary-tree-maximum-path-sum/) |
+| **H** | Serialize and Deserialize BT | [ ] | [Link](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) |
+
+---
+
+## 14. Heap (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Last Stone Weight | [ ] | [Link](https://leetcode.com/problems/last-stone-weight/) |
+| **E** | Relative Ranks | [ ] | [Link](https://leetcode.com/problems/relative-ranks/) |
+| **E** | Final Array State K Multiplications | [ ] | [Link](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) |
+| **M** | Kth Largest Element in Array | [ ] | [Link](https://leetcode.com/problems/kth-largest-element-in-an-array/) |
+| **M** | Sort Characters By Frequency | [ ] | [Link](https://leetcode.com/problems/sort-characters-by-frequency/) |
+| **M** | Reorganize String | [ ] | [Link](https://leetcode.com/problems/reorganize-string/) |
+| **M** | K Closest Points to Origin | [ ] | [Link](https://leetcode.com/problems/k-closest-points-to-origin/) |
+| **M** | Top K Frequent Words | [ ] | [Link](https://leetcode.com/problems/top-k-frequent-words/) |
+| **H** | Find Median from Data Stream | [ ] | [Link](https://leetcode.com/problems/find-median-from-data-stream/) |
+| **H** | Smallest Range Covering K Lists | [ ] | [Link](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) |
+
+
+## 15. Graph (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Find Center of Star Graph | [ ] | [Link](https://leetcode.com/problems/find-center-of-star-graph/) |
+| **E** | Flood Fill | [ ] | [Link](https://leetcode.com/problems/flood-fill/) |
+| **E** | Find if Path Exists in Graph | [ ] | [Link](https://leetcode.com/problems/find-if-path-exists-in-graph/) |
+| **M** | Number of Islands | [ ] | [Link](https://leetcode.com/problems/number-of-islands/) |
+| **M** | Course Schedule II | [ ] | [Link](https://leetcode.com/problems/course-schedule-ii/) |
+| **M** | Rotting Oranges | [ ] | [Link](https://leetcode.com/problems/rotting-oranges/) |
+| **M** | Network Delay Time (Dijkstra) | [ ] | [Link](https://leetcode.com/problems/network-delay-time/) |
+| **M** | Clone Graph | [ ] | [Link](https://leetcode.com/problems/clone-graph/) |
+| **H** | Word Ladder | [ ] | [Link](https://leetcode.com/problems/word-ladder/) |
+| **H** | Critical Connections (Tarjan's) | [ ] | [Link](https://leetcode.com/problems/critical-connections-in-a-network/) |
+
+---
+
+## 16. Greedy (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Assign Cookies | [ ] | [Link](https://leetcode.com/problems/assign-cookies/) |
+| **E** | Lemonade Change | [ ] | [Link](https://leetcode.com/problems/lemonade-change/) |
+| **E** | Maximum Units on a Truck | [ ] | [Link](https://leetcode.com/problems/maximum-units-on-a-truck/) |
+| **M** | Gas Station | [ ] | [Link](https://leetcode.com/problems/gas-station/) |
+| **M** | Jump Game | [ ] | [Link](https://leetcode.com/problems/jump-game/) |
+| **M** | Partition Labels | [ ] | [Link](https://leetcode.com/problems/partition-labels/) |
+| **M** | Non-overlapping Intervals | [ ] | [Link](https://leetcode.com/problems/non-overlapping-intervals/) |
+| **M** | Task Scheduler | [ ] | [Link](https://leetcode.com/problems/task-scheduler/) |
+| **H** | Candy | [ ] | [Link](https://leetcode.com/problems/candy/) |
+| **H** | Min Refueling Stops | [ ] | [Link](https://leetcode.com/problems/minimum-number-of-refueling-stops/) |
+
+---
+
+## 17. Dynamic Programming (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Climbing Stairs | [ ] | [Link](https://leetcode.com/problems/climbing-stairs/) |
+| **E** | House Robber | [ ] | [Link](https://leetcode.com/problems/house-robber/) |
+| **E** | Min Cost Climbing Stairs | [ ] | [Link](https://leetcode.com/problems/min-cost-climbing-stairs/) |
+| **M** | Longest Increasing Subsequence | [ ] | [Link](https://leetcode.com/problems/longest-increasing-subsequence/) |
+| **M** | Coin Change | [ ] | [Link](https://leetcode.com/problems/coin-change/) |
+| **M** | Longest Common Subsequence | [ ] | [Link](https://leetcode.com/problems/longest-common-subsequence/) |
+| **M** | Word Break | [ ] | [Link](https://leetcode.com/problems/word-break/) |
+| **M** | Unique Paths | [ ] | [Link](https://leetcode.com/problems/unique-paths/) |
+| **H** | Edit Distance | [ ] | [Link](https://leetcode.com/problems/edit-distance/) |
+| **H** | Burst Balloons | [ ] | [Link](https://leetcode.com/problems/burst-balloons/) |
+
+---
+
+## 18. Backtracking (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Binary Tree Paths | [ ] | [Link](https://leetcode.com/problems/binary-tree-paths/) |
+| **E** | Subset XOR Totals | [ ] | [Link](https://leetcode.com/problems/sum-of-all-subset-xor-totals/) |
+| **E** | All Paths From Source to Target | [ ] | [Link](https://leetcode.com/problems/all-paths-from-source-to-target/) |
+| **M** | Permutations | [ ] | [Link](https://leetcode.com/problems/permutations/) |
+| **M** | Word Search | [ ] | [Link](https://leetcode.com/problems/word-search/) |
+| **M** | Subsets | [ ] | [Link](https://leetcode.com/problems/subsets/) |
+| **M** | Combination Sum | [ ] | [Link](https://leetcode.com/problems/combination-sum/) |
+| **M** | Palindrome Partitioning | [ ] | [Link](https://leetcode.com/problems/palindrome-partitioning/) |
+| **H** | N-Queens | [ ] | [Link](https://leetcode.com/problems/n-queens/) |
+| **H** | Sudoku Solver | [ ] | [Link](https://leetcode.com/problems/sudoku-solver/) |
+
+---
+
+## 19. Bitwise Algorithms (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Number of 1 Bits | [ ] | [Link](https://leetcode.com/problems/number-of-1-bits/) |
+| **E** | Single Number | [ ] | [Link](https://leetcode.com/problems/single-number/) |
+| **E** | Power of Two | [ ] | [Link](https://leetcode.com/problems/power-of-two/) |
+| **M** | Bitwise AND of Range | [ ] | [Link](https://leetcode.com/problems/bitwise-and-of-numbers-range/) |
+| **M** | Maximum XOR of Two Numbers | [ ] | [Link](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) |
+| **M** | Single Number II | [ ] | [Link](https://leetcode.com/problems/single-number-ii/) |
+| **M** | Counting Bits | [ ] | [Link](https://leetcode.com/problems/counting-bits/) |
+| **M** | UTF-8 Validation | [ ] | [Link](https://leetcode.com/problems/utf-8-validation/) |
+| **H** | Min Bit Ops to Zero | [ ] | [Link](https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/) |
+| **H** | Total Hamming Distance | [ ] | [Link](https://leetcode.com/problems/total-hamming-distance/) |
+
+---
+
+## 20. Tries (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Implement Trie | [ ] | [Link](https://leetcode.com/problems/implement-trie-prefix-tree/) |
+| **E** | Longest Common Prefix | [ ] | [Link](https://leetcode.com/problems/longest-common-prefix/) |
+| **E** | Count Prefix/Suffix Pairs I | [ ] | [Link](https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/) |
+| **M** | Design Add/Search Words | [ ] | [Link](https://leetcode.com/problems/design-add-and-search-words-data-structure/) |
+| **M** | Search Suggestions System | [ ] | [Link](https://leetcode.com/problems/search-suggestions-system/) |
+| **M** | Replace Words | [ ] | [Link](https://leetcode.com/problems/replace-words/) |
+| **M** | Map Sum Pairs | [ ] | [Link](https://leetcode.com/problems/map-sum-pairs/) |
+| **M** | Extra Characters in a String | [ ] | [Link](https://leetcode.com/problems/extra-characters-in-a-string/) |
+| **H** | Word Search II | [ ] | [Link](https://leetcode.com/problems/word-search-ii/) |
+| **H** | Prefix and Suffix Search | [ ] | [Link](https://leetcode.com/problems/prefix-and-suffix-search/) |
+
+---
+
+## 21. Segment Trees (3E, 5M, 2H)
+| Level | Question | Status | LeetCode Link |
+|:--- | :--- | :---: | :--- |
+| **E** | Range Sum Query - Immutable | [ ] | [Link](https://leetcode.com/problems/range-sum-query-immutable/) |
+| **E** | XOR Queries of a Subarray | [ ] | [Link](https://leetcode.com/problems/xor-queries-of-a-subarray/) |
+| **E** | Straight Line Check | [ ] | [Link](https://leetcode.com/problems/check-if-it-is-a-straight-line/) |
+| **M** | Range Sum Query - Mutable | [ ] | [Link](https://leetcode.com/problems/range-sum-query-mutable/) |
+| **M** | Range Frequency Queries | [ ] | [Link](https://leetcode.com/problems/range-frequency-queries/) |
+| **M** | Shifting Letters II | [ ] | [Link](https://leetcode.com/problems/shifting-letters-ii/) |
+| **M** | My Calendar III | [ ] | [Link](https://leetcode.com/problems/my-calendar-iii/) |
+| **M** | Queue Reconstruction by Height | [ ] | [Link](https://leetcode.com/problems/queue-reconstruction-by-height/) |
+| **H** | Count Smaller Numbers After Self | [ ] | [Link](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) |
+| **H** | Falling Squares | [ ] | [Link](https://leetcode.com/problems/falling-squares/) |
+
+
