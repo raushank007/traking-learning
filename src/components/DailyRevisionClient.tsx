@@ -2,18 +2,29 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import Flashcard from './Flashcard'; // Assuming you saved Flashcard here
+import Flashcard from './Flashcard';
 import { CategoryDeck, RevisionCard } from '../lib/revision';
 
-// Hash function moved to the client
-function getDailyRandomItem<T>(items: T[], dateStr: string): T | null {
-  if (items.length === 0) return null;
-  let hash = 0;
-  for (let i = 0; i < dateStr.length; i++) {
-    hash = Math.imul(31, hash) + dateStr.charCodeAt(i) | 0;
+// 🌟 UPGRADED: Can now pick multiple unique items deterministically based on a date seed
+function getDailyRandomItems<T>(items: T[], dateStr: string, count: number, salt: string): T[] {
+  if (items.length === 0) return [];
+  if (items.length <= count) return [...items]; // Return all if we don't have enough
+
+  const selected: T[] = [];
+  const available = [...items];
+
+  for (let c = 0; c < count; c++) {
+    let hash = 0;
+    const hashStr = dateStr + salt + c.toString();
+    for (let i = 0; i < hashStr.length; i++) {
+      hash = Math.imul(31, hash) + hashStr.charCodeAt(i) | 0;
+    }
+    const index = Math.abs(hash) % available.length;
+    selected.push(available[index]);
+    available.splice(index, 1); // Remove picked item to prevent duplicates
   }
-  const index = Math.abs(hash) % items.length;
-  return items[index];
+
+  return selected;
 }
 
 export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }) {
@@ -21,24 +32,46 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
   const [displayDate, setDisplayDate] = useState("");
 
   useEffect(() => {
-    // Run only in the browser so it builds statically without hydration mismatches
     const todayStr = new Date().toLocaleDateString('en-CA');
     setDisplayDate(new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }));
 
-    const pickedCards = decks.map(deck => {
-      const dailyPick = getDailyRandomItem(deck.cards, todayStr);
-      return dailyPick || {
-        category: deck.category,
-        topic: "No completed topics yet. Keep studying!",
-        link: "#"
-      };
+    const pickedCards: RevisionCard[] = [];
+
+    decks.forEach(deck => {
+      // 🌟 NEW: Custom Distribution for Algorithms
+      if (deck.category === 'Algorithms') {
+        const easyCards = deck.cards.filter(c => c.difficulty === 'E');
+        const medCards = deck.cards.filter(c => c.difficulty === 'M');
+        const hardCards = deck.cards.filter(c => c.difficulty === 'H');
+
+        const pickedEasy = getDailyRandomItems(easyCards, todayStr, 1, "algoE");
+        const pickedMed = getDailyRandomItems(medCards, todayStr, 2, "algoM");
+        const pickedHard = getDailyRandomItems(hardCards, todayStr, 1, "algoH");
+
+        const algoPicks = [...pickedEasy, ...pickedMed, ...pickedHard];
+
+        if (algoPicks.length > 0) {
+          pickedCards.push(...algoPicks);
+        } else {
+          pickedCards.push({ category: deck.category, topic: "No completed topics yet. Keep studying!", link: "#" });
+        }
+      }
+      // 🌟 Standard Distribution (1 per category) for everything else
+      else {
+        const standardPick = getDailyRandomItems(deck.cards, todayStr, 1, deck.category);
+        if (standardPick.length > 0) {
+          pickedCards.push(standardPick[0]);
+        } else {
+          pickedCards.push({ category: deck.category, topic: "No completed topics yet. Keep studying!", link: "#" });
+        }
+      }
     });
 
     setDailyCards(pickedCards);
   }, [decks]);
 
   return (
-    <div className="w-full max-w-6xl mx-auto py-12 px-6">
+    <div className="w-full max-w-7xl mx-auto py-12 px-6">
       <header className="mb-12 text-center border-b-2 border-amber-200 pb-8">
         <h1 className="text-4xl md:text-5xl font-pirate tracking-widest text-slate-900 drop-shadow-sm mb-4">
           Daily Logbook Revision
@@ -48,8 +81,9 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
         </p>
       </header>
 
+      {/* 🌟 Adjusted grid to handle 8 cards comfortably (4 core + 4 algo) */}
       {dailyCards.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {dailyCards.map((card, index) => (
             <Flashcard key={`${card.category}-${index}`} card={card} />
           ))}

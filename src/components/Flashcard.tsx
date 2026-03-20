@@ -7,9 +7,14 @@ import { RevisionCard } from '../lib/revision';
 
 export default function Flashcard({ card }: { card: RevisionCard }) {
   const [isFlipped, setIsFlipped] = useState(false);
-
-  // If the link is '#', it means the parser didn't find any completed topics
   const isPlaceholder = card.link === '#';
+
+  // 🌟 NEW: Difficulty Colors
+  const diffColors: Record<string, string> = {
+    'E': 'bg-green-100 text-green-700 border-green-200',
+    'M': 'bg-yellow-100 text-yellow-700 border-yellow-200',
+    'H': 'bg-red-100 text-red-700 border-red-200'
+  };
 
   return (
     <div
@@ -18,13 +23,20 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
     >
       <div className={`relative h-full w-full rounded-2xl shadow-md transition-all duration-500 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}>
 
-        {/* 🌟 FRONT: The Topic to Revise */}
+        {/* FRONT: The Topic to Revise */}
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white border-2 border-slate-200 hover:border-amber-400 transition-colors rounded-2xl backface-hidden text-center">
+
+          {/* 🌟 NEW: Difficulty Badge */}
+          {card.difficulty && (
+            <span className={`absolute top-4 right-4 text-[10px] font-black px-2 py-0.5 rounded border shadow-sm ${diffColors[card.difficulty]}`}>
+              {card.difficulty === 'E' ? 'EASY' : card.difficulty === 'M' ? 'MED' : 'HARD'}
+            </span>
+          )}
+
           <span className="text-[10px] font-black uppercase text-amber-600 tracking-widest mb-4">
             {card.category}
           </span>
 
-          {/* Topic Name is now front and center! */}
           <h3 className="text-lg font-bold text-slate-800 leading-snug mb-4">
             {card.topic}
           </h3>
@@ -36,7 +48,7 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
           )}
         </div>
 
-        {/* 🌟 BACK: Action / Link */}
+        {/* BACK: Action / Link */}
         <div className="absolute inset-0 h-full w-full rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 p-6 text-slate-900 [transform:rotateY(180deg)] [backface-visibility:hidden] border-2 border-amber-400 shadow-lg flex flex-col items-center justify-center text-center">
 
           <span className="text-4xl mb-4">🧠</span>
