@@ -17,17 +17,17 @@ isRoadmap: true
 
 ## 1. Arrays (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
-|:--- | :--- | :---: | :--- |
-| **E** | Build Array from Permutation | [ ] | [Link](https://leetcode.com/problems/build-array-from-permutation/) |
-| **E** | Find Pivot Index (Equilibrium) | [ ] | [Link](https://leetcode.com/problems/find-pivot-index/) |
-| **E** | Sort Colors (0s, 1s, 2s) | [ ] | [Link](https://leetcode.com/problems/sort-colors/) |
-| **M** | Kadane’s Algorithm (Max Subarray) | [ ] | [Link](https://leetcode.com/problems/maximum-subarray/) |
-| **M** | Subarray Sum Equals K | [ ] | [Link](https://leetcode.com/problems/subarray-sum-equals-k/) |
-| **M** | Next Permutation | [ ] | [Link](https://leetcode.com/problems/next-permutation/) |
-| **M** | Find the Duplicate Number | [ ] | [Link](https://leetcode.com/problems/find-the-duplicate-number/) |
-| **M** | Product of Array Except Self | [ ] | [Link](https://leetcode.com/problems/product-of-array-except-self/) |
-| **H** | First Missing Positive | [ ] | [Link](https://leetcode.com/problems/first-missing-positive/) |
-| **H** | Trapping Rain Water | [ ] | [Link](https://leetcode.com/problems/trapping-rain-water/) |
+|:--- | :--- |:------:| :--- |
+| **E** | Build Array from Permutation |  [X]   | [Link](https://leetcode.com/problems/build-array-from-permutation/) |
+| **E** | Find Pivot Index (Equilibrium) |  [ ]   | [Link](https://leetcode.com/problems/find-pivot-index/) |
+| **E** | Sort Colors (0s, 1s, 2s) |  [ ]   | [Link](https://leetcode.com/problems/sort-colors/) |
+| **M** | Kadane’s Algorithm (Max Subarray) |  [ ]   | [Link](https://leetcode.com/problems/maximum-subarray/) |
+| **M** | Subarray Sum Equals K |  [ ]   | [Link](https://leetcode.com/problems/subarray-sum-equals-k/) |
+| **M** | Next Permutation |  [ ]   | [Link](https://leetcode.com/problems/next-permutation/) |
+| **M** | Find the Duplicate Number |  [ ]   | [Link](https://leetcode.com/problems/find-the-duplicate-number/) |
+| **M** | Product of Array Except Self |  [ ]   | [Link](https://leetcode.com/problems/product-of-array-except-self/) |
+| **H** | First Missing Positive |  [ ]   | [Link](https://leetcode.com/problems/first-missing-positive/) |
+| **H** | Trapping Rain Water |  [ ]   | [Link](https://leetcode.com/problems/trapping-rain-water/) |
 
 ---
 
