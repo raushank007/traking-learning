@@ -5,10 +5,13 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { RevisionCard } from '../lib/revision';
 
-export default function Flashcard({ card }: { card: RevisionCard }) {
+// 🌟 ACCEPT THE NEW PROP: isAlreadyRevised
+export default function Flashcard({ card, isAlreadyRevised = false }: { card: RevisionCard, isAlreadyRevised?: boolean }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
-  const [isLogged, setIsLogged] = useState(false);
+
+  // Initialize state directly from the server prop
+  const [isLogged, setIsLogged] = useState(isAlreadyRevised);
 
   const isPlaceholder = card.link === '#';
 
@@ -18,30 +21,19 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
     'H': 'bg-red-100 text-red-700 border-red-200'
   };
 
-  // 🌟 NEW: Check if this topic was already revised today when the component mounts
+  // 🌟 Sync state if the server prop changes
   useEffect(() => {
-    if (isPlaceholder) return;
+    setIsLogged(isAlreadyRevised);
+  }, [isAlreadyRevised]);
 
-    const todayStr = new Date().toLocaleDateString('en-CA');
-    const storageKey = `grandLine_revised_${todayStr}`;
-    const storedData = localStorage.getItem(storageKey);
-
-    if (storedData) {
-      const revisedTopics = JSON.parse(storedData);
-      if (revisedTopics.includes(card.topic)) {
-        setIsLogged(true);
-      }
-    }
-  }, [card.topic, isPlaceholder]);
-
-  // 🌟 UPGRADED: Save to localStorage upon successful API call
   const handleUpdateProgress = async (e: React.MouseEvent) => {
     e.stopPropagation();
     if (isSaving || isLogged) return;
 
     // Vercel / Production Bypass
+    // This ensures your UI feels fast on mobile without trying to write to Vercel's read-only disk
     if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
-      markAsCompletedInUI();
+      setIsLogged(true);
       return;
     }
 
@@ -58,27 +50,12 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
       });
 
       if (response.ok) {
-        markAsCompletedInUI();
+        setIsLogged(true); // Successfully wrote to markdown file!
       }
     } catch (error) {
       console.error("Failed to update progress", error);
     } finally {
       setIsSaving(false);
-    }
-  };
-
-  // Helper function to update React State AND LocalStorage
-  const markAsCompletedInUI = () => {
-    setIsLogged(true);
-    const todayStr = new Date().toLocaleDateString('en-CA');
-    const storageKey = `grandLine_revised_${todayStr}`;
-
-    const storedData = localStorage.getItem(storageKey);
-    const revisedTopics = storedData ? JSON.parse(storedData) : [];
-
-    if (!revisedTopics.includes(card.topic)) {
-      revisedTopics.push(card.topic);
-      localStorage.setItem(storageKey, JSON.stringify(revisedTopics));
     }
   };
 
@@ -94,7 +71,7 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
             </span>
           )}
 
-          {/* Show a green check on the front if completed during this session */}
+          {/* Show a green check on the front if completed during this session or earlier today */}
           {isLogged && <span className="absolute top-4 left-4 text-emerald-500 text-xl">✅</span>}
 
           <span className="text-[10px] font-black uppercase text-amber-600 tracking-widest mb-4">

@@ -78,3 +78,29 @@ export function getAllCompletedCards(): CategoryDeck[] {
     cards: parseRoadmapFile(source.file, source.title, source.requireCompleted)
   }));
 }
+
+// Add this to the very bottom of src/lib/revision.ts
+
+export function getTodayRevisedTopics(): string[] {
+  const logPath = path.join(process.cwd(), 'content', 'revision-log.md');
+
+  if (!fs.existsSync(logPath)) return [];
+
+  const todayStr = new Date().toLocaleDateString('en-CA');
+  const fileContent = fs.readFileSync(logPath, 'utf-8');
+  const lines = fileContent.split('\n');
+
+  const revisedToday: string[] = [];
+
+  for (const line of lines) {
+    // We are looking for lines like: - [2026-03-21] HashMap
+    if (line.includes(`[${todayStr}]`)) {
+      const topicPart = line.split(']')[1];
+      if (topicPart) {
+        revisedToday.push(topicPart.trim());
+      }
+    }
+  }
+
+  return revisedToday;
+}

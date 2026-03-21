@@ -26,7 +26,8 @@ function getDailyRandomItems<T>(items: T[], dateStr: string, count: number, salt
   return selected;
 }
 
-export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }) {
+// 🌟 ACCEPT THE NEW PROP: todayRevised
+export default function DailyRevisionClient({ decks, todayRevised = [] }: { decks: CategoryDeck[], todayRevised?: string[] }) {
   const [dailyCards, setDailyCards] = useState<RevisionCard[]>([]);
   const [displayDate, setDisplayDate] = useState("");
 
@@ -51,7 +52,6 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
         if (algoPicks.length > 0) {
           pickedCards.push(...algoPicks);
         } else {
-          // 🌟 FIXED: Added dummy fileName and isCoding
           pickedCards.push({
             category: deck.category,
             topic: "No completed topics yet. Keep studying!",
@@ -66,7 +66,6 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
         if (standardPick.length > 0) {
           pickedCards.push(standardPick[0]);
         } else {
-          // 🌟 FIXED: Added dummy fileName and isCoding
           pickedCards.push({
             category: deck.category,
             topic: "No completed topics yet. Keep studying!",
@@ -95,7 +94,12 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
       {dailyCards.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {dailyCards.map((card, index) => (
-            <Flashcard key={`${card.category}-${index}`} card={card} />
+            <Flashcard
+              key={`${card.category}-${index}`}
+              card={card}
+              // 🌟 PASS DOWN THE CHECK
+              isAlreadyRevised={todayRevised.includes(card.topic)}
+            />
           ))}
         </div>
       )}
