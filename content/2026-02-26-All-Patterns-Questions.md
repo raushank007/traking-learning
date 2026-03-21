@@ -184,7 +184,7 @@ isRoadmap: true
 | **M** | Daily Temperatures | [ ] | [Link](https://leetcode.com/problems/daily-temperatures/) |
 | **M** | Simplify Path | [ ] | [Link](https://leetcode.com/problems/simplify-path/) |
 | **M** | Online Stock Span | [ ] | [Link](https://leetcode.com/problems/online-stock-span/) |
-| **M** | Evaluate Reverse Polish Notation | [ ] | [Link](https://leetcode.com/problems/evaluate-reverse-polish-notation/) |
+| **M** | Evaluate Reverse Polish Notation |  [X]   | [Link](https://leetcode.com/problems/evaluate-reverse-polish-notation/) |
 | **M** | Score of Parentheses | [ ] | [Link](https://leetcode.com/problems/score-of-parentheses/) |
 | **H** | Largest Rectangle in Histogram | [ ] | [Link](https://leetcode.com/problems/largest-rectangle-in-histogram/) |
 | **H** | Maximal Rectangle | [ ] | [Link](https://leetcode.com/problems/maximal-rectangle/) |
@@ -210,7 +210,7 @@ isRoadmap: true
 ## 13. Tree (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
-| **E** | Invert Binary Tree | [ ] | [Link](https://leetcode.com/problems/invert-binary-tree/) |
+| **E** | Invert Binary Tree |  [X]   | [Link](https://leetcode.com/problems/invert-binary-tree/) |
 | **E** | Maximum Depth of Binary Tree | [ ] | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/) |
 | **E** | Same Tree | [ ] | [Link](https://leetcode.com/problems/same-tree/) |
 | **M** | Validate Binary Search Tree | [ ] | [Link](https://leetcode.com/problems/validate-binary-search-tree/) |
