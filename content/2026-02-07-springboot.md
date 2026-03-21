@@ -9,15 +9,15 @@ isRoadmap: true
 
 ## 1. Spring Core Mechanics
 
-| Category | Topic | Status | Revisions | Log Link                                                                                                                            |
-| :--- | :--- | :---: | :---: |:------------------------------------------------------------------------------------------------------------------------------------|
-| Core | Inversion of Control (IoC) and Dependency Injection (DI) | [x] | 0 | [Read log](/2026-02-07-IOC-Dependecy)                                                                                               |
-| Core | `ApplicationContext` vs `BeanFactory` | [x] | 0 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                               |
-| Beans | Bean Scopes (Singleton, Prototype, Request) & Thread Safety | [x] | 0 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                               |
-| Beans | Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`) | [x] | 0 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                               |
-| Beans | `BeanPostProcessor` and Custom Bean Modification | [x] | 1 | [Read Log](/2026-02-07-IOC-Dependecy)                                                                                                                                    |
-| AOP | Aspect-Oriented Programming (Proxies, Pointcuts, Advice) | [ ] | 0 | -                                                                                                                                   |
-| Events | Application Events (`ApplicationEventPublisher`, `@EventListener`) | [ ] | 0 | -                                                                                                                                   |
+| Category | Topic | Status | Revisions | Log Link                              |
+| :--- | :--- |:------:| :---: |:--------------------------------------|
+| Core | Inversion of Control (IoC) and Dependency Injection (DI) |  [x]   | 0 | [Read log](/2026-02-07-IOC-Dependecy) |
+| Core | `ApplicationContext` vs `BeanFactory` |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
+| Beans | Bean Scopes (Singleton, Prototype, Request) & Thread Safety |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
+| Beans | Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`) |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
+| Beans | `BeanPostProcessor` and Custom Bean Modification |  [x]   | 1 | [Read Log](/2026-02-07-IOC-Dependecy) |
+| AOP | Aspect-Oriented Programming (Proxies, Pointcuts, Advice) |  [X]   | 0 | [Read Log](/2026-03-21-AOP)           |
+| Events | Application Events (`ApplicationEventPublisher`, `@EventListener`) |  [ ]   | 0 | -                                     |
 
 ## 2. Spring Boot Under the Hood
 
