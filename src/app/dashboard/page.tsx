@@ -1,14 +1,13 @@
 import { getAllSlugs, getPostBySlug } from '@/lib/markdown';
 import Link from 'next/link';
 
-// Helper: Calculate minutes between 24-hour times (e.g., "14:30" to "16:00")
+// Helper: Calculate minutes between 24-hour times
 function calculateStudyMinutes(start?: string, end?: string): number {
   if (!start || !end) return 0;
   const [startHr, startMin] = start.split(':').map(Number);
   const [endHr, endMin] = end.split(':').map(Number);
   let diff = (endHr * 60 + endMin) - (startHr * 60 + startMin);
 
-  // Handles studying past midnight (e.g., 23:30 to 01:00)
   if (diff < 0) diff += 24 * 60;
   return diff || 0;
 }
@@ -28,51 +27,82 @@ export default function DashboardPage() {
   let globalStudyMins = 0;
   let globalReadMins = 0;
 
-  // 🌟 NEW: Roadmap Tracking Variables
+  // Roadmap Tracking Variables
   let totalRoadmapTopics = 0;
   let completedRoadmapTopics = 0;
 
-  // We initialize the stats including your new custom categories!
-  const categoryStats: Record<string, { count: number; studyMins: number; readMins: number }> = {
-    coding: { count: 0, studyMins: 0, readMins: 0 },
-    hld: { count: 0, studyMins: 0, readMins: 0 },
-    lld: { count: 0, studyMins: 0, readMins: 0 },
-    springboot: { count: 0, studyMins: 0, readMins: 0 },
-    java: { count: 0, studyMins: 0, readMins: 0 },
-    general: { count: 0, studyMins: 0, readMins: 0 },
+  // 🌟 NEW: Global Revision Tracker
+  let totalRevisions = 0;
+
+  // 🌟 UPGRADED: Added 'revisions' to tracking object
+  const categoryStats: Record<string, { count: number; studyMins: number; readMins: number; revisions: number }> = {
+    coding: { count: 0, studyMins: 0, readMins: 0, revisions: 0 },
+    hld: { count: 0, studyMins: 0, readMins: 0, revisions: 0 },
+    lld: { count: 0, studyMins: 0, readMins: 0, revisions: 0 },
+    springboot: { count: 0, studyMins: 0, readMins: 0, revisions: 0 },
+    java: { count: 0, studyMins: 0, readMins: 0, revisions: 0 },
+    general: { count: 0, studyMins: 0, readMins: 0, revisions: 0 },
   };
 
   const tagCounts: Record<string, number> = {};
   const dateCounts: Record<string, number> = {};
 
   posts.forEach(post => {
-    // 🌟 NEW: If it's a roadmap file, scan its checkboxes and SKIP standard stats!
+
+    // --- ROADMAP FILE PROCESSING ---
     if (post.meta.isRoadmap) {
-      // 1. Grab items from standard lists (like your HLD / LLD files)
-      // FIX: Changed `file.content` to `post.content`
       const pendingListMatches = [...post.content.matchAll(/-\s+\[ \]\s+(.*)/g)].map(m => m[1]);
       const completedListMatches = [...post.content.matchAll(/-\s+\[[xX]\]\s+(.*)/g)].map(m => m[1]);
 
-      // 2. Grab items from Markdown Tables (like your new Patterns file)
-      // This regex looks for: | Column 1 | Column 2 | [ ] | ...
       const pendingTableMatches = [...post.content.matchAll(/\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|\s*\[ \]\s*\|/g)].map(m => m[2]);
       const completedTableMatches = [...post.content.matchAll(/\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|\s*\[[xX]\]\s*\|/g)].map(m => m[2]);
 
-      // 3. Combine them together for the tracker
-      const pendingMatches = [...pendingListMatches, ...pendingTableMatches];
-      const pendingCount = pendingMatches.length;
+      const pendingCount = pendingListMatches.length + pendingTableMatches.length;
       const completedCount = completedListMatches.length + completedTableMatches.length;
       totalRoadmapTopics += (pendingCount + completedCount);
       completedRoadmapTopics += completedCount;
-      return; // Stop here so master files don't bloat your log counts
+
+      // 🌟 NEW: Determine the category of this specific roadmap file
+      let cat = 'general';
+      const slug = post.slug?.toLowerCase() || '';
+      const tags = post.meta.tags?.map((t: string) => t.toLowerCase()) || [];
+
+      if (slug.includes('springboot') || tags.includes('springboot')) cat = 'springboot';
+      else if (slug.includes('java') || tags.includes('java')) cat = 'java';
+      else if (slug.includes('hld') || tags.includes('hld')) cat = 'hld';
+      else if (slug.includes('lld') || tags.includes('lld')) cat = 'lld';
+      else if (slug.includes('pattern') || tags.includes('leetcode')) cat = 'coding';
+
+      // 🌟 NEW: Parse the Revisions column from Markdown Tables
+      const lines = post.content.split('\n');
+      for (const line of lines) {
+        if (line.trim().startsWith('|')) {
+          const cols = line.split('|').map(c => c.trim());
+
+          // Ensure it's a valid data row (not a header or separator)
+          if (cols.length >= 6 && !cols[1].includes('---')) {
+            // In theory files, cols[4] holds the Revisions number
+            // (cols[0] is empty because of the leading pipe '|')
+            const revCount = parseInt(cols[4], 10);
+
+            // If it's a valid number (e.g., not the LeetCode link from the coding file)
+            if (!isNaN(revCount) && revCount > 0) {
+              totalRevisions += revCount;
+              categoryStats[cat].revisions += revCount;
+            }
+          }
+        }
+      }
+      return; // Skip standard stats processing for roadmap files
     }
 
+    // --- STANDARD LOG FILE PROCESSING ---
     const cat = (post.meta.category || 'general').toLowerCase();
-    if (!categoryStats[cat]) categoryStats[cat] = { count: 0, studyMins: 0, readMins: 0 };
+    if (!categoryStats[cat]) categoryStats[cat] = { count: 0, studyMins: 0, readMins: 0, revisions: 0 };
     categoryStats[cat].count += 1;
 
     const postStudyMins = post.meta.sessions
-      ? post.meta.sessions.reduce((acc, s) => acc + calculateStudyMinutes(s.startTime, s.endTime), 0)
+      ? post.meta.sessions.reduce((acc: number, s: any) => acc + calculateStudyMinutes(s.startTime, s.endTime), 0)
       : 0;
 
     globalStudyMins += postStudyMins;
@@ -88,7 +118,7 @@ export default function DashboardPage() {
     globalReadMins += postReadMins;
     categoryStats[cat].readMins += postReadMins;
 
-    post.meta.tags?.forEach(tag => {
+    post.meta.tags?.forEach((tag: string) => {
       const normalizedTag = tag.toLowerCase();
       tagCounts[normalizedTag] = (tagCounts[normalizedTag] || 0) + 1;
     });
@@ -101,10 +131,8 @@ export default function DashboardPage() {
   const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 12);
   const sortedDates = Object.entries(dateCounts).sort((a, b) => b[0].localeCompare(a[0]));
 
-  // Calculate Progress Percentage for the Fleet Readiness bar
   const progressPercentage = totalRoadmapTopics === 0 ? 0 : Math.round((completedRoadmapTopics / totalRoadmapTopics) * 100);
 
-  // 🌟 THEME UPDATE: One Piece Visual Mapping with your new categories
   const categoryMeta: Record<string, { label: string, icon: string, color: string, textColor: string }> = {
     coding: { label: 'Pirate Code (LeetCode)', icon: '🏴‍☠️', color: 'border-red-300 hover:border-red-500', textColor: 'text-red-700' },
     hld: { label: 'Fortresses (HLD)', icon: '🏰', color: 'border-amber-400 hover:border-amber-600', textColor: 'text-amber-800' },
@@ -124,29 +152,33 @@ export default function DashboardPage() {
         </h1>
 
         <div className="flex flex-wrap gap-4 mb-6">
-          {/* Total Logs Card */}
-          <div className="bg-white/80 backdrop-blur-sm border border-amber-300 px-5 py-4 rounded-xl shadow-sm flex-1 min-w-[200px]">
+          <div className="bg-white/80 backdrop-blur-sm border border-amber-300 px-5 py-4 rounded-xl shadow-sm flex-1 min-w-[180px]">
             <div className="text-xs font-bold text-amber-700 uppercase tracking-widest mb-1 flex items-center gap-2">
               <span>🗺️</span> Charted Logs
             </div>
-            {/* Display count of non-roadmap files only */}
             <div className="text-3xl font-black text-slate-800">{posts.filter(p => !p.meta.isRoadmap).length}</div>
           </div>
 
-          {/* Study Time Card */}
-          <div className="bg-red-50/90 border border-red-300 px-5 py-4 rounded-xl shadow-sm flex-1 min-w-[200px]">
+          <div className="bg-red-50/90 border border-red-300 px-5 py-4 rounded-xl shadow-sm flex-1 min-w-[180px]">
             <div className="text-xs font-bold text-red-700 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-              <span>⏱️</span> Time at Sea (Study)
+              <span>⏱️</span> Time at Sea
             </div>
             <div className="text-3xl font-black text-red-800">{formatTime(globalStudyMins)}</div>
           </div>
 
-          {/* Read Time Card */}
-          <div className="bg-amber-100/70 border border-amber-400 px-5 py-4 rounded-xl shadow-sm flex-1 min-w-[200px]">
+          <div className="bg-amber-100/70 border border-amber-400 px-5 py-4 rounded-xl shadow-sm flex-1 min-w-[180px]">
             <div className="text-xs font-bold text-amber-800 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-              <span>📖</span> Poneglyph Translation
+              <span>📖</span> Translation
             </div>
             <div className="text-3xl font-black text-amber-900">{formatTime(globalReadMins)}</div>
+          </div>
+
+          {/* 🌟 NEW: Active Recalls (Revisions) Card */}
+          <div className="bg-emerald-50/90 border border-emerald-300 px-5 py-4 rounded-xl shadow-sm flex-1 min-w-[180px]">
+            <div className="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-1 flex items-center gap-1.5">
+              <span>🧠</span> Active Recalls
+            </div>
+            <div className="text-3xl font-black text-emerald-800">{totalRevisions}</div>
           </div>
         </div>
 
@@ -165,13 +197,8 @@ export default function DashboardPage() {
               </div>
               <span className="text-4xl md:text-5xl font-pirate text-red-600 drop-shadow-sm group-hover:scale-110 transition-transform origin-right">{progressPercentage}%</span>
             </div>
-            {/* Thematic Progress Bar */}
             <div className="w-full h-4 bg-amber-200/50 rounded-full overflow-hidden border border-amber-300/80 shadow-inner">
-              <div
-                className="h-full bg-gradient-to-r from-red-600 via-orange-500 to-amber-400 transition-all duration-1000 ease-out relative"
-                style={{ width: `${progressPercentage}%` }}
-              >
-                {/* Small shine effect on the progress bar */}
+              <div className="h-full bg-gradient-to-r from-red-600 via-orange-500 to-amber-400 transition-all duration-1000 ease-out relative" style={{ width: `${progressPercentage}%` }}>
                 <div className="absolute top-0 left-0 right-0 h-1/2 bg-white/20"></div>
               </div>
             </div>
@@ -184,11 +211,10 @@ export default function DashboardPage() {
         <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
           <span>📊</span> Crew Specialties Breakdown
         </h2>
-        {/* Adjusted to grid-cols-2 or 3 to fit 6 categories nicely */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {Object.entries(categoryStats).map(([catKey, stats]) => {
-            // Only render categories that actually have posts, to keep it clean
-            if (stats.count === 0) return null;
+            // 🌟 FIXED: Now displays if there is at least a log OR at least one revision
+            if (stats.count === 0 && stats.revisions === 0) return null;
 
             const meta = categoryMeta[catKey] || categoryMeta.general;
 
@@ -196,7 +222,6 @@ export default function DashboardPage() {
               <Link
                 key={catKey}
                 href={`/category/${catKey}`}
-                // Applied the parchment background to make them look like Wanted Posters
                 className={`bg-[url('https://www.transparenttextures.com/patterns/rice-paper.png')] bg-[#fef3c7]/60 p-5 rounded-2xl border-2 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group ${meta.color}`}
               >
                 <div className="flex items-center gap-3 mb-6">
@@ -206,16 +231,23 @@ export default function DashboardPage() {
                   </span>
                 </div>
 
-                <div className="space-y-3 mt-auto bg-white/70 backdrop-blur-sm p-4 rounded-xl border border-amber-200/60 shadow-sm">
+                <div className="space-y-2 mt-auto bg-white/70 backdrop-blur-sm p-4 rounded-xl border border-amber-200/60 shadow-sm">
                   <div className="flex justify-between items-center text-sm">
-                    <span className="text-slate-700 font-bold">Bounties</span>
+                    <span className="text-slate-700 font-bold">Bounties (Logs)</span>
                     <span className="font-black text-slate-900 bg-amber-200/80 px-2.5 py-0.5 rounded shadow-sm">{stats.count}</span>
                   </div>
+
+                  {/* 🌟 NEW: Category Specific Revisions */}
                   <div className="flex justify-between items-center text-sm">
+                    <span className="text-slate-700 font-bold">Active Recalls</span>
+                    <span className="font-black text-emerald-900 bg-emerald-200/80 px-2.5 py-0.5 rounded shadow-sm">{stats.revisions}</span>
+                  </div>
+
+                  <div className="flex justify-between items-center text-sm border-t border-amber-200/80 pt-2 mt-1">
                     <span className="text-slate-600 font-medium">Training</span>
                     <span className="font-bold text-red-600">{formatTime(stats.studyMins)}</span>
                   </div>
-                  <div className="flex justify-between items-center text-sm border-t border-amber-200/80 pt-3">
+                  <div className="flex justify-between items-center text-sm">
                     <span className="text-slate-600 font-medium">Reading</span>
                     <span className="font-bold text-amber-700">{formatTime(stats.readMins)}</span>
                   </div>
@@ -228,6 +260,7 @@ export default function DashboardPage() {
 
       {/* TOP TAGS & ACTIVITY TIMELINE */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* ... (Tags and Logs sections remain exactly the same) ... */}
         <section>
           <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
             <span>🏷️</span> Wanted Posters (Top Tags)

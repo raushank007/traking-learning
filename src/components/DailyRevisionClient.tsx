@@ -5,10 +5,9 @@ import React, { useState, useEffect } from 'react';
 import Flashcard from './Flashcard';
 import { CategoryDeck, RevisionCard } from '../lib/revision';
 
-// 🌟 UPGRADED: Can now pick multiple unique items deterministically based on a date seed
 function getDailyRandomItems<T>(items: T[], dateStr: string, count: number, salt: string): T[] {
   if (items.length === 0) return [];
-  if (items.length <= count) return [...items]; // Return all if we don't have enough
+  if (items.length <= count) return [...items];
 
   const selected: T[] = [];
   const available = [...items];
@@ -21,7 +20,7 @@ function getDailyRandomItems<T>(items: T[], dateStr: string, count: number, salt
     }
     const index = Math.abs(hash) % available.length;
     selected.push(available[index]);
-    available.splice(index, 1); // Remove picked item to prevent duplicates
+    available.splice(index, 1);
   }
 
   return selected;
@@ -38,7 +37,6 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
     const pickedCards: RevisionCard[] = [];
 
     decks.forEach(deck => {
-      // 🌟 NEW: Custom Distribution for Algorithms
       if (deck.category === 'Algorithms') {
         const easyCards = deck.cards.filter(c => c.difficulty === 'E');
         const medCards = deck.cards.filter(c => c.difficulty === 'M');
@@ -53,16 +51,29 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
         if (algoPicks.length > 0) {
           pickedCards.push(...algoPicks);
         } else {
-          pickedCards.push({ category: deck.category, topic: "No completed topics yet. Keep studying!", link: "#" });
+          // 🌟 FIXED: Added dummy fileName and isCoding
+          pickedCards.push({
+            category: deck.category,
+            topic: "No completed topics yet. Keep studying!",
+            link: "#",
+            fileName: "",
+            isCoding: false
+          });
         }
       }
-      // 🌟 Standard Distribution (1 per category) for everything else
       else {
         const standardPick = getDailyRandomItems(deck.cards, todayStr, 1, deck.category);
         if (standardPick.length > 0) {
           pickedCards.push(standardPick[0]);
         } else {
-          pickedCards.push({ category: deck.category, topic: "No completed topics yet. Keep studying!", link: "#" });
+          // 🌟 FIXED: Added dummy fileName and isCoding
+          pickedCards.push({
+            category: deck.category,
+            topic: "No completed topics yet. Keep studying!",
+            link: "#",
+            fileName: "",
+            isCoding: false
+          });
         }
       }
     });
@@ -81,7 +92,6 @@ export default function DailyRevisionClient({ decks }: { decks: CategoryDeck[] }
         </p>
       </header>
 
-      {/* 🌟 Adjusted grid to handle 8 cards comfortably (4 core + 4 algo) */}
       {dailyCards.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {dailyCards.map((card, index) => (
