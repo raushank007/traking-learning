@@ -43,7 +43,7 @@ isRoadmap: true
 | **M** | Multiply Strings | [ ] | [Link](https://leetcode.com/problems/multiply-strings/) |
 | **M** | Decode String | [ ] | [Link](https://leetcode.com/problems/decode-string/) |
 | **H** | Minimum Window Substring | [ ] | [Link](https://leetcode.com/problems/minimum-window-substring/) |
-| **H** | Valid Number | [ ] | [Link](https://leetcode.com/problems/valid-number/) |
+| **H** | Valid Number |  [X]   | [Link](https://leetcode.com/problems/valid-number/) |
 
 ---
 
@@ -244,7 +244,7 @@ isRoadmap: true
 | **E** | Find Center of Star Graph | [ ] | [Link](https://leetcode.com/problems/find-center-of-star-graph/) |
 | **E** | Flood Fill | [ ] | [Link](https://leetcode.com/problems/flood-fill/) |
 | **E** | Find if Path Exists in Graph | [ ] | [Link](https://leetcode.com/problems/find-if-path-exists-in-graph/) |
-| **M** | Number of Islands | [ ] | [Link](https://leetcode.com/problems/number-of-islands/) |
+| **M** | Number of Islands |  [X]   | [Link](https://leetcode.com/problems/number-of-islands/) |
 | **M** | Course Schedule II | [ ] | [Link](https://leetcode.com/problems/course-schedule-ii/) |
 | **M** | Rotting Oranges | [ ] | [Link](https://leetcode.com/problems/rotting-oranges/) |
 | **M** | Network Delay Time (Dijkstra) | [ ] | [Link](https://leetcode.com/problems/network-delay-time/) |
