@@ -9,22 +9,22 @@ isRoadmap: true
 
 ## 1. Object Oriented Design Principles
 
-| Category | Topic | Status | Revisions | Log Link                                                          |
-| :--- | :--- |:------:|:---------:|:------------------------------------------------------------------|
-| Core OOP | Abstraction |  [x]   |     0     | [Read Log](/2026-03-01-Abstraction)                               |
-| Core OOP | Encapsulation |  [x]   |     0     | [Read Log](/2026-03-11-Encapsulation)                             |
-| Core OOP | Inheritance |  [x]   |     1     | [Read Log](/2026-03-12-Inheritance)                               |
-| Core OOP | Polymorphism |  [X]   |     0     | [Read Log](/2026-03-12-Polymorphism)                              |
-| SOLID | Single Responsibility |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)                                     |
-| SOLID | Open/Closed |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)                                     |
-| SOLID | Liskov Substitution |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)                                     |
-| SOLID | Interface Segregation |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)                                     |
-| SOLID | Dependency Inversion |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)                                                                  |
-| Additional | DRY (Don't Repeat Yourself) |  [ ]   |     0     | -                                                                 |
-| Additional | KISS (Keep it Simple, Stupid) |  [ ]   |     0     | -                                                                 |
-| Additional | YAGNI (You Aren't Gonna Need It) |  [ ]   |     0     | -                                                                 |
-| Additional | Composition > Inheritance |  [ ]   |     0     | -                                                                 |
-| Additional | Immutability |  [ ]   |     0     | -                                                                 |
+| Category | Topic | Status | Revisions | Log Link                              |
+| :--- | :--- |:------:|:---------:|:--------------------------------------|
+| Core OOP | Abstraction |  [x]   |     0     | [Read Log](/2026-03-01-Abstraction)   |
+| Core OOP | Encapsulation |  [x]   |     0     | [Read Log](/2026-03-11-Encapsulation) |
+| Core OOP | Inheritance |  [x]   |     1     | [Read Log](/2026-03-12-Inheritance)   |
+| Core OOP | Polymorphism |  [X]   |     0     | [Read Log](/2026-03-12-Polymorphism)  |
+| SOLID | Single Responsibility |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
+| SOLID | Open/Closed |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
+| SOLID | Liskov Substitution |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
+| SOLID | Interface Segregation |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
+| SOLID | Dependency Inversion |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
+| Additional | DRY (Don't Repeat Yourself) |  [X]   |     0     | [Read Log](/2026-03-21-DRY)           |
+| Additional | KISS (Keep it Simple, Stupid) |  [X]   |     0     | [Read Log](/2026-03-21-KISS)          |
+| Additional | YAGNI (You Aren't Gonna Need It) |  [X]   |     0     | [Read Log](/2026-03-21-YAGNI)         |
+| Additional | Composition > Inheritance |  [ ]   |     0     | -                                     |
+| Additional | Immutability |  [ ]   |     0     | -                                     |
 
 ## 2. UML Diagrams (Draw & Describe)
 

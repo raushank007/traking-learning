@@ -2,7 +2,7 @@
 title: "Scalability"
 date: "2026-03-21"
 tags: ["HLD", "Trade off"]
-summary: "Define Consistency, Availability, and Partition Tolerance. Understand why a distributed system can only guarantee two out of the three at any given time."
+summary: "Understand Scalability term"
 category: "HLD"
 sessions:
   - date: "2026-03-21"
