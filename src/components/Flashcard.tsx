@@ -1,14 +1,12 @@
 // src/components/Flashcard.tsx
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { RevisionCard } from '../lib/revision';
 
 export default function Flashcard({ card }: { card: RevisionCard }) {
   const [isFlipped, setIsFlipped] = useState(false);
-
-  // 🌟 NEW: Track the saving state of this individual card
   const [isSaving, setIsSaving] = useState(false);
   const [isLogged, setIsLogged] = useState(false);
 
@@ -20,10 +18,32 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
     'H': 'bg-red-100 text-red-700 border-red-200'
   };
 
-  // 🌟 NEW: The function that updates your Markdown table row
+  // 🌟 NEW: Check if this topic was already revised today when the component mounts
+  useEffect(() => {
+    if (isPlaceholder) return;
+
+    const todayStr = new Date().toLocaleDateString('en-CA');
+    const storageKey = `grandLine_revised_${todayStr}`;
+    const storedData = localStorage.getItem(storageKey);
+
+    if (storedData) {
+      const revisedTopics = JSON.parse(storedData);
+      if (revisedTopics.includes(card.topic)) {
+        setIsLogged(true);
+      }
+    }
+  }, [card.topic, isPlaceholder]);
+
+  // 🌟 UPGRADED: Save to localStorage upon successful API call
   const handleUpdateProgress = async (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent card flip
+    e.stopPropagation();
     if (isSaving || isLogged) return;
+
+    // Vercel / Production Bypass
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+      markAsCompletedInUI();
+      return;
+    }
 
     setIsSaving(true);
     try {
@@ -37,11 +57,28 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
         }),
       });
 
-      if (response.ok) setIsLogged(true);
+      if (response.ok) {
+        markAsCompletedInUI();
+      }
     } catch (error) {
       console.error("Failed to update progress", error);
     } finally {
       setIsSaving(false);
+    }
+  };
+
+  // Helper function to update React State AND LocalStorage
+  const markAsCompletedInUI = () => {
+    setIsLogged(true);
+    const todayStr = new Date().toLocaleDateString('en-CA');
+    const storageKey = `grandLine_revised_${todayStr}`;
+
+    const storedData = localStorage.getItem(storageKey);
+    const revisedTopics = storedData ? JSON.parse(storedData) : [];
+
+    if (!revisedTopics.includes(card.topic)) {
+      revisedTopics.push(card.topic);
+      localStorage.setItem(storageKey, JSON.stringify(revisedTopics));
     }
   };
 
@@ -56,6 +93,7 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
               {card.difficulty === 'E' ? 'EASY' : card.difficulty === 'M' ? 'MED' : 'HARD'}
             </span>
           )}
+
           {/* Show a green check on the front if completed during this session */}
           {isLogged && <span className="absolute top-4 left-4 text-emerald-500 text-xl">✅</span>}
 
@@ -88,7 +126,6 @@ export default function Flashcard({ card }: { card: RevisionCard }) {
                 {card.link.startsWith('http') ? 'View on LeetCode ↗' : 'Review Logbook →'}
               </Link>
 
-              {/* 🌟 NEW: The interactive progress button */}
               <button
                 onClick={handleUpdateProgress}
                 disabled={isSaving || isLogged}
