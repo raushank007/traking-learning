@@ -11,7 +11,25 @@ export async function POST(request: Request) {
   try {
     const { fileName, topic, isCoding } = await request.json();
 
-    // 1. Update the Main Roadmap File
+    const logPath = path.join(process.cwd(), 'content', 'revision-log.md');
+    const todayStr = new Date().toLocaleDateString('en-CA');
+
+    // The exact string we expect in the ledger for today
+    const logEntry = `- [${todayStr}] ${topic}`;
+
+    // 🌟 1. NEW: The Duplicate Safeguard
+    // Check if the topic was already logged today before touching ANY files
+    if (fs.existsSync(logPath)) {
+      const logContent = fs.readFileSync(logPath, 'utf-8');
+
+      if (logContent.includes(logEntry)) {
+        console.log(`⏩ [SKIPPED] "${topic}" is already logged for today.`);
+        // Return success so the frontend UI stays green, but 'updated: false' indicates no file changes
+        return NextResponse.json({ success: true, message: "Already logged today", updated: false });
+      }
+    }
+
+    // 2. Update the Main Roadmap File
     const filePath = path.join(process.cwd(), 'content', fileName);
     if (!fs.existsSync(filePath)) return NextResponse.json({ error: "File not found" }, { status: 404 });
 
@@ -22,8 +40,9 @@ export async function POST(request: Request) {
       if (line.trim().startsWith('|')) {
         const columns = line.split('|');
         if (columns.length >= 5 && columns[2].trim() === topic.trim()) {
-          if (isCoding) columns[3] = '  [X]   ';
-          else {
+          if (isCoding) {
+            columns[3] = '  [X]   ';
+          } else {
             const currentRevs = parseInt(columns[4].trim(), 10) || 0;
             columns[4] = ` ${currentRevs + 1} `;
           }
@@ -38,21 +57,19 @@ export async function POST(request: Request) {
       fs.writeFileSync(filePath, newLines.join('\n'), 'utf-8');
     }
 
-    // 🌟 2. NEW: Append to the Central Ledger (revision-log.md)
-    const logPath = path.join(process.cwd(), 'content', 'revision-log.md');
-    const todayStr = new Date().toLocaleDateString('en-CA');
-    const logEntry = `- [${todayStr}] ${topic}\n`;
-
+    // 3. Append to the Central Ledger (revision-log.md)
     if (!fs.existsSync(logPath)) {
       // Create it with a nice frontmatter header if it doesn't exist yet
       const header = `---\ntitle: "Daily Revision Ledger"\nsummary: "Automated tracking of spaced repetition sessions."\n---\n\n`;
-      fs.writeFileSync(logPath, header + logEntry, 'utf-8');
+      fs.writeFileSync(logPath, header + logEntry + '\n', 'utf-8');
     } else {
       // Append to the end of the file
-      fs.appendFileSync(logPath, logEntry, 'utf-8');
+      fs.appendFileSync(logPath, logEntry + '\n', 'utf-8');
     }
 
+    console.log(`✅ [LOGGED] successfully updated "${topic}"`);
     return NextResponse.json({ success: true, updated });
+
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });

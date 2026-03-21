@@ -5,25 +5,31 @@ import React, { useState, useEffect } from 'react';
 import Flashcard from './Flashcard';
 import { CategoryDeck, RevisionCard } from '../lib/revision';
 
-function getDailyRandomItems<T>(items: T[], dateStr: string, count: number, salt: string): T[] {
+// 🌟 UPGRADED: Consistent Hashing guarantees cards stay fixed all day
+function getDailyRandomItems<T extends { topic: string }>(items: T[], dateStr: string, count: number, salt: string): T[] {
   if (items.length === 0) return [];
   if (items.length <= count) return [...items];
 
-  const selected: T[] = [];
-  const available = [...items];
-
-  for (let c = 0; c < count; c++) {
+  // Helper to generate a stable number from a string
+  const getHash = (str: string) => {
     let hash = 0;
-    const hashStr = dateStr + salt + c.toString();
-    for (let i = 0; i < hashStr.length; i++) {
-      hash = Math.imul(31, hash) + hashStr.charCodeAt(i) | 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = Math.imul(31, hash) + str.charCodeAt(i) | 0;
     }
-    const index = Math.abs(hash) % available.length;
-    selected.push(available[index]);
-    available.splice(index, 1);
-  }
+    return hash;
+  };
 
-  return selected;
+  // Score each item based on Today's Date, Category (salt), and Topic Name
+  const scoredItems = items.map(item => ({
+    item,
+    score: getHash(dateStr + salt + item.topic)
+  }));
+
+  // Sort them by their daily score
+  scoredItems.sort((a, b) => a.score - b.score);
+
+  // Return the top 'count' items. These will not change until dateStr changes!
+  return scoredItems.slice(0, count).map(si => si.item);
 }
 
 // 🌟 ACCEPT THE NEW PROP: todayRevised
