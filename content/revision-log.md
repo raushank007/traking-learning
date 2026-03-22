@@ -10,3 +10,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-21] Evaluate Reverse Polish Notation
 - [2026-03-21] Number of Islands
 - [2026-03-21] Valid Number
+- [2026-03-22] Base 7
+- [2026-03-22] LinkedHashMap Internals & LRU Cache Implementation

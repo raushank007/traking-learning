@@ -196,7 +196,7 @@ isRoadmap: true
 |:--- | :--- | :---: | :--- |
 | **E** | Implement Stack using Queues | [ ] | [Link](https://leetcode.com/problems/implement-stack-using-queues/) |
 | **E** | Students Unable to Eat Lunch | [ ] | [Link](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) |
-| **E** | Base 7 | [ ] | [Link](https://leetcode.com/problems/base-7/) |
+| **E** | Base 7 |  [X]   | [Link](https://leetcode.com/problems/base-7/) |
 | **M** | Sliding Window Maximum | [ ] | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
 | **M** | Longest Subarray with Absolute Diff | [ ] | [Link](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) |
 | **M** | Design Front Middle Back Queue | [ ] | [Link](https://leetcode.com/problems/design-front-middle-back-queue/) |
