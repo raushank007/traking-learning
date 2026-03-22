@@ -11,7 +11,7 @@ isRoadmap: true
 
 | Category | Topic | Status | Revisions | Log Link                              |
 | :--- | :--- |:------:| :---: |:--------------------------------------|
-| Core | Inversion of Control (IoC) and Dependency Injection (DI) |  [x]   | 0 | [Read log](/2026-02-07-IOC-Dependecy) |
+| Core | Inversion of Control (IoC) and Dependency Injection (DI) |  [x]   | 1 | [Read log](/2026-02-07-IOC-Dependecy) |
 | Core | `ApplicationContext` vs `BeanFactory` |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
 | Beans | Bean Scopes (Singleton, Prototype, Request) & Thread Safety |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
 | Beans | Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`) |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
