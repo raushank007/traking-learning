@@ -18,3 +18,6 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-23] Palindrome Partitioning
 - [2026-03-23] First Negative Integer in Window
 - [2026-03-23] LinkedHashMap Internals & LRU Cache Implementation
+- [2026-03-23] API Gateway Pattern
+- [2026-03-23] Liskov Substitution
+- [2026-03-23] Aspect-Oriented Programming (Proxies, Pointcuts, Advice)

@@ -17,7 +17,7 @@ isRoadmap: true
 | Core OOP | Polymorphism |  [X]   |     0     | [Read Log](/2026-03-12-Polymorphism)  |
 | SOLID | Single Responsibility |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
 | SOLID | Open/Closed |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
-| SOLID | Liskov Substitution |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
+| SOLID | Liskov Substitution |  [X]   | 1 | [Read Log](/2026-03-18-SOLID)         |
 | SOLID | Interface Segregation |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
 | SOLID | Dependency Inversion |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |
 | Additional | DRY (Don't Repeat Yourself) |  [X]   |     0     | [Read Log](/2026-03-21-DRY)           |
