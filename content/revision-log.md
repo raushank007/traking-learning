@@ -16,3 +16,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-22] L4 vs L7 Load Balancers
 - [2026-03-23] Min Stack
 - [2026-03-23] Palindrome Partitioning
+- [2026-03-23] First Negative Integer in Window
+- [2026-03-23] LinkedHashMap Internals & LRU Cache Implementation

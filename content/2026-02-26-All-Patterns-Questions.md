@@ -203,7 +203,7 @@ isRoadmap: true
 | **M** | Jump Game VI | [ ] | [Link](https://leetcode.com/problems/jump-game-vi/) |
 | **M** | Shortest Subarray with Sum at Least K | [ ] | [Link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) |
 | **H** | Maximize the Beauty of the Garden | [ ] | [Link](https://leetcode.com/problems/maximize-the-beauty-of-the-garden/) |
-| **H** | First Negative Integer in Window | [ ] | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
+| **H** | First Negative Integer in Window |  [X]   | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
 
 ---
 
