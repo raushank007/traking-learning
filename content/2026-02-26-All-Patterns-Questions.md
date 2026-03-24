@@ -313,7 +313,7 @@ isRoadmap: true
 | **M** | Single Number II | [ ] | [Link](https://leetcode.com/problems/single-number-ii/) |
 | **M** | Counting Bits | [ ] | [Link](https://leetcode.com/problems/counting-bits/) |
 | **M** | UTF-8 Validation | [ ] | [Link](https://leetcode.com/problems/utf-8-validation/) |
-| **H** | Min Bit Ops to Zero | [ ] | [Link](https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/) |
+| **H** | Min Bit Ops to Zero |  [X]   | [Link](https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/) |
 | **H** | Total Hamming Distance | [ ] | [Link](https://leetcode.com/problems/total-hamming-distance/) |
 
 ---
