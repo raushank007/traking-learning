@@ -38,25 +38,25 @@ isRoadmap: true
 
 > **Focus:** Always understand *when* and *why* to use them, not just how to code them.
 
-| Category | Pattern | Status | Revisions | Log Link                          |
-| :--- | :--- |:------:| :---: |:----------------------------------|
-| Creational | Singleton |  [X]   | 0 | [Read Log](/2026-03-24-Singleton) |
-| Creational | Factory & Factory Method |  [ ]   | 0 | -                                 |
-| Creational | Abstract Factory |  [ ]   | 0 | -                                 |
-| Creational | Builder |  [ ]   | 0 | -                                 |
-| Creational | Prototype |  [ ]   | 0 | -                                 |
-| Structural | Adapter |  [ ]   | 0 | -                                 |
-| Structural | Decorator |  [ ]   | 0 | -                                 |
-| Structural | Facade |  [ ]   | 0 | -                                 |
-| Structural | Composite |  [ ]   | 0 | -                                 |
-| Structural | Proxy |  [ ]   | 0 | -                                 |
-| Behavioral | Strategy |  [ ]   | 0 | -                                 |
-| Behavioral | Observer |  [ ]   | 0 | -                                 |
-| Behavioral | Command |  [ ]   | 0 | -                                 |
-| Behavioral | Template Method |  [ ]   | 0 | -                                 |
-| Behavioral | Iterator |  [ ]   | 0 | -                                 |
-| Behavioral | Chain of Responsibility |  [ ]   | 0 | -                                 |
-| Behavioral | State |  [ ]   | 0 | -                                 |
+| Category | Pattern | Status | Revisions | Log Link                                |
+| :--- | :--- |:------:| :---: |:----------------------------------------|
+| Creational | Singleton |  [X]   | 0 | [Read Log](/2026-03-24-Singleton)       |
+| Creational | Factory & Factory Method |  [X]   | 0 | [Read Log](/2026-03-24-Factory-Pattern) |
+| Creational | Abstract Factory |  [ ]   | 0 | -                                       |
+| Creational | Builder |  [ ]   | 0 | -                                       |
+| Creational | Prototype |  [ ]   | 0 | -                                       |
+| Structural | Adapter |  [ ]   | 0 | -                                       |
+| Structural | Decorator |  [ ]   | 0 | -                                       |
+| Structural | Facade |  [ ]   | 0 | -                                       |
+| Structural | Composite |  [ ]   | 0 | -                                       |
+| Structural | Proxy |  [ ]   | 0 | -                                       |
+| Behavioral | Strategy |  [ ]   | 0 | -                                       |
+| Behavioral | Observer |  [ ]   | 0 | -                                       |
+| Behavioral | Command |  [ ]   | 0 | -                                       |
+| Behavioral | Template Method |  [ ]   | 0 | -                                       |
+| Behavioral | Iterator |  [ ]   | 0 | -                                       |
+| Behavioral | Chain of Responsibility |  [ ]   | 0 | -                                       |
+| Behavioral | State |  [ ]   | 0 | -                                       |
 
 ## 4. Concurrency & Multithreading Design
 
