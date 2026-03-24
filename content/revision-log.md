@@ -26,3 +26,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-24] Number of Islands
 - [2026-03-24] Fail-Fast vs Fail-Safe Iterators
 - [2026-03-24] Min Bit Ops to Zero
+- [2026-03-24] Back-of-the-envelope calculations (Estimations)
+- [2026-03-24] Interface Segregation
