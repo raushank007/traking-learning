@@ -21,14 +21,14 @@ isRoadmap: true
 
 ## 2. Spring Boot Under the Hood
 
-| Category | Topic | Status | Revisions | Log Link |
-| :--- | :--- | :---: | :---: | :--- |
-| Internals | How `@SpringBootApplication` works internally | [ ] | 0 | - |
-| Auto-Config | Auto-configuration (`@EnableAutoConfiguration`, `spring.factories`) | [ ] | 0 | - |
-| Conditions | Conditional Bean Loading (`@ConditionalOnClass`, `@ConditionalOnProperty`) | [ ] | 0 | - |
-| Extensions | Creating a Custom Spring Boot Starter | [ ] | 0 | - |
-| Config | Externalized Configuration and Property Resolution Order | [ ] | 0 | - |
-| Ops | Spring Boot Actuator Internals and Custom Metrics | [ ] | 0 | - |
+| Category | Topic | Status | Revisions | Log Link                                                                                  |
+| :--- | :--- |:------:| :---: |:------------------------------------------------------------------------------------------|
+| Internals | How `@SpringBootApplication` works internally |  [X]   | 0 | [Read Log](/2026-03-24-SpringbootApplication)                                             |
+| Auto-Config | Auto-configuration (`@EnableAutoConfiguration`, `spring.factories`) |  [X]   | 0 | [Read Log](/2026-03-24-SpringbootApplication)                                             |
+| Conditions | Conditional Bean Loading (`@ConditionalOnClass`, `@ConditionalOnProperty`) |  [X]   | 0 | [Read Log](/2026-03-24-SpringbootApplication)                                                                                          |
+| Extensions | Creating a Custom Spring Boot Starter |  [ ]   | 0 | -                                                                                         |
+| Config | Externalized Configuration and Property Resolution Order |  [ ]   | 0 | -                                                                                         |
+| Ops | Spring Boot Actuator Internals and Custom Metrics |  [ ]   | 0 | -                                                                                         |
 
 ## 3. Web, REST & Reactive Design
 
