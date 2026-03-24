@@ -34,7 +34,7 @@ isRoadmap: true
 ## 2. Strings (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
-| **E** | Valid Anagram | [ ] | [Link](https://leetcode.com/problems/valid-anagram/) |
+| **E** | Valid Anagram |  [X]   | [Link](https://leetcode.com/problems/valid-anagram/) |
 | **E** | Reverse Words in a String | [ ] | [Link](https://leetcode.com/problems/reverse-words-in-a-string/) |
 | **E** | Longest Common Prefix | [ ] | [Link](https://leetcode.com/problems/longest-common-prefix/) |
 | **M** | Longest Palindromic Substring | [ ] | [Link](https://leetcode.com/problems/longest-palindromic-substring/) |
@@ -277,7 +277,7 @@ isRoadmap: true
 | **E** | House Robber | [ ] | [Link](https://leetcode.com/problems/house-robber/) |
 | **E** | Min Cost Climbing Stairs | [ ] | [Link](https://leetcode.com/problems/min-cost-climbing-stairs/) |
 | **M** | Longest Increasing Subsequence | [ ] | [Link](https://leetcode.com/problems/longest-increasing-subsequence/) |
-| **M** | Coin Change | [ ] | [Link](https://leetcode.com/problems/coin-change/) |
+| **M** | Coin Change |  [X]   | [Link](https://leetcode.com/problems/coin-change/) |
 | **M** | Longest Common Subsequence | [ ] | [Link](https://leetcode.com/problems/longest-common-subsequence/) |
 | **M** | Word Break | [ ] | [Link](https://leetcode.com/problems/word-break/) |
 | **M** | Unique Paths | [ ] | [Link](https://leetcode.com/problems/unique-paths/) |

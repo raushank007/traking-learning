@@ -21,3 +21,6 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-23] API Gateway Pattern
 - [2026-03-23] Liskov Substitution
 - [2026-03-23] Aspect-Oriented Programming (Proxies, Pointcuts, Advice)
+- [2026-03-24] Valid Anagram
+- [2026-03-24] Coin Change
+- [2026-03-24] Number of Islands
