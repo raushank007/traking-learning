@@ -22,7 +22,7 @@ isRoadmap: true
 | **E** | Find Pivot Index (Equilibrium) |  [ ]   | [Link](https://leetcode.com/problems/find-pivot-index/) |
 | **E** | Sort Colors (0s, 1s, 2s) |  [ ]   | [Link](https://leetcode.com/problems/sort-colors/) |
 | **M** | Kadane’s Algorithm (Max Subarray) |  [ ]   | [Link](https://leetcode.com/problems/maximum-subarray/) |
-| **M** | Subarray Sum Equals K |  [ ]   | [Link](https://leetcode.com/problems/subarray-sum-equals-k/) |
+| **M** | Subarray Sum Equals K |  [X]   | [Link](https://leetcode.com/problems/subarray-sum-equals-k/) |
 | **M** | Next Permutation |  [ ]   | [Link](https://leetcode.com/problems/next-permutation/) |
 | **M** | Find the Duplicate Number |  [ ]   | [Link](https://leetcode.com/problems/find-the-duplicate-number/) |
 | **M** | Product of Array Except Self |  [ ]   | [Link](https://leetcode.com/problems/product-of-array-except-self/) |
@@ -249,7 +249,7 @@ isRoadmap: true
 | **M** | Rotting Oranges | [ ] | [Link](https://leetcode.com/problems/rotting-oranges/) |
 | **M** | Network Delay Time (Dijkstra) | [ ] | [Link](https://leetcode.com/problems/network-delay-time/) |
 | **M** | Clone Graph | [ ] | [Link](https://leetcode.com/problems/clone-graph/) |
-| **H** | Word Ladder | [ ] | [Link](https://leetcode.com/problems/word-ladder/) |
+| **H** | Word Ladder |  [X]   | [Link](https://leetcode.com/problems/word-ladder/) |
 | **H** | Critical Connections (Tarjan's) | [ ] | [Link](https://leetcode.com/problems/critical-connections-in-a-network/) |
 
 ---
@@ -289,7 +289,7 @@ isRoadmap: true
 ## 18. Backtracking (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
-| **E** | Binary Tree Paths | [ ] | [Link](https://leetcode.com/problems/binary-tree-paths/) |
+| **E** | Binary Tree Paths |  [X]   | [Link](https://leetcode.com/problems/binary-tree-paths/) |
 | **E** | Subset XOR Totals | [ ] | [Link](https://leetcode.com/problems/sum-of-all-subset-xor-totals/) |
 | **E** | All Paths From Source to Target | [ ] | [Link](https://leetcode.com/problems/all-paths-from-source-to-target/) |
 | **M** | Permutations | [ ] | [Link](https://leetcode.com/problems/permutations/) |
