@@ -31,3 +31,4 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-25] Binary Tree Paths
 - [2026-03-25] Subarray Sum Equals K
 - [2026-03-25] Word Ladder
+- [2026-03-25] Internal working of HashMap (Hashing, Collisions, Treeification)
