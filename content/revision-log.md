@@ -35,3 +35,8 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-27] Two Sum
 - [2026-03-27] K Closest Points to Origin
 - [2026-03-27] Group Anagrams
+- [2026-03-27] N-Queens
+- [2026-03-27] ConcurrentHashMap Internals (Segment locks vs Node locks)
+- [2026-03-27] `BeanPostProcessor` and Custom Bean Modification
+- [2026-03-27] TCP vs UDP
+- [2026-03-27] Singleton

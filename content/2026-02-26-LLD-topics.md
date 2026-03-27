@@ -40,7 +40,7 @@ isRoadmap: true
 
 | Category | Pattern | Status | Revisions | Log Link                                 |
 | :--- | :--- |:------:| :---: |:-----------------------------------------|
-| Creational | Singleton |  [X]   | 0 | [Read Log](/2026-03-24-Singleton)        |
+| Creational | Singleton |  [X]   | 1 | [Read Log](/2026-03-24-Singleton)        |
 | Creational | Factory & Factory Method |  [X]   | 0 | [Read Log](/2026-03-24-Factory-Pattern)  |
 | Creational | Abstract Factory |  [X]   | 0 | [Read Log](/2026-03-25-Abstract-Factory) |
 | Creational | Builder |  [ ]   | 0 | -                                        |

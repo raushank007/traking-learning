@@ -297,7 +297,7 @@ isRoadmap: true
 | **M** | Subsets | [ ] | [Link](https://leetcode.com/problems/subsets/) |
 | **M** | Combination Sum | [ ] | [Link](https://leetcode.com/problems/combination-sum/) |
 | **M** | Palindrome Partitioning |  [X]   | [Link](https://leetcode.com/problems/palindrome-partitioning/) |
-| **H** | N-Queens | [ ] | [Link](https://leetcode.com/problems/n-queens/) |
+| **H** | N-Queens |  [X]   | [Link](https://leetcode.com/problems/n-queens/) |
 | **H** | Sudoku Solver | [ ] | [Link](https://leetcode.com/problems/sudoku-solver/) |
 
 ---

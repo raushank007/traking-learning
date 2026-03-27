@@ -15,7 +15,7 @@ isRoadmap: true
 | Core | `ApplicationContext` vs `BeanFactory` |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
 | Beans | Bean Scopes (Singleton, Prototype, Request) & Thread Safety |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
 | Beans | Bean Lifecycle (`@PostConstruct`, `InitializingBean`, `@PreDestroy`) |  [x]   | 0 | [Read Log](/2026-02-07-IOC-Dependecy) |
-| Beans | `BeanPostProcessor` and Custom Bean Modification |  [x]   | 1 | [Read Log](/2026-02-07-IOC-Dependecy) |
+| Beans | `BeanPostProcessor` and Custom Bean Modification |  [x]   | 2 | [Read Log](/2026-02-07-IOC-Dependecy) |
 | AOP | Aspect-Oriented Programming (Proxies, Pointcuts, Advice) |  [X]   | 1 | [Read Log](/2026-03-21-AOP)           |
 | Events | Application Events (`ApplicationEventPublisher`, `@EventListener`) |  [ ]   | 0 | -                                     |
 
