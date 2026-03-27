@@ -32,3 +32,6 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-25] Subarray Sum Equals K
 - [2026-03-25] Word Ladder
 - [2026-03-25] Internal working of HashMap (Hashing, Collisions, Treeification)
+- [2026-03-27] Two Sum
+- [2026-03-27] K Closest Points to Origin
+- [2026-03-27] Group Anagrams

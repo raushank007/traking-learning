@@ -39,7 +39,7 @@ isRoadmap: true
 | **E** | Longest Common Prefix | [ ] | [Link](https://leetcode.com/problems/longest-common-prefix/) |
 | **M** | Longest Palindromic Substring | [ ] | [Link](https://leetcode.com/problems/longest-palindromic-substring/) |
 | **M** | String to Integer (atoi) | [ ] | [Link](https://leetcode.com/problems/string-to-integer-atoi/) |
-| **M** | Group Anagrams | [ ] | [Link](https://leetcode.com/problems/group-anagrams/) |
+| **M** | Group Anagrams |  [X]   | [Link](https://leetcode.com/problems/group-anagrams/) |
 | **M** | Multiply Strings | [ ] | [Link](https://leetcode.com/problems/multiply-strings/) |
 | **M** | Decode String | [ ] | [Link](https://leetcode.com/problems/decode-string/) |
 | **H** | Minimum Window Substring | [ ] | [Link](https://leetcode.com/problems/minimum-window-substring/) |
@@ -114,7 +114,7 @@ isRoadmap: true
 ## 7. Hashing (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
-| **E** | Two Sum | [ ] | [Link](https://leetcode.com/problems/two-sum/) |
+| **E** | Two Sum |  [X]   | [Link](https://leetcode.com/problems/two-sum/) |
 | **E** | Isomorphic Strings | [ ] | [Link](https://leetcode.com/problems/isomorphic-strings/) |
 | **E** | First Unique Character in String | [ ] | [Link](https://leetcode.com/problems/first-unique-character-in-a-string/) |
 | **M** | Longest Consecutive Sequence | [ ] | [Link](https://leetcode.com/problems/longest-consecutive-sequence/) |
@@ -232,7 +232,7 @@ isRoadmap: true
 | **M** | Kth Largest Element in Array | [ ] | [Link](https://leetcode.com/problems/kth-largest-element-in-an-array/) |
 | **M** | Sort Characters By Frequency | [ ] | [Link](https://leetcode.com/problems/sort-characters-by-frequency/) |
 | **M** | Reorganize String | [ ] | [Link](https://leetcode.com/problems/reorganize-string/) |
-| **M** | K Closest Points to Origin | [ ] | [Link](https://leetcode.com/problems/k-closest-points-to-origin/) |
+| **M** | K Closest Points to Origin |  [X]   | [Link](https://leetcode.com/problems/k-closest-points-to-origin/) |
 | **M** | Top K Frequent Words | [ ] | [Link](https://leetcode.com/problems/top-k-frequent-words/) |
 | **H** | Find Median from Data Stream | [ ] | [Link](https://leetcode.com/problems/find-median-from-data-stream/) |
 | **H** | Smallest Range Covering K Lists | [ ] | [Link](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) |
