@@ -40,3 +40,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-27] `BeanPostProcessor` and Custom Bean Modification
 - [2026-03-27] TCP vs UDP
 - [2026-03-27] Singleton
+- [2026-03-29] Fibonacci Number
+- [2026-03-29] Maximum XOR of Two Numbers

@@ -130,7 +130,7 @@ isRoadmap: true
 ## 8. Recursion (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
-| **E** | Fibonacci Number | [ ] | [Link](https://leetcode.com/problems/fibonacci-number/) |
+| **E** | Fibonacci Number |  [X]   | [Link](https://leetcode.com/problems/fibonacci-number/) |
 | **E** | Power of Two | [ ] | [Link](https://leetcode.com/problems/power-of-two/) |
 | **E** | Range Sum of BST | [ ] | [Link](https://leetcode.com/problems/range-sum-of-bst/) |
 | **M** | Letter Combinations of Phone Number | [ ] | [Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) |
@@ -309,7 +309,7 @@ isRoadmap: true
 | **E** | Single Number | [ ] | [Link](https://leetcode.com/problems/single-number/) |
 | **E** | Power of Two | [ ] | [Link](https://leetcode.com/problems/power-of-two/) |
 | **M** | Bitwise AND of Range | [ ] | [Link](https://leetcode.com/problems/bitwise-and-of-numbers-range/) |
-| **M** | Maximum XOR of Two Numbers | [ ] | [Link](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) |
+| **M** | Maximum XOR of Two Numbers |  [X]   | [Link](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) |
 | **M** | Single Number II | [ ] | [Link](https://leetcode.com/problems/single-number-ii/) |
 | **M** | Counting Bits | [ ] | [Link](https://leetcode.com/problems/counting-bits/) |
 | **M** | UTF-8 Validation | [ ] | [Link](https://leetcode.com/problems/utf-8-validation/) |
