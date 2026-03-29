@@ -18,6 +18,7 @@ import { Metadata } from 'next';
 
 // Components
 import Mermaid from '@/components/Mermaid';
+import RoadmapProgress from '@/components/RoadmapProgress'; // 🌟 NEW: Import the progress bar
 
 // --- HELPER FUNCTIONS ---
 
@@ -97,7 +98,7 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
           <header className="mb-10 pb-8 border-b border-amber-200/80">
             {meta.tags && (
               <div className="flex gap-2 mb-6 flex-wrap">
-                {meta.tags.map(tag => (
+                {meta.tags.map((tag: string) => (
                   <span key={tag} className="text-[10px] font-bold text-amber-800 bg-amber-200/50 px-2 py-1 rounded-sm uppercase tracking-widest border border-amber-200">
                     {tag}
                   </span>
@@ -137,7 +138,7 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
                 <>
                   <span className="hidden sm:inline opacity-50">&bull;</span>
                   <div className="flex items-center gap-1.5 bg-red-50 text-red-700 px-3 py-1 rounded-md font-bold shadow-sm border border-red-200/60">
-                    <span>⏳</span>
+                    <span>⏱️</span>
                     {formattedTime} total
                     <span className="text-red-500/70 font-medium ml-1">
                       ({meta.sessions?.length} {meta.sessions?.length === 1 ? 'session' : 'sessions'})
@@ -148,11 +149,17 @@ export default async function MarkdownPage({ params }: { params: Promise<{ slug:
             </div>
           </header>
 
+          {/* 🌟 NEW: ROADMAP PROGRESS BAR RENDERED HERE */}
+          <RoadmapProgress
+            content={content}
+            isRoadmap={meta.isRoadmap}
+          />
+
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath, remarkBreaks]}
             rehypePlugins={[rehypeRaw, rehypeHighlight, rehypeSlug, rehypeKatex]}
             components={{
-              // 🌟 CUSTOM CODE RENDERER
+              // 🛠️ CUSTOM CODE RENDERER
               code({ node, inline, className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '');
                 const rawContent = extractText(children);
