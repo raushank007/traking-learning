@@ -227,7 +227,7 @@ isRoadmap: true
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
 | **E** | Last Stone Weight | [ ] | [Link](https://leetcode.com/problems/last-stone-weight/) |
-| **E** | Relative Ranks | [ ] | [Link](https://leetcode.com/problems/relative-ranks/) |
+| **E** | Relative Ranks |  [X]   | [Link](https://leetcode.com/problems/relative-ranks/) |
 | **E** | Final Array State K Multiplications | [ ] | [Link](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) |
 | **M** | Kth Largest Element in Array | [ ] | [Link](https://leetcode.com/problems/kth-largest-element-in-an-array/) |
 | **M** | Sort Characters By Frequency | [ ] | [Link](https://leetcode.com/problems/sort-characters-by-frequency/) |
