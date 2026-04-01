@@ -82,7 +82,7 @@ isRoadmap: true
 ## 5. Two Pointers (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
-| **E** | Move Zeroes | [ ] | [Link](https://leetcode.com/problems/move-zeroes/) |
+| **E** | Move Zeroes |  [X]   | [Link](https://leetcode.com/problems/move-zeroes/) |
 | **E** | Two Sum II (Sorted Array) | [ ] | [Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |
 | **E** | Valid Palindrome | [ ] | [Link](https://leetcode.com/problems/valid-palindrome/) |
 | **M** | 3Sum | [ ] | [Link](https://leetcode.com/problems/3sum/) |
