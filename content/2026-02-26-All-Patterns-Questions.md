@@ -105,7 +105,7 @@ isRoadmap: true
 | **M** | Repeating Character Replacement | [ ] | [Link](https://leetcode.com/problems/longest-repeating-character-replacement/) |
 | **M** | Max Consecutive Ones III | [ ] | [Link](https://leetcode.com/problems/max-consecutive-ones-iii/) |
 | **M** | Fruit Into Baskets | [ ] | [Link](https://leetcode.com/problems/fruit-into-baskets/) |
-| **M** | Sliding Window Maximum | [ ] | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
+| **M** | Sliding Window Maximum |  [X]   | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
 | **H** | Minimum Window Substring | [ ] | [Link](https://leetcode.com/problems/minimum-window-substring/) |
 | **H** | Subarrays with K Different Integers | [ ] | [Link](https://leetcode.com/problems/subarrays-with-k-different-integers/) |
 
@@ -197,7 +197,7 @@ isRoadmap: true
 | **E** | Implement Stack using Queues | [ ] | [Link](https://leetcode.com/problems/implement-stack-using-queues/) |
 | **E** | Students Unable to Eat Lunch | [ ] | [Link](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) |
 | **E** | Base 7 |  [X]   | [Link](https://leetcode.com/problems/base-7/) |
-| **M** | Sliding Window Maximum | [ ] | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
+| **M** | Sliding Window Maximum |  [X]   | [Link](https://leetcode.com/problems/sliding-window-maximum/) |
 | **M** | Longest Subarray with Absolute Diff | [ ] | [Link](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) |
 | **M** | Design Front Middle Back Queue | [ ] | [Link](https://leetcode.com/problems/design-front-middle-back-queue/) |
 | **M** | Jump Game VI | [ ] | [Link](https://leetcode.com/problems/jump-game-vi/) |
@@ -242,7 +242,7 @@ isRoadmap: true
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
 | **E** | Find Center of Star Graph | [ ] | [Link](https://leetcode.com/problems/find-center-of-star-graph/) |
-| **E** | Flood Fill | [ ] | [Link](https://leetcode.com/problems/flood-fill/) |
+| **E** | Flood Fill |  [X]   | [Link](https://leetcode.com/problems/flood-fill/) |
 | **E** | Find if Path Exists in Graph | [ ] | [Link](https://leetcode.com/problems/find-if-path-exists-in-graph/) |
 | **M** | Number of Islands |  [X]   | [Link](https://leetcode.com/problems/number-of-islands/) |
 | **M** | Course Schedule II | [ ] | [Link](https://leetcode.com/problems/course-schedule-ii/) |

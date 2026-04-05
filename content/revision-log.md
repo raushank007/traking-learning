@@ -45,3 +45,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-03-31] Relative Ranks
 - [2026-04-01] Thread Lifecycle and OS level context switching
 - [2026-04-01] Move Zeroes
+- [2026-04-05] Flood Fill
+- [2026-04-05] Sliding Window Maximum
