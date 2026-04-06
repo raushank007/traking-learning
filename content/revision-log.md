@@ -47,3 +47,6 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-01] Move Zeroes
 - [2026-04-05] Flood Fill
 - [2026-04-05] Sliding Window Maximum
+- [2026-04-06] Valid Palindrome
+- [2026-04-06] Coin Change
+- [2026-04-06] Task Scheduler

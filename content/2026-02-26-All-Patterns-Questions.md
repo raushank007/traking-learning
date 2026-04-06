@@ -84,7 +84,7 @@ isRoadmap: true
 |:--- | :--- | :---: | :--- |
 | **E** | Move Zeroes |  [X]   | [Link](https://leetcode.com/problems/move-zeroes/) |
 | **E** | Two Sum II (Sorted Array) | [ ] | [Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |
-| **E** | Valid Palindrome | [ ] | [Link](https://leetcode.com/problems/valid-palindrome/) |
+| **E** | Valid Palindrome |  [X]   | [Link](https://leetcode.com/problems/valid-palindrome/) |
 | **M** | 3Sum | [ ] | [Link](https://leetcode.com/problems/3sum/) |
 | **M** | Container With Most Water | [ ] | [Link](https://leetcode.com/problems/container-with-most-water/) |
 | **M** | Remove Nth Node From End of List | [ ] | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) |
@@ -167,7 +167,7 @@ isRoadmap: true
 | **E** | Time Needed to Buy Tickets | [ ] | [Link](https://leetcode.com/problems/time-needed-to-buy-tickets/) |
 | **M** | DOTA2 Senate | [ ] | [Link](https://leetcode.com/problems/dota2-senate/) |
 | **M** | Design Circular Queue | [ ] | [Link](https://leetcode.com/problems/design-circular-queue/) |
-| **M** | Task Scheduler | [ ] | [Link](https://leetcode.com/problems/task-scheduler/) |
+| **M** | Task Scheduler |  [X]   | [Link](https://leetcode.com/problems/task-scheduler/) |
 | **M** | First Unique Char in Stream | [ ] | [Link](https://leetcode.com/problems/first-unique-character-in-a-string/) |
 | **M** | Reveal Cards In Increasing Order | [ ] | [Link](https://leetcode.com/problems/reveal-cards-in-increasing-order/) |
 | **H** | Constrained Subsequence Sum | [ ] | [Link](https://leetcode.com/problems/constrained-subsequence-sum/) |
@@ -264,7 +264,7 @@ isRoadmap: true
 | **M** | Jump Game | [ ] | [Link](https://leetcode.com/problems/jump-game/) |
 | **M** | Partition Labels | [ ] | [Link](https://leetcode.com/problems/partition-labels/) |
 | **M** | Non-overlapping Intervals | [ ] | [Link](https://leetcode.com/problems/non-overlapping-intervals/) |
-| **M** | Task Scheduler | [ ] | [Link](https://leetcode.com/problems/task-scheduler/) |
+| **M** | Task Scheduler |  [X]   | [Link](https://leetcode.com/problems/task-scheduler/) |
 | **H** | Candy | [ ] | [Link](https://leetcode.com/problems/candy/) |
 | **H** | Min Refueling Stops | [ ] | [Link](https://leetcode.com/problems/minimum-number-of-refueling-stops/) |
 
