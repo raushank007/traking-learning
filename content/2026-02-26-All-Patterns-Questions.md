@@ -52,7 +52,7 @@ isRoadmap: true
 |:--- | :--- | :---: | :--- |
 | **E** | Binary Search | [ ] | [Link](https://leetcode.com/problems/binary-search/) |
 | **E** | Find Smallest Letter Greater Than Target | [ ] | [Link](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) |
-| **E** | Search Insert Position | [ ] | [Link](https://leetcode.com/problems/search-insert-position/) |
+| **E** | Search Insert Position |  [X]   | [Link](https://leetcode.com/problems/search-insert-position/) |
 | **M** | Search in Rotated Sorted Array | [ ] | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/) |
 | **M** | Find First/Last Position in Sorted Array | [ ] | [Link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) |
 | **M** | Koko Eating Bananas | [ ] | [Link](https://leetcode.com/problems/koko-eating-bananas/) |
@@ -133,7 +133,7 @@ isRoadmap: true
 | **E** | Fibonacci Number |  [X]   | [Link](https://leetcode.com/problems/fibonacci-number/) |
 | **E** | Power of Two | [ ] | [Link](https://leetcode.com/problems/power-of-two/) |
 | **E** | Range Sum of BST | [ ] | [Link](https://leetcode.com/problems/range-sum-of-bst/) |
-| **M** | Letter Combinations of Phone Number | [ ] | [Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) |
+| **M** | Letter Combinations of Phone Number |  [X]   | [Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) |
 | **M** | Combination Sum | [ ] | [Link](https://leetcode.com/problems/combination-sum/) |
 | **M** | Generate Parentheses | [ ] | [Link](https://leetcode.com/problems/generate-parentheses/) |
 | **M** | K-th Symbol in Grammar | [ ] | [Link](https://leetcode.com/problems/k-th-symbol-in-grammar/) |
@@ -168,7 +168,7 @@ isRoadmap: true
 | **M** | DOTA2 Senate | [ ] | [Link](https://leetcode.com/problems/dota2-senate/) |
 | **M** | Design Circular Queue | [ ] | [Link](https://leetcode.com/problems/design-circular-queue/) |
 | **M** | Task Scheduler |  [X]   | [Link](https://leetcode.com/problems/task-scheduler/) |
-| **M** | First Unique Char in Stream | [ ] | [Link](https://leetcode.com/problems/first-unique-character-in-a-string/) |
+| **M** | First Unique Char in Stream |  [X]   | [Link](https://leetcode.com/problems/first-unique-character-in-a-string/) |
 | **M** | Reveal Cards In Increasing Order | [ ] | [Link](https://leetcode.com/problems/reveal-cards-in-increasing-order/) |
 | **H** | Constrained Subsequence Sum | [ ] | [Link](https://leetcode.com/problems/constrained-subsequence-sum/) |
 | **H** | Max Value of Equation | [ ] | [Link](https://leetcode.com/problems/max-value-of-equation/) |

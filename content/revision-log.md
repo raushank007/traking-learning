@@ -50,3 +50,6 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-06] Valid Palindrome
 - [2026-04-06] Coin Change
 - [2026-04-06] Task Scheduler
+- [2026-04-07] Search Insert Position
+- [2026-04-07] Letter Combinations of Phone Number
+- [2026-04-07] First Unique Char in Stream
