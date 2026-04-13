@@ -153,7 +153,7 @@ isRoadmap: true
 | **M** | Copy List with Random Pointer | [ ] | [Link](https://leetcode.com/problems/copy-list-with-random-pointer/) |
 | **M** | Flatten Multilevel Doubly Linked List | [ ] | [Link](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) |
 | **M** | Add Two Numbers | [ ] | [Link](https://leetcode.com/problems/add-two-numbers/) |
-| **M** | Reorder List | [ ] | [Link](https://leetcode.com/problems/reorder-list/) |
+| **M** | Reorder List |  [X]   | [Link](https://leetcode.com/problems/reorder-list/) |
 | **H** | Reverse Nodes in k-Group | [ ] | [Link](https://leetcode.com/problems/reverse-nodes-in-k-group/) |
 | **H** | Merge k Sorted Lists | [ ] | [Link](https://leetcode.com/problems/merge-k-sorted-lists/) |
 
@@ -217,7 +217,7 @@ isRoadmap: true
 | **M** | Binary Tree Zigzag Traversal | [ ] | [Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) |
 | **M** | Lowest Common Ancestor of a BT | [ ] | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
 | **M** | Path Sum III | [ ] | [Link](https://leetcode.com/problems/path-sum-iii/) |
-| **M** | Construct BT from Pre/Inorder | [ ] | [Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) |
+| **M** | Construct BT from Pre/Inorder |  [X]   | [Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) |
 | **H** | Binary Tree Maximum Path Sum | [ ] | [Link](https://leetcode.com/problems/binary-tree-maximum-path-sum/) |
 | **H** | Serialize and Deserialize BT | [ ] | [Link](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) |
 
@@ -228,7 +228,7 @@ isRoadmap: true
 |:--- | :--- | :---: | :--- |
 | **E** | Last Stone Weight | [ ] | [Link](https://leetcode.com/problems/last-stone-weight/) |
 | **E** | Relative Ranks |  [X]   | [Link](https://leetcode.com/problems/relative-ranks/) |
-| **E** | Final Array State K Multiplications | [ ] | [Link](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) |
+| **E** | Final Array State K Multiplications |  [X]   | [Link](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) |
 | **M** | Kth Largest Element in Array | [ ] | [Link](https://leetcode.com/problems/kth-largest-element-in-an-array/) |
 | **M** | Sort Characters By Frequency | [ ] | [Link](https://leetcode.com/problems/sort-characters-by-frequency/) |
 | **M** | Reorganize String | [ ] | [Link](https://leetcode.com/problems/reorganize-string/) |
@@ -281,7 +281,7 @@ isRoadmap: true
 | **M** | Longest Common Subsequence | [ ] | [Link](https://leetcode.com/problems/longest-common-subsequence/) |
 | **M** | Word Break | [ ] | [Link](https://leetcode.com/problems/word-break/) |
 | **M** | Unique Paths | [ ] | [Link](https://leetcode.com/problems/unique-paths/) |
-| **H** | Edit Distance | [ ] | [Link](https://leetcode.com/problems/edit-distance/) |
+| **H** | Edit Distance |  [X]   | [Link](https://leetcode.com/problems/edit-distance/) |
 | **H** | Burst Balloons | [ ] | [Link](https://leetcode.com/problems/burst-balloons/) |
 
 ---

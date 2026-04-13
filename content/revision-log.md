@@ -53,3 +53,7 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-07] Search Insert Position
 - [2026-04-07] Letter Combinations of Phone Number
 - [2026-04-07] First Unique Char in Stream
+- [2026-04-13] Final Array State K Multiplications
+- [2026-04-13] Reorder List
+- [2026-04-13] Edit Distance
+- [2026-04-13] Construct BT from Pre/Inorder
