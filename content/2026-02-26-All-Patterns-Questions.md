@@ -207,7 +207,7 @@ isRoadmap: true
 
 ---
 
-## 13. Tree (3E, 5M, 2H)
+## 13. Tree (3E, 5M, 2H) [Notes](/2026-04-16-BinaryTree)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
 | **E** | Invert Binary Tree |  [X]   | [Link](https://leetcode.com/problems/invert-binary-tree/) |
@@ -259,7 +259,7 @@ isRoadmap: true
 |:--- | :--- | :---: | :--- |
 | **E** | Assign Cookies | [ ] | [Link](https://leetcode.com/problems/assign-cookies/) |
 | **E** | Lemonade Change | [ ] | [Link](https://leetcode.com/problems/lemonade-change/) |
-| **E** | Maximum Units on a Truck | [ ] | [Link](https://leetcode.com/problems/maximum-units-on-a-truck/) |
+| **E** | Maximum Units on a Truck |  [X]   | [Link](https://leetcode.com/problems/maximum-units-on-a-truck/) |
 | **M** | Gas Station | [ ] | [Link](https://leetcode.com/problems/gas-station/) |
 | **M** | Jump Game | [ ] | [Link](https://leetcode.com/problems/jump-game/) |
 | **M** | Partition Labels | [ ] | [Link](https://leetcode.com/problems/partition-labels/) |

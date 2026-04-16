@@ -1,3 +1,4 @@
+---
 title: "ThreadLocals and memory leaks"
 date: "2026-04-07"
 tags: [ "Java","Concurrency","Multithreading"]

@@ -57,3 +57,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-13] Reorder List
 - [2026-04-13] Edit Distance
 - [2026-04-13] Construct BT from Pre/Inorder
+- [2026-04-14] Maximum Units on a Truck
+- [2026-04-14] Number of Islands
