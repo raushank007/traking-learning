@@ -59,3 +59,7 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-13] Construct BT from Pre/Inorder
 - [2026-04-14] Maximum Units on a Truck
 - [2026-04-14] Number of Islands
+- [2026-04-19] Binary Search
+- [2026-04-19] Find the Duplicate Number
+- [2026-04-19] Group Anagrams
+- [2026-04-19] First Negative Integer in Window

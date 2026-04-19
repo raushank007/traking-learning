@@ -24,7 +24,7 @@ isRoadmap: true
 | **M** | Kadane’s Algorithm (Max Subarray) |  [ ]   | [Link](https://leetcode.com/problems/maximum-subarray/) |                             |
 | **M** | Subarray Sum Equals K |  [X]   | [Link](https://leetcode.com/problems/subarray-sum-equals-k/) | [Log Link](/2026-04-05-560) |
 | **M** | Next Permutation |  [ ]   | [Link](https://leetcode.com/problems/next-permutation/) |                             |
-| **M** | Find the Duplicate Number |  [ ]   | [Link](https://leetcode.com/problems/find-the-duplicate-number/) |                             |
+| **M** | Find the Duplicate Number |  [X]   | [Link](https://leetcode.com/problems/find-the-duplicate-number/) |                             |
 | **M** | Product of Array Except Self |  [ ]   | [Link](https://leetcode.com/problems/product-of-array-except-self/) |                             |
 | **H** | First Missing Positive |  [ ]   | [Link](https://leetcode.com/problems/first-missing-positive/) |                             |
 | **H** | Trapping Rain Water |  [ ]   | [Link](https://leetcode.com/problems/trapping-rain-water/) |                             |
@@ -50,7 +50,7 @@ isRoadmap: true
 ## 3. Searching (3E, 5M, 2H)
 | Level | Question | Status | LeetCode Link |
 |:--- | :--- | :---: | :--- |
-| **E** | Binary Search | [ ] | [Link](https://leetcode.com/problems/binary-search/) |
+| **E** | Binary Search |  [X]   | [Link](https://leetcode.com/problems/binary-search/) |
 | **E** | Find Smallest Letter Greater Than Target | [ ] | [Link](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) |
 | **E** | Search Insert Position |  [X]   | [Link](https://leetcode.com/problems/search-insert-position/) |
 | **M** | Search in Rotated Sorted Array | [ ] | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/) |
