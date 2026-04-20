@@ -25,7 +25,7 @@ isRoadmap: true
 | **M** | Subarray Sum Equals K |  [X]   | [Link](https://leetcode.com/problems/subarray-sum-equals-k/) | [Log Link](/2026-04-05-560) |
 | **M** | Next Permutation |  [ ]   | [Link](https://leetcode.com/problems/next-permutation/) |                             |
 | **M** | Find the Duplicate Number |  [X]   | [Link](https://leetcode.com/problems/find-the-duplicate-number/) |                             |
-| **M** | Product of Array Except Self |  [ ]   | [Link](https://leetcode.com/problems/product-of-array-except-self/) |                             |
+| **M** | Product of Array Except Self |  [X]   | [Link](https://leetcode.com/problems/product-of-array-except-self/) |                             |
 | **H** | First Missing Positive |  [ ]   | [Link](https://leetcode.com/problems/first-missing-positive/) |                             |
 | **H** | Trapping Rain Water |  [ ]   | [Link](https://leetcode.com/problems/trapping-rain-water/) |                             |
 
@@ -68,7 +68,7 @@ isRoadmap: true
 |:--- | :--- | :---: | :--- |
 | **E** | Merge Sorted Array | [ ] | [Link](https://leetcode.com/problems/merge-sorted-array/) |
 | **E** | Intersection of Two Arrays | [ ] | [Link](https://leetcode.com/problems/intersection-of-two-arrays/) |
-| **E** | Contains Duplicate | [ ] | [Link](https://leetcode.com/problems/contains-duplicate/) |
+| **E** | Contains Duplicate |  [X]   | [Link](https://leetcode.com/problems/contains-duplicate/) |
 | **M** | Merge Intervals | [ ] | [Link](https://leetcode.com/problems/merge-intervals/) |
 | **M** | Sort List | [ ] | [Link](https://leetcode.com/problems/sort-list/) |
 | **M** | Largest Number | [ ] | [Link](https://leetcode.com/problems/largest-number/) |
@@ -122,7 +122,7 @@ isRoadmap: true
 | **M** | Subarray Sums Divisible by K | [ ] | [Link](https://leetcode.com/problems/subarray-sums-divisible-by-k/) |
 | **M** | Design HashMap | [ ] | [Link](https://leetcode.com/problems/design-hashmap/) |
 | **M** | Find All Anagrams in a String | [ ] | [Link](https://leetcode.com/problems/find-all-anagrams-in-a-string/) |
-| **H** | Max Points on a Line | [ ] | [Link](https://leetcode.com/problems/max-points-on-a-line/) |
+| **H** | Max Points on a Line |  [X]   | [Link](https://leetcode.com/problems/max-points-on-a-line/) |
 | **H** | Grid Illumination | [ ] | [Link](https://leetcode.com/problems/grid-illumination/) |
 
 
@@ -245,7 +245,7 @@ isRoadmap: true
 | **E** | Flood Fill |  [X]   | [Link](https://leetcode.com/problems/flood-fill/) |
 | **E** | Find if Path Exists in Graph | [ ] | [Link](https://leetcode.com/problems/find-if-path-exists-in-graph/) |
 | **M** | Number of Islands |  [X]   | [Link](https://leetcode.com/problems/number-of-islands/) |
-| **M** | Course Schedule II | [ ] | [Link](https://leetcode.com/problems/course-schedule-ii/) |
+| **M** | Course Schedule II |  [X]   | [Link](https://leetcode.com/problems/course-schedule-ii/) |
 | **M** | Rotting Oranges | [ ] | [Link](https://leetcode.com/problems/rotting-oranges/) |
 | **M** | Network Delay Time (Dijkstra) | [ ] | [Link](https://leetcode.com/problems/network-delay-time/) |
 | **M** | Clone Graph | [ ] | [Link](https://leetcode.com/problems/clone-graph/) |

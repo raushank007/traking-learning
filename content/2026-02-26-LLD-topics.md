@@ -12,7 +12,7 @@ isRoadmap: true
 | Category | Topic | Status | Revisions | Log Link                              |
 | :--- | :--- |:------:|:---------:|:--------------------------------------|
 | Core OOP | Abstraction |  [x]   |     0     | [Read Log](/2026-03-01-Abstraction)   |
-| Core OOP | Encapsulation |  [x]   |     0     | [Read Log](/2026-03-11-Encapsulation) |
+| Core OOP | Encapsulation |  [x]   | 1 | [Read Log](/2026-03-11-Encapsulation) |
 | Core OOP | Inheritance |  [x]   |     1     | [Read Log](/2026-03-12-Inheritance)   |
 | Core OOP | Polymorphism |  [X]   |     0     | [Read Log](/2026-03-12-Polymorphism)  |
 | SOLID | Single Responsibility |  [X]   |     0     | [Read Log](/2026-03-18-SOLID)         |

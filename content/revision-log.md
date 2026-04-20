@@ -63,3 +63,11 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-19] Find the Duplicate Number
 - [2026-04-19] Group Anagrams
 - [2026-04-19] First Negative Integer in Window
+- [2026-04-20] Deadlock detection, prevention, and Livelocks
+- [2026-04-20] Auto-configuration (`@EnableAutoConfiguration`, `spring.factories`)
+- [2026-04-20] Back-of-the-envelope calculations (Estimations)
+- [2026-04-20] Encapsulation
+- [2026-04-20] Contains Duplicate
+- [2026-04-20] Product of Array Except Self
+- [2026-04-20] Course Schedule II
+- [2026-04-20] Max Points on a Line
