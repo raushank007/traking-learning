@@ -45,15 +45,15 @@ export default function DailyRevisionClient({ decks, todayRevised = [] }: { deck
 
     decks.forEach(deck => {
       if (deck.category === 'Algorithms') {
-        const easyCards = deck.cards.filter(c => c.difficulty === 'E');
+
         const medCards = deck.cards.filter(c => c.difficulty === 'M');
         const hardCards = deck.cards.filter(c => c.difficulty === 'H');
 
-        const pickedEasy = getDailyRandomItems(easyCards, todayStr, 1, "algoE");
-        const pickedMed = getDailyRandomItems(medCards, todayStr, 2, "algoM");
-        const pickedHard = getDailyRandomItems(hardCards, todayStr, 1, "algoH");
 
-        const algoPicks = [...pickedEasy, ...pickedMed, ...pickedHard];
+        const pickedMed = getDailyRandomItems(medCards, todayStr, 3, "algoM");
+        const pickedHard = getDailyRandomItems(hardCards, todayStr, 2, "algoH");
+
+        const algoPicks = [ ...pickedMed, ...pickedHard];
 
         if (algoPicks.length > 0) {
           pickedCards.push(...algoPicks);
