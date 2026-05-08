@@ -39,7 +39,7 @@ isRoadmap: true
 | **M** | Group Anagrams | [X] | Critical | [Link](https://leetcode.com/problems/group-anagrams/) |
 | **M** | Decode String | [ ] | Medium | [Link](https://leetcode.com/problems/decode-string/) |
 | **M** | Longest Substring Without Repeating | [ ] | Critical | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |
-| **M** | Palindromic Substrings | [ ] | Medium | [Link](https://leetcode.com/problems/palindromic-substrings/) |
+| **M** | Palindromic Substrings |  [X]   | Medium | [Link](https://leetcode.com/problems/palindromic-substrings/) |
 | **H** | Minimum Window Substring | [ ] | Critical | [Link](https://leetcode.com/problems/minimum-window-substring/) |
 | **H** | Word Search II | [ ] | High | [Link](https://leetcode.com/problems/word-search-ii/) |
 | **H** | Basic Calculator III | [ ] | High | [Link](https://leetcode.com/problems/basic-calculator-iii/) |
@@ -150,7 +150,7 @@ isRoadmap: true
 | **M** | Design Add/Search Words | [ ] | High | [Link](https://leetcode.com/problems/design-add-and-search-words-data-structure/) |
 | **M** | Search Suggestions System | [ ] | High | [Link](https://leetcode.com/problems/search-suggestions-system/) |
 | **M** | Replace Words | [ ] | Medium | [Link](https://leetcode.com/problems/replace-words/) |
-| **M** | Map Sum Pairs | [ ] | Medium | [Link](https://leetcode.com/problems/map-sum-pairs/) |
+| **M** | Map Sum Pairs |  [X]   | Medium | [Link](https://leetcode.com/problems/map-sum-pairs/) |
 | **M** | Extra Characters in a String | [ ] | Medium | [Link](https://leetcode.com/problems/extra-characters-in-a-string/) |
 | **H** | Word Search II | [ ] | High | [Link](https://leetcode.com/problems/word-search-ii/) |
 | **H** | Prefix and Suffix Search | [ ] | High | [Link](https://leetcode.com/problems/prefix-and-suffix-search/) |

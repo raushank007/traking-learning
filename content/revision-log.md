@@ -74,3 +74,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-21] Reorganize String
 - [2026-04-21] Auto-configuration (`@EnableAutoConfiguration`, `spring.factories`)
 - [2026-04-21] Internal working of HashMap (Hashing, Collisions, Treeification)
+- [2026-05-08] Palindromic Substrings
+- [2026-05-08] Map Sum Pairs
