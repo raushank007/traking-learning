@@ -180,7 +180,7 @@ isRoadmap: true
 |:--- | :--- | :---:|:--- | :--- |
 | **M** | Linked List Cycle II | [ ] | High | [Link](https://leetcode.com/problems/linked-list-cycle-ii/) |
 | **M** | Copy List with Random Pointer | [ ] | High | [Link](https://leetcode.com/problems/copy-list-with-random-pointer/) |
-| **M** | Add Two Numbers | [ ] | High | [Link](https://leetcode.com/problems/add-two-numbers/) |
+| **M** | Add Two Numbers |  [X]   | High | [Link](https://leetcode.com/problems/add-two-numbers/) |
 | **M** | Reorder List | [X] | High | [Link](https://leetcode.com/problems/reorder-list/) |
 | **M** | Remove Nth Node From End | [ ] | High | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) |
 | **M** | Swap Nodes in Pairs | [ ] | Medium | [Link](https://leetcode.com/problems/swap-nodes-in-pairs/) |
@@ -313,7 +313,7 @@ isRoadmap: true
 | **M** | Find the Winner (Josephus) | [ ] | Medium | [Link](https://leetcode.com/problems/find-the-winner-of-the-circular-game/) |
 | **M** | Pow(x, n) | [ ] | High | [Link](https://leetcode.com/problems/powx-n/) |
 | **H** | Word Search II | [ ] | High | [Link](https://leetcode.com/problems/word-search-ii/) |
-| **H** | 4 Keys Keyboard | [ ] | Medium | [Link](https://leetcode.com/problems/4-keys-keyboard/) |
+| **H** | 4 Keys Keyboard |  [X]   | Medium | [Link](https://leetcode.com/problems/4-keys-keyboard/) |
 | **H** | Strobogrammatic Number III | [ ] | Medium | [Link](https://leetcode.com/problems/strobogrammatic-number-iii/) |
 | **H** | Integer to English Words | [ ] | Medium | [Link](https://leetcode.com/problems/integer-to-english-words/) |
 

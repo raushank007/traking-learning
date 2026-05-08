@@ -76,3 +76,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-04-21] Internal working of HashMap (Hashing, Collisions, Treeification)
 - [2026-05-08] Palindromic Substrings
 - [2026-05-08] Map Sum Pairs
+- [2026-05-08] Add Two Numbers
+- [2026-05-08] 4 Keys Keyboard
