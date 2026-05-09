@@ -55,7 +55,7 @@ isRoadmap: true
 | **M** | Koko Eating Bananas | [ ] | Medium | [Link](https://leetcode.com/problems/koko-eating-bananas/) |
 | **M** | Search a 2D Matrix | [ ] | High | [Link](https://leetcode.com/problems/search-a-2d-matrix/) |
 | **M** | Capacity To Ship Packages | [ ] | High | [Link](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) |
-| **M** | Find Peak Element | [ ] | High | [Link](https://leetcode.com/problems/find-peak-element/) |
+| **M** | Find Peak Element |  [X]   | High | [Link](https://leetcode.com/problems/find-peak-element/) |
 | **H** | Median of Two Sorted Arrays | [ ] | Critical | [Link](https://leetcode.com/problems/median-of-two-sorted-arrays/) |
 | **H** | Split Array Largest Sum | [ ] | High | [Link](https://leetcode.com/problems/split-array-largest-sum/) |
 | **H** | Reverse Pairs | [ ] | Medium | [Link](https://leetcode.com/problems/reverse-pairs/) |
@@ -243,7 +243,7 @@ isRoadmap: true
 | Level | Question | Status | Priority | LeetCode Link |
 |:--- | :--- | :---:|:--- | :--- |
 | **M** | Kth Largest Element in Array | [ ] | Critical | [Link](https://leetcode.com/problems/kth-largest-element-in-an-array/) |
-| **M** | Sort Characters By Frequency | [ ] | Medium | [Link](https://leetcode.com/problems/sort-characters-by-frequency/) |
+| **M** | Sort Characters By Frequency |  [X]   | Medium | [Link](https://leetcode.com/problems/sort-characters-by-frequency/) |
 | **M** | Reorganize String |  [X]   | High | [Link](https://leetcode.com/problems/reorganize-string/) |
 | **M** | K Closest Points to Origin | [X] | High | [Link](https://leetcode.com/problems/k-closest-points-to-origin/) |
 | **M** | Top K Frequent Words | [ ] | High | [Link](https://leetcode.com/problems/top-k-frequent-words/) |

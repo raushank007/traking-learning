@@ -78,3 +78,5 @@ summary: "Automated tracking of spaced repetition sessions."
 - [2026-05-08] Map Sum Pairs
 - [2026-05-08] Add Two Numbers
 - [2026-05-08] 4 Keys Keyboard
+- [2026-05-09] Find Peak Element
+- [2026-05-09] Sort Characters By Frequency
