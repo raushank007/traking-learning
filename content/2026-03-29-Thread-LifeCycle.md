@@ -7,7 +7,7 @@ summary: "JVM vs. OS Threads, Context Switching Overhead, Blocking I/O, and Java
 category: "java"
 sessions:
 
-* date: "2026-03-29"
+date: "2026-03-29"
 startTime: "11:30"
 endTime: "12:02"
 
